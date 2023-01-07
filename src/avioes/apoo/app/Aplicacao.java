@@ -76,6 +76,9 @@ public class Aplicacao {
 			break;
 		case 5:
 			MenuPrincipal();
+	
+			default: System.out.println("Opção inválida");
+			MenuPrincipal();
 
 		}
 
@@ -101,6 +104,9 @@ public class Aplicacao {
 			break;
 		case 5:
 			MenuPrincipal();
+			
+		default: System.out.println("Opção inválida");
+		MenuPrincipal();
 		}
 	}
 
@@ -136,7 +142,10 @@ public class Aplicacao {
 		case 8: // função para eliminar pilotos
 			break;
 		case 9:
+			
 			MenuPrincipal();
+		default: System.out.println("Opção inválida");
+		MenuPrincipal();
 
 		}
 	}
