@@ -7,7 +7,7 @@ public class Tripulacao extends Pessoa {
 	private String anotacoes;
 	private String categoria;
 	
-	public Tripulacao(int id, String nome, String nacionalidade, String morada, int telefone, String dataDeNascimento,
+	public Tripulacao(String id, String nome, String nacionalidade, String morada, int telefone, String dataDeNascimento,
 			int nLincenca, String dataDeValidade, String anotacoes, String categoria) {
 		super(id, nome, nacionalidade, morada, telefone, dataDeNascimento);
 		this.nLincenca = nLincenca;

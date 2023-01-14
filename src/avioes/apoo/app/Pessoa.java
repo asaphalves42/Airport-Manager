@@ -2,7 +2,7 @@ package avioes.apoo.app;
 
 public class Pessoa {
 	
-	private int id;
+	private String id;
 	private String nome;
 	private String nacionalidade;
 	private String morada;
@@ -10,7 +10,7 @@ public class Pessoa {
 	private String dataDeNascimento;
 	
 	
-	public Pessoa(int id, String nome, String nacionalidade, String morada, int telefone, String dataDeNascimento) {
+	public Pessoa(String id, String nome, String nacionalidade, String morada, int telefone, String dataDeNascimento) {
 			
 		super();
 		this.id = id;
@@ -21,12 +21,16 @@ public class Pessoa {
 		this.dataDeNascimento = dataDeNascimento;
 		
 	}
+	
+	public Pessoa(){
+		
+	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

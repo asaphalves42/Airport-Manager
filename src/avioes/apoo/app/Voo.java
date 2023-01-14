@@ -98,7 +98,8 @@ public class Voo {
 	public String toString() {
 		return "Voos[\nVoo: " + nVoo + " \nNúmero do avião: " + aviao + " \nAeroporto de origem: " + aeroOrigem + " \nAeroporto de destino: "
 				+ aeroDestino + " \nData de partida: " + dataDePartida + " \nData de chegada: " + dataDeChegada
-				+ " \nHora de partida: " + horaDePartida + " \nHora de chegada: " + horaDeChegada + "]\n";
+				+ " \nHora de partida: " + horaDePartida + " \nHora de chegada: " + horaDeChegada + "]\n" + 
+				"--------------------------------------------------------------------";
 	}
 
 	

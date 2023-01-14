@@ -6,13 +6,16 @@ public class Passageiros extends Pessoa {
 	private String tipoBilhete;
 	private String lugarReservado;
 	
-	public Passageiros(int id, String nome, String nacionalidade, String morada, int telefone, String dataDeNascimento,
+	public Passageiros(String id, String nome, String nacionalidade, String morada, int telefone, String dataDeNascimento,
 			String email, String tipoBilhete, String lugarReservado) {
 		
-		super(id, nome, nacionalidade, morada, telefone, dataDeNascimento);
 		this.email = email;
 		this.tipoBilhete = tipoBilhete;
 		this.lugarReservado = lugarReservado;
+	}
+
+	public Passageiros() {
+		
 	}
 
 	public String getEmail() {
@@ -38,6 +41,18 @@ public class Passageiros extends Pessoa {
 	public void setLugarReservado(String lugarReservado) {
 		this.lugarReservado = lugarReservado;
 	}
+
+	@Override
+	public String toString() {
+		return "Passageiros [\nId: " + getId() + "\nNome: " + getNome() + "\nNacionalidade: " + getNacionalidade() + 
+				"\nMorada: " + getMorada() + "\ntelefone: " + getTelefone() + "\nData de nascimento: " + getDataDeNascimento() + "\ne-mail: " + email + 
+				"\ntipoBilhete: " + tipoBilhete + "\nLugar reservado: " + lugarReservado
+				+ "]" + "\n" + 
+				"------------------------------------------------------------------";
+		
+		
+	}
+	
 	
 	
 
