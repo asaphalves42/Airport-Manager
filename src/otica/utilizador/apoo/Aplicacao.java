@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.xml.crypto.Data;
+
 import avioes.apoo.app.Aeronave;
 import avioes.apoo.app.Passageiros;
 import avioes.apoo.app.Tripulacao;
@@ -163,19 +165,21 @@ public class Aplicacao {
 			case 1:
 				MenuListaPassageiros2();
 				break;
-			case 2: EditarPassageiroCompleto();
+			case 2:
+				EditarPassageiroCompleto();
 				break;
 			case 3:
 				AdicionarPassageiros();
 				break;
-			case 4: EliminarPassageiros();
+			case 4:
+				EliminarPassageiros();
 				break;
 			}
 		} while (opcao != 4);
 	}
-	
+
 	private void EliminarPassageiros() {
-		
+
 		Passageiros eliminarPassageiro = null;
 		String idPassageiro;
 
@@ -194,8 +198,7 @@ public class Aplicacao {
 			System.out.println("Passageiro eliminado com sucesso!");
 		}
 	}
-	
-	
+
 	private void AdicionarPassageiros() {
 
 		Passageiros passageiro = new Passageiros();
@@ -231,7 +234,7 @@ public class Aplicacao {
 
 		System.out.println("Passageiro adicionado com sucesso!");
 		System.out.println("");
-		
+
 		GravarFicheirosPass();
 
 	}
@@ -257,9 +260,9 @@ public class Aplicacao {
 
 		} while (opcao != 2);
 	}
-	
+
 	public void EditarPassageiroCompleto() {
-		
+
 		Passageiros editarPassageiro = new Passageiros();
 		String idPass;
 
@@ -299,26 +302,14 @@ public class Aplicacao {
 
 		System.out.println("Insira o novo tipo de bilhete:");
 		editarPassageiro.setTipoBilhete(ler.next());
-		
+
 		System.out.println("Insira o novo lugar reservado:");
 		editarPassageiro.setLugarReservado(ler.next());
 
 		ApresentarMenuVoo();
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
+
 	private void ListarTodosOsPassageiros() {
 
 		if (passageiros.isEmpty()) {
@@ -572,7 +563,6 @@ public class Aplicacao {
 
 	public void GravarFicheirosVoos() {
 
-
 		String resposta;
 
 		System.out.println("Queres salvar as altereções (S/N)?");
@@ -615,7 +605,7 @@ public class Aplicacao {
 		}
 
 	}
-	
+
 	public void GravarFicheirosPass() {
 		String resposta;
 
@@ -658,10 +648,11 @@ public class Aplicacao {
 
 			}
 		}
-		
+
 	}
 
 	public void LerFicheirosPassageiros() {
+
 
 		// Agora vou abrir os Reader
 		try {
@@ -697,4 +688,6 @@ public class Aplicacao {
 			System.out.println(Ex.getMessage());
 		}
 	}
+	
+	
 }
