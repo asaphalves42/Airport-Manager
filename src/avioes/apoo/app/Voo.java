@@ -1,6 +1,7 @@
 package avioes.apoo.app;
 
 public class Voo {
+	
 	private String nVoo;
 	private String aviao;
 	private String aeroOrigem;
@@ -21,6 +22,11 @@ public class Voo {
 		this.dataDeChegada = dataDeChegada;
 		this.horaDePartida = horaDePartida;
 		this.horaDeChegada = horaDeChegada;
+		
+		
+	}
+
+	public Voo() {
 		
 	}
 
@@ -88,8 +94,13 @@ public class Voo {
 		this.horaDeChegada = horaDeChegada;
 	}
 
+	@Override
+	public String toString() {
+		return "Voos[\nVoo: " + nVoo + " \nNúmero do avião: " + aviao + " \nAeroporto de origem: " + aeroOrigem + " \nAeroporto de destino: "
+				+ aeroDestino + " \nData de partida: " + dataDePartida + " \nData de chegada: " + dataDeChegada
+				+ " \nHora de partida: " + horaDePartida + " \nHora de chegada: " + horaDeChegada + "]\n";
+	}
 
-	
 	
 	
 }

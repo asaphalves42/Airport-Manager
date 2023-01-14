@@ -1,4 +1,4 @@
-package avioes.apoo.app;
+package otica.utilizador.apoo;
 
 public class Runner {
 
