@@ -7,9 +7,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import javax.xml.crypto.Data;
-
 import avioes.apoo.app.Aeronave;
 import avioes.apoo.app.Passageiros;
 import avioes.apoo.app.Tripulacao;
@@ -332,6 +329,8 @@ public class Aplicacao {
 			System.out.println("2 - Editar pessoal cabine");
 			System.out.println("3 - Adicionar pessoal cabine");
 			System.out.println("4 - Eliminar pessoal cabine");
+			
+			System.out.println("---------------------------------------");
 
 			System.out.println("5 - Listar pilotos");
 			System.out.println("6 - Editar pilotos");
@@ -359,8 +358,9 @@ public class Aplicacao {
 				break;
 			case 8: // função para eliminar pilotos
 				break;
+			default: System.out.println("Opcão inválida");
 			}
-		} while (opcao != 9);
+		} while (opcao != 8);
 	}
 
 	public void AdicionarVoos() {
