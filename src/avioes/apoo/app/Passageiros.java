@@ -48,7 +48,7 @@ public class Passageiros extends Pessoa {
 				"\nMorada: " + getMorada() + "\ntelefone: " + getTelefone() + "\nData de nascimento: " + getDataDeNascimento() + "\ne-mail: " + email + 
 				"\ntipoBilhete: " + tipoBilhete + "\nLugar reservado: " + lugarReservado
 				+ "]" + "\n" + 
-				"------------------------------------------------------------------";
+				"---------------------------------------";
 		
 		
 	}

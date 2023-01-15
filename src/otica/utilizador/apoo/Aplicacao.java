@@ -342,11 +342,11 @@ public class Aplicacao {
 
 			switch (opcao) {
 
-			case 1: // função para listar cabine
+			case 1: ListarPessoalCabine();
 				break;
 			case 2: // função para editar cabine
 				break;
-			case 3: // função para adicionar cabine
+			case 3: AdicionarPessoalCabine();
 				break;
 			case 4: // função para eliminar cabine
 				break;
@@ -362,7 +362,62 @@ public class Aplicacao {
 			}
 		} while (opcao != 8);
 	}
+	
+	public void AdicionarPessoalCabine() {
+		
+		Tripulacao tripulacao = new Tripulacao();
+		
+		System.out.println("Identidade do funcionário:");
+		tripulacao.setId(ler.next());
+		
+		System.out.println("Nome do funcionário:");
+		tripulacao.setNome(ler.next());
 
+		System.out.println("Nacionalidade:");
+		tripulacao.setNacionalidade(ler.next());
+
+		System.out.println("Morada:");
+		tripulacao.setMorada(ler.next());
+
+		System.out.println("Telefone:");
+		tripulacao.setTelefone(ler.nextInt());
+
+		System.out.println("Data de nascimento:");
+		tripulacao.setDataDeNascimento(ler.next());
+
+		System.out.println("Data de validade:");
+		tripulacao.setDataDeValidade(ler.next());
+
+		System.out.println("Anotações:");
+		tripulacao.setAnotacoes(ler.next());
+
+		System.out.println("Categoria:");
+		tripulacao.setCategoria(ler.next());
+
+		this.tripulacao.add(tripulacao);
+
+		System.out.println("Tripulante adicionado com sucesso!");
+		System.out.println("");
+		
+		//Gravar ficheiros tripulação
+		
+		ApresentarMenuTripulação();
+	}
+	
+	public void ListarPessoalCabine() {
+		
+		if (tripulacao.isEmpty()) {
+			System.out.println("Não existem tripulantes de cabine registrados!");
+		} else {
+			for (Tripulacao tripulacao : tripulacao) {
+				System.out.println(tripulacao);
+			}
+
+			ApresentarMenuTripulação();
+		}
+	}
+	
+	
 	public void AdicionarVoos() {
 
 		Voo voo = new Voo();

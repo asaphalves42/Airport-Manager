@@ -16,6 +16,10 @@ public class Tripulacao extends Pessoa {
 		this.categoria = categoria;
 	}
 
+	public Tripulacao() {
+		
+	}
+
 	public int getnLincenca() {
 		return nLincenca;
 	}
@@ -46,6 +50,16 @@ public class Tripulacao extends Pessoa {
 
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
+	}
+
+	@Override
+	public String toString() {
+		return "Tripulantes [\nId: " + getId() + "\nNome: " + getNome() + "\nNacionalidade: " + getNacionalidade() + 
+				"\nMorada: " + getMorada() + "\ntelefone: " + getTelefone() + "\nData de nascimento: " + 
+				getDataDeNascimento() + "[\nNúmero da lincenca: " + nLincenca + "\nData de validade: " + dataDeValidade + "\nAnotações: " + anotacoes
+				+ "\nCategoria: " + categoria + "]" + "\n" + 
+				"------------------------------------------------------";
+				
 	}
 	
 	
