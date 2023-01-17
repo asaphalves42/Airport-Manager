@@ -677,7 +677,7 @@ public class Aplicacao {
 
 				if (passageiros.isEmpty()) {
 					caneta.write("");
-					caneta.close();
+					
 				} else {
 
 					for (Passageiros passageiros : passageiros) {
