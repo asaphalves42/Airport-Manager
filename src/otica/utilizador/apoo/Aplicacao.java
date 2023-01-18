@@ -44,8 +44,7 @@ public class Aplicacao {
 	 * CONTROLO DE MENUS
 	 * 
 	 */
-	
-	
+
 	public void MenuPrincipal() {
 
 		int opcao;
@@ -136,6 +135,7 @@ public class Aplicacao {
 		do {
 			System.out.println("1 - Listar por datas");
 			System.out.println("2 - Listar todos os voos");
+			System.out.println("3 - Voltar ao menu anterior");
 
 			opcao = ler.nextInt();
 
@@ -146,9 +146,12 @@ public class Aplicacao {
 			case 2:
 				ListarVoos();
 				break;
+			case 3:
+				ApresentarMenuVoo();
+				break;
 			}
 
-		} while (opcao != 2);
+		} while (opcao != 3);
 	}
 
 	public void ApresentarMenuPassageiro() {
@@ -178,8 +181,11 @@ public class Aplicacao {
 			case 4:
 				EliminarPassageiros();
 				break;
+			case 5:
+				MenuPrincipal();
+				break;
 			}
-		} while (opcao != 4);
+		} while (opcao != 5);
 	}
 
 	private void MenuListaPassageiros2() {
@@ -189,6 +195,7 @@ public class Aplicacao {
 		do {
 			System.out.println("1 - Listar passageiros por voo");
 			System.out.println("2 - Listar todos os passageiros");
+			System.out.println("3 - Voltar ao menu anterior");
 
 			opcao = ler.nextInt();
 
@@ -198,12 +205,15 @@ public class Aplicacao {
 			case 2:
 				ListarTodosOsPassageiros();
 				break;
+			case 3:
+				ApresentarMenuPassageiro();
+				break;
 
 			}
 
-		} while (opcao != 2);
+		} while (opcao != 3);
 	}
-	
+
 	public void ApresentarMenuTripulação() {
 		int opcao;
 
@@ -212,7 +222,7 @@ public class Aplicacao {
 			System.out.println("2 - Editar pessoal cabine");
 			System.out.println("3 - Adicionar pessoal cabine");
 			System.out.println("4 - Eliminar pessoal cabine");
-			
+
 			System.out.println("---------------------------------------");
 
 			System.out.println("5 - Listar pilotos");
@@ -225,11 +235,13 @@ public class Aplicacao {
 
 			switch (opcao) {
 
-			case 1: ListarPessoalCabine();
+			case 1:
+				ListarPessoalCabine();
 				break;
 			case 2: // função para editar cabine
 				break;
-			case 3: AdicionarPessoalCabine();
+			case 3:
+				AdicionarPessoalCabine();
 				break;
 			case 4: // função para eliminar cabine
 				break;
@@ -241,11 +253,15 @@ public class Aplicacao {
 				break;
 			case 8: // função para eliminar pilotos
 				break;
-			default: System.out.println("Opcão inválida");
+			case 9:
+				MenuPrincipal();
+				break;
+			default:
+				System.out.println("Opcão inválida");
 			}
-		} while (opcao != 8);
+		} while (opcao != 9);
 	}
-	
+
 	public void MenuEditarVoos() {
 
 		int opcao;
@@ -286,21 +302,22 @@ public class Aplicacao {
 				break;
 			case 9:
 				break;
+			case 10:ApresentarMenuVoo();
+				break;
 			default:
 				System.out.println("Opção Inválida");
 
 			}
-		} while (opcao != 9);
+		} while (opcao != 10);
 	}
-	
+
 	/*
 	 * 
 	 * CONTROLO DE FUNÇÕES
 	 * 
 	 */
-	
-	
-	private void AdicionarPassageiros(){
+
+	private void AdicionarPassageiros() {
 
 		Passageiros passageiro = new Passageiros();
 
@@ -339,7 +356,6 @@ public class Aplicacao {
 		GravarFicheirosPass();
 
 	}
-	
 
 	private void EliminarPassageiros() {
 
@@ -430,14 +446,14 @@ public class Aplicacao {
 	 * CONTROLO DE PESSOAL CABINE
 	 * 
 	 */
-	
+
 	public void AdicionarPessoalCabine() {
-		
+
 		Tripulacao tripulacao = new Tripulacao();
-		
+
 		System.out.println("Identidade do funcionário:");
 		tripulacao.setId(ler.next());
-		
+
 		System.out.println("Nome do funcionário:");
 		tripulacao.setNome(ler.next());
 
@@ -466,14 +482,14 @@ public class Aplicacao {
 
 		System.out.println("Tripulante adicionado com sucesso!");
 		System.out.println("");
-		
-		//Gravar ficheiros tripulação
-		
+
+		// Gravar ficheiros tripulação
+
 		ApresentarMenuTripulação();
 	}
-	
+
 	public void ListarPessoalCabine() {
-		
+
 		if (tripulacao.isEmpty()) {
 			System.out.println("Não existem tripulantes de cabine registrados!");
 		} else {
@@ -484,9 +500,9 @@ public class Aplicacao {
 			ApresentarMenuTripulação();
 		}
 	}
-	
+
 	public void ElminarCabine() {
-		
+
 		Tripulacao eliminarCabine = null;
 		String nomeCabine;
 
@@ -504,15 +520,14 @@ public class Aplicacao {
 
 			System.out.println("Tripulante eliminado com sucesso!");
 		}
-		
-		
+
 	}
 	/*
 	 * 
 	 * CONTROLO DE VOOS
 	 * 
 	 */
-	
+
 	public void EliminarVoos() {
 
 		Voo eliminarVoo = null;
@@ -533,7 +548,7 @@ public class Aplicacao {
 			System.out.println("Voo eliminado com sucesso!");
 		}
 	}
-	
+
 	public void AdicionarVoos() {
 
 		Voo voo = new Voo();
@@ -635,7 +650,6 @@ public class Aplicacao {
 	 * 
 	 */
 
-
 	public void LerFicheirosVoos() {
 
 		// Agora vou abrir os Reader
@@ -670,9 +684,8 @@ public class Aplicacao {
 			System.out.println(Ex.getMessage());
 		}
 	}
-	
-	public void LerFicheirosPassageiros() {
 
+	public void LerFicheirosPassageiros() {
 
 		// Agora vou abrir os Reader
 		try {
@@ -726,10 +739,12 @@ public class Aplicacao {
 
 				if (voos.isEmpty()) {
 					caneta.write("");
-					caneta.close();
+
 				} else {
 
 					for (Voo voo : voos) {
+						linha = "";
+
 						linha += voo.getnVoo() + "|";
 						linha += voo.getAviao() + "|";
 						linha += voo.getAeroOrigem() + "|";
@@ -740,10 +755,8 @@ public class Aplicacao {
 						linha += voo.getHoraDeChegada() + "|\n";
 						caneta.write(linha);
 					}
-
-					caneta.close();
 				}
-
+				caneta.close();
 			} catch (IOException Ex) {
 				{
 					System.out.println(Ex.getMessage());
@@ -770,7 +783,7 @@ public class Aplicacao {
 
 				if (passageiros.isEmpty()) {
 					caneta.write("");
-					
+
 				} else {
 
 					for (Passageiros passageiros : passageiros) {
@@ -783,11 +796,11 @@ public class Aplicacao {
 						linha += passageiros.getEmail() + "|";
 						linha += passageiros.getTipoBilhete() + "|";
 						linha += passageiros.getLugarReservado() + "|\n";
-						
+
+						caneta.write(linha);
 					}
-					caneta.write(linha);
-					caneta.close();
 				}
+				caneta.close();
 
 			} catch (IOException Ex) {
 				{
@@ -799,7 +812,4 @@ public class Aplicacao {
 
 	}
 
-	
-	
-	
 }
