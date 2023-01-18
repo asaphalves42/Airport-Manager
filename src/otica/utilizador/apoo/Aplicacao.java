@@ -389,39 +389,40 @@ public class Aplicacao {
 		for (Passageiros passageiros : passageiros) {
 			if (idPass.equals(passageiros.getId())) {
 				editarPassageiro = passageiros;
+				
+				System.out.println("Insira o novo número de identidade do passageiro:");
+				editarPassageiro.setId(ler.next());
+
+				System.out.println("Insira o novo nome do passageiro:");
+				editarPassageiro.setNome(ler.next());
+
+				System.out.println("Insira a nova nacionalidade:");
+				editarPassageiro.setNacionalidade(ler.next());
+
+				System.out.println("Insira a nova morada:");
+				editarPassageiro.setMorada(ler.next());
+
+				System.out.println("Insira o novo telefone:");
+				editarPassageiro.setTelefone(ler.nextInt());
+
+				System.out.println("Insira a nova data de nascimento:");
+				editarPassageiro.setDataDeNascimento(ler.next());
+
+				System.out.println("Insira o novo e-mail:");
+				editarPassageiro.setEmail(ler.next());
+
+				System.out.println("Insira o novo tipo de bilhete:");
+				editarPassageiro.setTipoBilhete(ler.next());
+
+				System.out.println("Insira o novo lugar reservado:");
+				editarPassageiro.setLugarReservado(ler.next());
+
 			} else {
 				System.out.println("Passageiro não encontrado!");
 
 				ApresentarMenuPassageiro();
 			}
 		}
-
-		System.out.println("Insira o novo número de identidade do passageiro:");
-		editarPassageiro.setId(ler.next());
-
-		System.out.println("Insira o novo nome do passageiro:");
-		editarPassageiro.setNome(ler.next());
-
-		System.out.println("Insira a nova nacionalidade:");
-		editarPassageiro.setNacionalidade(ler.next());
-
-		System.out.println("Insira a nova morada:");
-		editarPassageiro.setMorada(ler.next());
-
-		System.out.println("Insira o novo telefone:");
-		editarPassageiro.setTelefone(ler.nextInt());
-
-		System.out.println("Insira a nova data de nascimento:");
-		editarPassageiro.setDataDeNascimento(ler.next());
-
-		System.out.println("Insira o novo e-mail:");
-		editarPassageiro.setEmail(ler.next());
-
-		System.out.println("Insira o novo tipo de bilhete:");
-		editarPassageiro.setTipoBilhete(ler.next());
-
-		System.out.println("Insira o novo lugar reservado:");
-		editarPassageiro.setLugarReservado(ler.next());
 
 		ApresentarMenuVoo();
 
@@ -610,6 +611,37 @@ public class Aplicacao {
 		for (Voo voo : voos) {
 			if (numeroVoo.equals(voo.getnVoo())) {
 				editarVoo = voo;
+				
+				System.out.println("Insira o novo número do voo:");
+				editarVoo.setnVoo(ler.next());
+
+				System.out.println("Insira o novo número do avião:");
+				editarVoo.setAviao(ler.next());
+
+				System.out.println("Insira o novo aeroporto de origem:");
+				editarVoo.setAeroOrigem(ler.next());
+
+				System.out.println("Insira o novo aeroporto de destino:");
+				editarVoo.setAeroDestino(ler.next());
+
+				System.out.println("Insira a nova data de partida:");
+				editarVoo.setDataDePartida(ler.next());
+
+				System.out.println("Insira a nova data de chegada:");
+				editarVoo.setDataDeChegada(ler.next());
+
+				System.out.println("Insira a nova hora de partida:");
+				editarVoo.setHoraDePartida(ler.next());
+
+				System.out.println("Insira a nova hora de chegada:");
+				editarVoo.setHoraDeChegada(ler.next());
+				
+				System.out.println("Editado com sucesso!");
+				
+				GravarFicheirosVoos();
+
+				ApresentarMenuPassageiro();
+				
 			} else {
 				System.out.println("Voo não encontrado!");
 
@@ -617,31 +649,7 @@ public class Aplicacao {
 			}
 		}
 
-		System.out.println("Insira o novo número do voo:");
-		editarVoo.setnVoo(ler.next());
-
-		System.out.println("Insira o novo número do avião:");
-		editarVoo.setAviao(ler.next());
-
-		System.out.println("Insira o novo aeroporto de origem:");
-		editarVoo.setAeroOrigem(ler.next());
-
-		System.out.println("Insira o novo aeroporto de destino:");
-		editarVoo.setAeroDestino(ler.next());
-
-		System.out.println("Insira a nova data de partida:");
-		editarVoo.setDataDePartida(ler.next());
-
-		System.out.println("Insira a nova data de chegada:");
-		editarVoo.setDataDeChegada(ler.next());
-
-		System.out.println("Insira a nova hora de partida:");
-		editarVoo.setHoraDePartida(ler.next());
-
-		System.out.println("Insira a nova hora de chegada:");
-		editarVoo.setHoraDeChegada(ler.next());
-
-		ApresentarMenuPassageiro();
+		
 	}
 
 	/*
