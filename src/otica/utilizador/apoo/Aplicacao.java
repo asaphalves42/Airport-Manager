@@ -238,12 +238,14 @@ public class Aplicacao {
 			case 1:
 				ListarPessoalCabine();
 				break;
-			case 2: // função para editar cabine
+			case 2:
+				EditarCabine();
 				break;
 			case 3:
 				AdicionarPessoalCabine();
 				break;
-			case 4: // função para eliminar cabine
+			case 4:
+				ElminarCabine();
 				break;
 			case 5: // função para listar pilotos
 				break;
@@ -302,7 +304,8 @@ public class Aplicacao {
 				break;
 			case 9:
 				break;
-			case 10:ApresentarMenuVoo();
+			case 10:
+				ApresentarMenuVoo();
 				break;
 			default:
 				System.out.println("Opção Inválida");
@@ -389,7 +392,7 @@ public class Aplicacao {
 		for (Passageiros passageiros : passageiros) {
 			if (idPass.equals(passageiros.getId())) {
 				editarPassageiro = passageiros;
-				
+
 				System.out.println("Insira o novo número de identidade do passageiro:");
 				editarPassageiro.setId(ler.next());
 
@@ -523,6 +526,59 @@ public class Aplicacao {
 		}
 
 	}
+
+	public void EditarCabine() {
+
+		Tripulacao editarTripulante = new Tripulacao();
+		String idTripulante;
+
+		System.out.println("Insira o número de identidade do passageiro:");
+		idTripulante = ler.next();
+
+		for (Tripulacao tripulacao : tripulacao) {
+			if (idTripulante.equals(tripulacao.getId())) {
+				editarTripulante = tripulacao;
+
+				System.out.println("Insira o novo número de identidade do tripulante:");
+				editarTripulante.setId(ler.next());
+
+				System.out.println("Insira o novo nome do tripulante:");
+				editarTripulante.setNome(ler.next());
+
+				System.out.println("Insira a nova nacionalidade:");
+				editarTripulante.setNacionalidade(ler.next());
+
+				System.out.println("Insira a nova morada:");
+				editarTripulante.setMorada(ler.next());
+
+				System.out.println("Insira o novo telefone:");
+				editarTripulante.setTelefone(ler.nextInt());
+
+				System.out.println("Insira a nova data de nascimento:");
+				editarTripulante.setDataDeNascimento(ler.next());
+
+				System.out.println("Insira a nova licença:");
+				editarTripulante.setnLincenca(ler.nextInt());
+
+				System.out.println("Insira a nova data de validade:");
+				editarTripulante.setDataDeValidade(ler.next());
+
+				System.out.println("Insira as novas anotações:");
+				editarTripulante.setAnotacoes(ler.next());
+
+				System.out.println("Insira a nova categoria:");
+				editarTripulante.setCategoria(ler.next());
+
+				System.out.println("Editado com sucesso!");
+
+			} else {
+				System.out.println("Tripulante não encontrado não encontrado!");
+
+				ApresentarMenuPassageiro();
+			}
+		}
+	}
+
 	/*
 	 * 
 	 * CONTROLO DE VOOS
@@ -611,7 +667,7 @@ public class Aplicacao {
 		for (Voo voo : voos) {
 			if (numeroVoo.equals(voo.getnVoo())) {
 				editarVoo = voo;
-				
+
 				System.out.println("Insira o novo número do voo:");
 				editarVoo.setnVoo(ler.next());
 
@@ -635,13 +691,13 @@ public class Aplicacao {
 
 				System.out.println("Insira a nova hora de chegada:");
 				editarVoo.setHoraDeChegada(ler.next());
-				
+
 				System.out.println("Editado com sucesso!");
-				
+
 				GravarFicheirosVoos();
 
 				ApresentarMenuPassageiro();
-				
+
 			} else {
 				System.out.println("Voo não encontrado!");
 
@@ -649,7 +705,6 @@ public class Aplicacao {
 			}
 		}
 
-		
 	}
 
 	/*
