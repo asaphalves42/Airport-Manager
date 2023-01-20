@@ -1,12 +1,12 @@
 package avioes.apoo.app;
 
 public class Aeronave {
-	private int nRegistro;
+	private String nRegistro;
 	private String marcaEmodelo;
 	private int NlugaresTuristica;
 	private int NlugaresExecutiva;
 	
-	public Aeronave(int nRegistro, String marcaEmodelo, int nlugaresTuristica, int nlugaresExecutiva) {
+	public Aeronave(String nRegistro, String marcaEmodelo, int nlugaresTuristica, int nlugaresExecutiva) {
 		super();
 		this.nRegistro = nRegistro;
 		this.marcaEmodelo = marcaEmodelo;
@@ -14,11 +14,15 @@ public class Aeronave {
 		NlugaresExecutiva = nlugaresExecutiva;
 	}
 
-	public int getnRegistro() {
+	public Aeronave() {
+		
+	}
+
+	public String getnRegistro() {
 		return nRegistro;
 	}
 
-	public void setnRegistro(int nRegistro) {
+	public void setnRegistro(String nRegistro) {
 		this.nRegistro = nRegistro;
 	}
 
@@ -44,6 +48,12 @@ public class Aeronave {
 
 	public void setNlugaresExecutiva(int nlugaresExecutiva) {
 		NlugaresExecutiva = nlugaresExecutiva;
+	}
+
+	@Override
+	public String toString() {
+		return "Aeronaves [\nNúmero de registro: " + nRegistro + "\nMarca/modelo: " + marcaEmodelo + "\nNúmero de lugares turística: "
+				+ NlugaresTuristica + "\nNúmero de lugares executiva: " + NlugaresExecutiva + "]" + "\n----------------------------------";
 	}
 	
 	
