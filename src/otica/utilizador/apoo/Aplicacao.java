@@ -1370,7 +1370,7 @@ public class Aplicacao {
 	}
 
 	public void GravarFicheirosTripulantes() {
-
+		/*
 		String resposta;
 
 		System.out.println("Queres salvar as altereções (S/N)?");
@@ -1415,7 +1415,7 @@ public class Aplicacao {
 
 			}
 		}
-
+*/
 	}
 
 }
