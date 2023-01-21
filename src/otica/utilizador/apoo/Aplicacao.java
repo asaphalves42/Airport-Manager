@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import avioes.apoo.app.Aeronave;
+import avioes.apoo.app.Aeroporto;
 import avioes.apoo.app.Passageiros;
 import avioes.apoo.app.Tripulacao;
 import avioes.apoo.app.Voo;
@@ -25,18 +26,18 @@ public class Aplicacao {
 
 	public void Iniciar() {
 		LerFicheirosVoos();
-		LerFicheirosPassageiros();
+		// LerFicheirosPassageiros();
 		LerFicheirosAeroporto();
 		// LerFicheirosAeronave();
 
-		System.out.println("Bem vindo a aplicaï¿½ï¿½o para companhia aï¿½rea");
+		System.out.println("Bem vindo a aplicação para companhia aérea");
 		LerCompanhiaAerea();
 		MenuPrincipal();
 
 	}
 
 	public void LerCompanhiaAerea() {
-		System.out.println("Qual a companhia aï¿½rea?");
+		System.out.println("Qual a companhia aérea?");
 
 		companhia = ler.next();
 
@@ -49,24 +50,25 @@ public class Aplicacao {
 	 */
 
 	public void MenuPrincipal() {
-		// Funï¿½ï¿½o que mostra ao utilizador o menu principal
+		// Funcao que mostra ao utilizador o menu principal
 		int opcao;
 
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e repetiï¿½ï¿½o
+		// escolher as opcoes do menu consoante ao que o utilizador deseja, e repeticao
 		// do menu
 		do {
 
 			System.out.println("");
 			System.out.println("## Menu principal ##");
 			System.out.println("Companhia selecionada: " + companhia);
-			System.out.println("Selecione uma opï¿½ï¿½o:");
+			System.out.println("Selecione uma opção:");
 
 			System.out.println("1 - Voos");
 			System.out.println("2 - Passageiros");
-			System.out.println("3 - Tripulaï¿½ï¿½o");
+			System.out.println("3 - Tripulação");
 			System.out.println("4 - Aeronaves");
 			System.out.println("5 - Aeroportos");
-			System.out.println("6 - Fechar");
+			System.out.println("6 - Estatísticas");
+			System.out.println("7 - Fechar");
 
 			opcao = ler.nextInt();
 
@@ -93,22 +95,26 @@ public class Aplicacao {
 				break;
 
 			case 6:
+				Estatisticas();
+				break;
+
+			case 7:
 
 				break;
 
 			default:
-				System.out.println("Opï¿½ï¿½o Invï¿½lida");
+				System.out.println("Opção inválida");
 				break;
 
 			}
-		} while (opcao != 6);
+		} while (opcao != 7);
 	}
 
 	public void ApresentarMenuVoo() {
 
 		int opcao;
 
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e repetiï¿½ï¿½o
+		// escolher as opcoes do menu consoante ao que o utilizador deseja, e repeticao
 		// do menu
 		do {
 
@@ -137,7 +143,7 @@ public class Aplicacao {
 				MenuPrincipal();
 
 			default:
-				System.out.println("Opcï¿½o invï¿½lida!");
+				System.out.println("Opção inválida!");
 				break;
 
 			}
@@ -149,13 +155,14 @@ public class Aplicacao {
 
 		int opcao;
 
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e repetiï¿½ï¿½o
+		// escolher as opcoes do menu consoante ao que o utilizador deseja, e repeticao
 		// do menu
 		do {
 			System.out.println("1 - Listar por datas");
 			System.out.println("2 - Listar por rotas");
 			System.out.println("3 - Listar todos os voos");
-			System.out.println("4 - Voltar ao menu anterior");
+			System.out.println("4 - Listar voo por número");
+			System.out.println("5 - Voltar ao menu anterior");
 
 			opcao = ler.nextInt();
 
@@ -164,27 +171,31 @@ public class Aplicacao {
 			case 1: // funcao para listar por datas
 				break;
 			case 2:
-				// Funï¿½ï¿½o para listar por rotas
+				// Funcao para listar por rotas
 				break;
 			case 3:
 				ListarVoos();
 				break;
 			case 4:
+				ListarVoosPorNumero();
+				break;
+			case 5:
 				ApresentarMenuVoo();
 				break;
 			default:
-				System.out.println("Opcï¿½o invï¿½lida");
+				System.out.println("Opção inválida");
 				break;
 			}
 
-		} while (opcao != 3);
+		} while (opcao != 5);
 	}
 
 	public void ApresentarMenuPassageiro() {
 
 		int opcao;
 
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e repetiï¿½ï¿½o
+		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e
+		// repetiï¿½ï¿½o
 		// do menu
 		do {
 			System.out.println("1 - Listar passageiros");
@@ -211,12 +222,13 @@ public class Aplicacao {
 				EliminarPassageiros();
 				break;
 			case 5:
-				//Funcao para mostrar a media dos passageiros
+				// Funcao para mostrar a media dos passageiros
 				break;
 			case 6:
 				MenuPrincipal();
 				break;
-				default:System.out.println("Opï¿½ï¿½o invï¿½lida");
+			default:
+				System.out.println("Opï¿½ï¿½o invï¿½lida");
 			}
 		} while (opcao != 6);
 	}
@@ -224,7 +236,8 @@ public class Aplicacao {
 	public void MenuListaPassageiros2() {
 
 		int opcao;
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e repetiï¿½ï¿½o
+		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e
+		// repetiï¿½ï¿½o
 		// do menu
 		do {
 			System.out.println("1 - Listar passageiros por voo");
@@ -245,7 +258,7 @@ public class Aplicacao {
 				// Funï¿½ï¿½o para apresentar voos em um dia
 				break;
 			case 4:
-				//Funï¿½ï¿½o para listar passageiros num intervalo de datas
+				// Funï¿½ï¿½o para listar passageiros num intervalo de datas
 				break;
 			case 5:
 				ApresentarMenuPassageiro();
@@ -261,7 +274,8 @@ public class Aplicacao {
 
 		int opcao;
 
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e repetiï¿½ï¿½o
+		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e
+		// repetiï¿½ï¿½o
 		// do menu
 		do {
 			System.out.println("1 - Listar pessoal cabine");
@@ -299,7 +313,8 @@ public class Aplicacao {
 
 		int opcao;
 
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e repetiï¿½ï¿½o
+		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e
+		// repetiï¿½ï¿½o
 		// do menu
 		System.out.println("## Selecione uma opï¿½ï¿½o ##");
 
@@ -340,7 +355,8 @@ public class Aplicacao {
 
 		int opcao;
 
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e repetiï¿½ï¿½o
+		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e
+		// repetiï¿½ï¿½o
 		// do menu
 
 		do {
@@ -382,11 +398,11 @@ public class Aplicacao {
 
 	/*
 	 * 
-	 * CONTROLO DE FUNï¿½ï¿½ES
+	 * CONTROLO DE FUNCOES
 	 * 
 	 */
 
-	// Funï¿½ï¿½o para adicionar passageiros
+	// Funcao para adicionar passageiros
 	public void AdicionarPassageiros() {
 
 		// Crio um objeto do tipo passageiro, e adiciono os dados
@@ -810,8 +826,8 @@ public class Aplicacao {
 		Voo editarVoo = new Voo();
 		String numeroVoo;
 
-		// Pergunto ao utilizador os nï¿½mero do voo
-		System.out.println("Insira o nï¿½mero do voo:");
+		// Pergunto ao utilizador os numero do voo
+		System.out.println("Insira o número do voo:");
 		numeroVoo = ler.next();
 
 		// Percorro o array, encontro os dados e altero
@@ -855,8 +871,8 @@ public class Aplicacao {
 				ApresentarMenuPassageiro();
 
 			} else {
-				// Se nï¿½o encontrar, mostro a mensagem
-				System.out.println("Voo nï¿½o encontrado!");
+				// Se nao encontrar, mostro a mensagem
+				System.out.println("Voo não encontrado!");
 				System.out.println(" ");
 
 				ApresentarMenuVoo();
@@ -865,13 +881,37 @@ public class Aplicacao {
 
 	}
 
+	//Funcao para listar voo por número
+	public void ListarVoosPorNumero() {
+
+		Voo listarVoo = new Voo();
+
+		String opcao;
+		//Peco ao utilizador o número do voo
+		System.out.println("Insira o número do voo:");
+		opcao = ler.next();
+		
+		//Percorro o array para ver se encontro
+		for (Voo voo : voos) {
+			//se sim
+			if (opcao.equals(voo.getnVoo())) {
+				listarVoo = voo;
+			}
+
+		}
+		//mostro o voo
+		System.out.println(listarVoo);
+
+		MenuVoo2();
+	}
+
 	/*
 	 * 
 	 * CONTROLO DE AERONAVES
 	 * 
 	 */
 
-	// Funï¿½ï¿½o para adicionar aeronaves
+	// Funcao para adicionar aeronaves
 	public void AdicionarAaeronaves() {
 
 		Aeronave aeronaves = new Aeronave();
@@ -997,6 +1037,32 @@ public class Aplicacao {
 			}
 		}
 
+	}
+
+	/*
+	 * 
+	 * CONTROLO DE ESTATISTICAS
+	 * 
+	 */
+
+	//Mostrar as estatísticas
+	public void Estatisticas() {
+
+		int opcao;
+		do {
+			System.out.println("## Selecione uma opcão ##");
+			System.out.println("1 - Média de passageiros em um dia");
+
+			opcao = ler.nextInt();
+
+			switch (opcao) {
+			case 1:// media
+				break;
+			}
+
+		} while (opcao != 1);
+
+		MenuPrincipal();
 	}
 
 	/*
