@@ -167,10 +167,10 @@ public class Aplicacao {
 			switch (opcao) {
 
 			case 1: // funcao para listar por datas
-				FiltraVoosPorData();
+				FiltrarVoosPorData();
 				break;
 			case 2:	// Fun��o para listar por 
-				FilraVoosPorRota();
+				FilrarVoosPorRota();
 				break;
 			case 3:
 				ListarVoos();
@@ -871,7 +871,7 @@ public class Aplicacao {
 
 	}
 
-	public void FiltraVoosPorData() {
+	public void FiltrarVoosPorData() {
         LocalDate dataInicioPesquisa;
         LocalDate dataFimPesquisa;
 		        
@@ -888,7 +888,7 @@ public class Aplicacao {
         }
 	}
 	
-	public void FilraVoosPorRota() {
+	public void FilrarVoosPorRota() {
 		String aeroportoOrigem;
 		String aeroportoDestino;
 		
