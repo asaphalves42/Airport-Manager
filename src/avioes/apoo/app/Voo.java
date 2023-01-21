@@ -1,17 +1,21 @@
 package avioes.apoo.app;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Voo {
 	
 	private String nVoo;
 	private String aviao;
 	private String aeroOrigem;
 	private String aeroDestino;
-	private String dataDePartida;
-	private String dataDeChegada;
+	private LocalDate dataDePartida;
+	private LocalDate dataDeChegada;
 	private String horaDePartida;
 	private String horaDeChegada;
 	
-	public Voo(String nVoo, String aviao, String aeroOrigem, String aeroDestino, String dataDePartida,String dataDeChegada,  
+	public Voo(String nVoo, String aviao, String aeroOrigem, String aeroDestino, LocalDate dataDePartida,LocalDate dataDeChegada,  
 			String horaDePartida, String horaDeChegada) {
 		super();
 		this.nVoo = nVoo;
@@ -62,19 +66,19 @@ public class Voo {
 		this.aeroDestino = aeroDestino;
 	}
 
-	public String getDataDePartida() {
+	public LocalDate getDataDePartida() {
 		return dataDePartida;
 	}
 
-	public void setDataDePartida(String dataDePartida) {
+	public void setDataDePartida(LocalDate dataDePartida) {
 		this.dataDePartida = dataDePartida;
 	}
 
-	public String getDataDeChegada() {
+	public LocalDate getDataDeChegada() {
 		return dataDeChegada;
 	}
 
-	public void setDataDeChegada(String dataDeChegada) {
+	public void setDataDeChegada(LocalDate dataDeChegada) {
 		this.dataDeChegada = dataDeChegada;
 	}
 
@@ -93,10 +97,11 @@ public class Voo {
 	public void setHoraDeChegada(String horaDeChegada) {
 		this.horaDeChegada = horaDeChegada;
 	}
-
+	
+	
 	@Override
 	public String toString() {
-		return "Voos[\nVoo: " + nVoo + " \nNúmero do avião: " + aviao + " \nAeroporto de origem: " + aeroOrigem + " \nAeroporto de destino: "
+		return "Voos[\nVoo: " + nVoo + " \nNï¿½mero do aviï¿½o: " + aviao + " \nAeroporto de origem: " + aeroOrigem + " \nAeroporto de destino: "
 				+ aeroDestino + " \nData de partida: " + dataDePartida + " \nData de chegada: " + dataDeChegada
 				+ " \nHora de partida: " + horaDePartida + " \nHora de chegada: " + horaDeChegada + "]\n" + 
 				"--------------------------------------------------------------------";
