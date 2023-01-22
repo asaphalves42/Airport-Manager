@@ -20,16 +20,11 @@ public class Aplicacao {
 
 	Scanner ler = new Scanner(System.in);
 
-
 	ArrayList<Voo> voos = new ArrayList<>();
 	ArrayList<Aeronave> aeronave = new ArrayList<>();
 	ArrayList<Aeroporto> aeroporto = new ArrayList<>();
-<<<<<<< HEAD
-=======
 	ArrayList<Tripulacao> tripulacao = new ArrayList<>();
 	ArrayList<Passageiros> passageiros = new ArrayList<>();
-
->>>>>>> 46407c2614cbe23a542ec91e8ff5207318c02436
 
 	public void Iniciar() {
 		LerFicheirosVoos();
@@ -81,8 +76,8 @@ public class Aplicacao {
 			System.out.println("7 - Fechar");
 
 			opcao = ler.nextInt();
-			
-			//chamar a funcao especifica a que o utilizador usar
+
+			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 
 			case 1:
@@ -139,7 +134,7 @@ public class Aplicacao {
 
 			opcao = ler.nextInt();
 
-			//chamar a funcao especifica a que o utilizador usar
+			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 			case 1:
 				MenuVoo2();
@@ -180,12 +175,11 @@ public class Aplicacao {
 			System.out.println("5 - Voltar ao menu anterior");
 
 			opcao = ler.nextInt();
-				
-			
-			//chamar a funcao especifica a que o utilizador usar
+
+			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 
-			case 1: 
+			case 1:
 				FiltrarVoosPorData();
 				break;
 			case 2:
@@ -226,7 +220,7 @@ public class Aplicacao {
 
 			opcao = ler.nextInt();
 
-			//chamar a funcao especifica a que o utilizador usar
+			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 
 			case 1:
@@ -271,7 +265,7 @@ public class Aplicacao {
 
 			opcao = ler.nextInt();
 
-			//chamar a funcao especifica a que o utilizador usar
+			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 			case 1: // funcao para listar por voo
 				break;
@@ -310,7 +304,7 @@ public class Aplicacao {
 
 			opcao = ler.nextInt();
 
-			//chamar a funcao especifica a que o utilizador usar
+			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 
 			case 1:
@@ -329,7 +323,7 @@ public class Aplicacao {
 				MenuPrincipal();
 				break;
 			default:
-				System.out.println("OpcÃ£o invÃ¡lida");
+				System.out.println("OpcÃ£o inválida");
 			}
 		} while (opcao != 5);
 	}
@@ -353,7 +347,7 @@ public class Aplicacao {
 
 			opcao = ler.nextInt();
 
-			//chamar a funcao especifica a que o utilizador usar
+			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 
 			case 1:
@@ -372,7 +366,7 @@ public class Aplicacao {
 				MenuPrincipal();
 				break;
 			default:
-				System.out.println("OpÃ§Ã£o invÃ¡lida!");
+				System.out.println("Opção inválida!");
 			}
 		} while (opcao != 5);
 	}
@@ -397,7 +391,7 @@ public class Aplicacao {
 
 			opcao = ler.nextInt();
 
-			//chamar a funcao especifica a que o utilizador usar
+			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 			case 1:
 				AdicionarAaeroporto();
@@ -434,7 +428,7 @@ public class Aplicacao {
 
 		// Crio um objeto do tipo passageiro, e adiciono os dados
 		Passageiros passageiro = new Passageiros();
-		
+
 		System.out.println("Indique o nÂº do Voo:");
 		passageiro.setnVoo(ler.next());
 
@@ -520,11 +514,11 @@ public class Aplicacao {
 		// percorro o array para ver se existe os dados inseridos
 		for (Passageiros passageiros : passageiros) {
 			if (idPass.equals(passageiros.getId())) {
-				
+
 				// edito todos os campos
 				System.out.println("Indique o nÂº do Voo:");
 				passageiros.setnVoo(ler.next());
-				
+
 				System.out.println("Insira o novo nÃºmero de identidade do passageiro:");
 				passageiros.setId(ler.next());
 
@@ -597,7 +591,7 @@ public class Aplicacao {
 	public void AdicionarPessoalCabine() {
 		// Preencho os dados
 		Tripulacao tripulacao = new Tripulacao();
-		
+
 		System.out.println("Indique o nÂº do Voo:");
 		tripulacao.setnVoo(ler.next());
 
@@ -697,7 +691,6 @@ public class Aplicacao {
 	// Funcao para editar os dados de um tripulante
 	public void EditarCabine() {
 
-		
 		String idTripulante;
 
 		// Pergunto ao utilizador a identidade do tripulante
@@ -707,12 +700,11 @@ public class Aplicacao {
 		// Percorro o array para encontrar o id
 		for (Tripulacao tripulacao : tripulacao) {
 			if (idTripulante.equals(tripulacao.getId())) {
-				
 
 				// Edito os dados
 				System.out.println("Indique o nÂº do Voo:");
 				tripulacao.setnVoo(ler.next());
-				
+
 				System.out.println("Insira o novo nÃºmero de identidade do tripulante:");
 				tripulacao.setId(ler.next());
 
@@ -863,7 +855,6 @@ public class Aplicacao {
 		Voo editarVoo = new Voo();
 		String numeroVoo;
 
-
 		// Pergunto ao utilizador os numero do voo
 		System.out.println("Insira o número do voo:");
 
@@ -928,7 +919,6 @@ public class Aplicacao {
 
 	}
 
-	
 	// Funcao para listar voo por número
 	public void ListarVoosPorNumero() {
 
@@ -941,7 +931,7 @@ public class Aplicacao {
 
 		// Percorro o array para ver se encontro
 		for (Voo voo : voos) {
-<<<<<<< HEAD
+
 			// se sim
 			if (opcao.equals(voo.getnVoo())) {
 				listarVoo = voo;
@@ -953,8 +943,6 @@ public class Aplicacao {
 
 		MenuVoo2();
 	}
-
-
 
 	public void FiltrarVoosPorData() {
 		LocalDate dataInicioPesquisa;
@@ -969,10 +957,14 @@ public class Aplicacao {
 		for (Voo voo : voos) {
 			if (voo.getDataDePartida().isAfter(dataInicioPesquisa)
 					&& voo.getDataDeChegada().isBefore(dataFimPesquisa)) {
-=======
-			if (voo.getAeroOrigem().equalsIgnoreCase(aeroportoOrigem) && (voo.getAeroDestino().equalsIgnoreCase(aeroportoDestino))) {
->>>>>>> 46407c2614cbe23a542ec91e8ff5207318c02436
-				System.out.println(voo);
+
+				String aeroportoDestino = null;
+				String aeroportoOrigem = null;
+				if (voo.getAeroOrigem().equalsIgnoreCase(aeroportoOrigem)
+						&& (voo.getAeroDestino().equalsIgnoreCase(aeroportoDestino))) {
+
+					System.out.println(voo);
+				}
 			}
 		}
 	}
@@ -994,7 +986,6 @@ public class Aplicacao {
 		}
 	}
 
-	
 	/*
 	 * 
 	 * CONTROLO DE AERONAVES
@@ -1349,8 +1340,8 @@ public class Aplicacao {
 				String tipoBilhete = partes[8];
 				String lugarReservado = partes[9];
 
-				Passageiros passageiros = new Passageiros(id, nVoo, nome, nacionalidade, morada, telefone, dataDeNascimento,
-						email, tipoBilhete, lugarReservado);
+				Passageiros passageiros = new Passageiros(id, nVoo, nome, nacionalidade, morada, telefone,
+						dataDeNascimento, email, tipoBilhete, lugarReservado);
 
 				this.passageiros.add(passageiros);
 
@@ -1607,21 +1598,21 @@ public class Aplicacao {
 				String[] partes = linha.split("\\|");
 
 				String id = partes[0];
-				String nVoo = partes [1];
-		        String nome = partes[2];
-		        String nacionalidade = partes[3];
-		        String morada = partes[4];
-		        int telefone = Integer.parseInt(partes[5]);
-		        String dataDeNascimento = partes[6];
-		        int nLincenca = Integer.parseInt(partes[7]);
-		        String dataDeValidade = partes[8];
-		        String anotacoes = partes[9];
-		        String categoria = partes[10];
+				String nVoo = partes[1];
+				String nome = partes[2];
+				String nacionalidade = partes[3];
+				String morada = partes[4];
+				int telefone = Integer.parseInt(partes[5]);
+				String dataDeNascimento = partes[6];
+				int nLincenca = Integer.parseInt(partes[7]);
+				String dataDeValidade = partes[8];
+				String anotacoes = partes[9];
+				String categoria = partes[10];
 
-		        Tripulacao tripulantes = new Tripulacao(id, nVoo, nome, nacionalidade, morada,
-		            telefone, dataDeNascimento, nLincenca, dataDeValidade, anotacoes, categoria );
+				Tripulacao tripulantes = new Tripulacao(id, nVoo, nome, nacionalidade, morada, telefone,
+						dataDeNascimento, nLincenca, dataDeValidade, anotacoes, categoria);
 
-		        this.tripulacao.add(tripulantes);
+				this.tripulacao.add(tripulantes);
 
 			}
 
@@ -1629,48 +1620,48 @@ public class Aplicacao {
 
 		} catch (IOException Ex) {
 			System.out.println(Ex.getMessage());
-		}			
+		}
 	}
 
 	// Funcao para guardar os dados no ficheiro
 	public void GravarFicheirosTripulantes() {
-		
-		 String resposta;
-		 
-		 System.out.println("Queres salvar as altereï¿½ï¿½es (S/N)?"); 
-		 resposta = ler.next();
-		 
-		 if (resposta.equals("S") || resposta.equals("s")) {		 
-			 try { 
-				 // Abrir o FileWriter, Buffered Writer 
-				 FileWriter fw = new FileWriter("C:\\Users\\asaph\\Desktop\\Aero\\Teste2.txt"); 
-				 BufferedWriter caneta = new BufferedWriter(fw); 
-				 String linha = "";
-		 
-				 if (tripulacao.isEmpty()) { 
-					 caneta.write("");		
-				 } else {		 
-					 for (Tripulacao tripulantes : tripulacao) { 
-						 linha = "";
-					 	 linha += tripulantes.getId() + "|"; 
-					 	 linha += tripulantes.getnVoo() + "|";
-					 	 linha += tripulantes.getNome() + "|";
-					 	 linha += tripulantes.getNacionalidade() + "|"; 
-					 	 linha += tripulantes.getMorada() + "|"; 
-					 	 linha += tripulantes.getTelefone() + "|";
-					 	 linha += tripulantes.getDataDeNascimento() + "|"; 
-					 	 linha += tripulantes.getnLincenca() + "|"; 
-					 	 linha += tripulantes.getDataDeValidade() + "|"; 
-					 	 linha += tripulantes.getAnotacoes() + "|"; 
-					 	 linha += tripulantes.getCategoria() + "|\n";		 
-					 	 caneta.write(linha); 
-				 	 } 
-				 } 
-				 caneta.close();		 
-			 } catch (IOException Ex) {
-				 System.out.println(Ex.getMessage()); 
-			 }
-		 }
+
+		String resposta;
+
+		System.out.println("Queres salvar as alterações (S/N)?");
+		resposta = ler.next();
+
+		if (resposta.equals("S") || resposta.equals("s")) {
+			try {
+				// Abrir o FileWriter, Buffered Writer
+				FileWriter fw = new FileWriter("C:\\Users\\asaph\\Desktop\\Aero\\Teste2.txt");
+				BufferedWriter caneta = new BufferedWriter(fw);
+				String linha = "";
+
+				if (tripulacao.isEmpty()) {
+					caneta.write("");
+				} else {
+					for (Tripulacao tripulantes : tripulacao) {
+						linha = "";
+						linha += tripulantes.getId() + "|";
+						linha += tripulantes.getnVoo() + "|";
+						linha += tripulantes.getNome() + "|";
+						linha += tripulantes.getNacionalidade() + "|";
+						linha += tripulantes.getMorada() + "|";
+						linha += tripulantes.getTelefone() + "|";
+						linha += tripulantes.getDataDeNascimento() + "|";
+						linha += tripulantes.getnLincenca() + "|";
+						linha += tripulantes.getDataDeValidade() + "|";
+						linha += tripulantes.getAnotacoes() + "|";
+						linha += tripulantes.getCategoria() + "|\n";
+						caneta.write(linha);
+					}
+				}
+				caneta.close();
+			} catch (IOException Ex) {
+				System.out.println(Ex.getMessage());
+			}
+		}
 	}
 
 	// Funcao para ler e converter data
