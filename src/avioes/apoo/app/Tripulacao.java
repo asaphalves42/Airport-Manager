@@ -6,18 +6,28 @@ public class Tripulacao extends Pessoa {
 	private String dataDeValidade;
 	private String anotacoes;
 	private String categoria;
+	private String nVoo;
 	
-	public Tripulacao(String id, String nome, String nacionalidade, String morada, int telefone, String dataDeNascimento,
+	public Tripulacao(String id, String nVoo, String nome, String nacionalidade, String morada, int telefone, String dataDeNascimento,
 			int nLincenca, String dataDeValidade, String anotacoes, String categoria) {
 		super(id, nome, nacionalidade, morada, telefone, dataDeNascimento);
 		this.nLincenca = nLincenca;
 		this.dataDeValidade = dataDeValidade;
 		this.anotacoes = anotacoes;
 		this.categoria = categoria;
+		this.nVoo = nVoo;
 	}
 
 	public Tripulacao() {
 		
+	}
+	
+	public String getnVoo() {
+		return this.nVoo;
+	}
+
+	public void setnVoo(String nVoo) {
+		this.nVoo = nVoo;
 	}
 
 	public int getnLincenca() {
@@ -56,7 +66,7 @@ public class Tripulacao extends Pessoa {
 	public String toString() {
 		return "Tripulantes [\nId: " + getId() + "\nNome: " + getNome() + "\nNacionalidade: " + getNacionalidade() + 
 				"\nMorada: " + getMorada() + "\ntelefone: " + getTelefone() + "\nData de nascimento: " + 
-				getDataDeNascimento() + "[\nNúmero da lincenca: " + nLincenca + "\nData de validade: " + dataDeValidade + "\nAnotações: " + anotacoes
+				getDataDeNascimento() + "[\nNï¿½mero da lincenca: " + nLincenca + "\nData de validade: " + dataDeValidade + "\nAnotaï¿½ï¿½es: " + anotacoes
 				+ "\nCategoria: " + categoria + "]" + "\n" + 
 				"------------------------------------------------------";
 				

@@ -20,11 +20,16 @@ public class Aplicacao {
 
 	Scanner ler = new Scanner(System.in);
 
-	ArrayList<Tripulacao> tripulacao = new ArrayList<>();
-	ArrayList<Passageiros> passageiros = new ArrayList<>();
+
 	ArrayList<Voo> voos = new ArrayList<>();
 	ArrayList<Aeronave> aeronave = new ArrayList<>();
 	ArrayList<Aeroporto> aeroporto = new ArrayList<>();
+<<<<<<< HEAD
+=======
+	ArrayList<Tripulacao> tripulacao = new ArrayList<>();
+	ArrayList<Passageiros> passageiros = new ArrayList<>();
+
+>>>>>>> 46407c2614cbe23a542ec91e8ff5207318c02436
 
 	public void Iniciar() {
 		LerFicheirosVoos();
@@ -429,6 +434,9 @@ public class Aplicacao {
 
 		// Crio um objeto do tipo passageiro, e adiciono os dados
 		Passageiros passageiro = new Passageiros();
+		
+		System.out.println("Indique o nº do Voo:");
+		passageiro.setnVoo(ler.next());
 
 		System.out.println("Identidade do passageiro:");
 		passageiro.setId(ler.next());
@@ -503,7 +511,6 @@ public class Aplicacao {
 	// Funcao para editar algum passageiro
 	public void EditarPassageiroCompleto() {
 
-		Passageiros editarPassageiro = new Passageiros();
 		String idPass;
 
 		// identifico o passageiro
@@ -513,35 +520,37 @@ public class Aplicacao {
 		// percorro o array para ver se existe os dados inseridos
 		for (Passageiros passageiros : passageiros) {
 			if (idPass.equals(passageiros.getId())) {
-				editarPassageiro = passageiros;
-
+				
 				// edito todos os campos
+				System.out.println("Indique o nº do Voo:");
+				passageiros.setnVoo(ler.next());
+				
 				System.out.println("Insira o novo número de identidade do passageiro:");
-				editarPassageiro.setId(ler.next());
+				passageiros.setId(ler.next());
 
 				System.out.println("Insira o novo nome do passageiro:");
-				editarPassageiro.setNome(ler.next());
+				passageiros.setNome(ler.next());
 
 				System.out.println("Insira a nova nacionalidade:");
-				editarPassageiro.setNacionalidade(ler.next());
+				passageiros.setNacionalidade(ler.next());
 
 				System.out.println("Insira a nova morada:");
-				editarPassageiro.setMorada(ler.next());
+				passageiros.setMorada(ler.next());
 
 				System.out.println("Insira o novo telefone:");
-				editarPassageiro.setTelefone(ler.nextInt());
+				passageiros.setTelefone(ler.nextInt());
 
 				System.out.println("Insira a nova data de nascimento:");
-				editarPassageiro.setDataDeNascimento(ler.next());
+				passageiros.setDataDeNascimento(ler.next());
 
 				System.out.println("Insira o novo e-mail:");
-				editarPassageiro.setEmail(ler.next());
+				passageiros.setEmail(ler.next());
 
 				System.out.println("Insira o novo tipo de bilhete:");
-				editarPassageiro.setTipoBilhete(ler.next());
+				passageiros.setTipoBilhete(ler.next());
 
 				System.out.println("Insira o novo lugar reservado:");
-				editarPassageiro.setLugarReservado(ler.next());
+				passageiros.setLugarReservado(ler.next());
 
 				System.out.println(" ");
 
@@ -588,6 +597,9 @@ public class Aplicacao {
 	public void AdicionarPessoalCabine() {
 		// Preencho os dados
 		Tripulacao tripulacao = new Tripulacao();
+		
+		System.out.println("Indique o nº do Voo:");
+		tripulacao.setnVoo(ler.next());
 
 		System.out.println("Identidade do funcionário:");
 		tripulacao.setId(ler.next());
@@ -685,7 +697,7 @@ public class Aplicacao {
 	// Funcao para editar os dados de um tripulante
 	public void EditarCabine() {
 
-		Tripulacao editarTripulante = new Tripulacao();
+		
 		String idTripulante;
 
 		// Pergunto ao utilizador a identidade do tripulante
@@ -695,38 +707,41 @@ public class Aplicacao {
 		// Percorro o array para encontrar o id
 		for (Tripulacao tripulacao : tripulacao) {
 			if (idTripulante.equals(tripulacao.getId())) {
-				editarTripulante = tripulacao;
+				
 
 				// Edito os dados
+				System.out.println("Indique o nº do Voo:");
+				tripulacao.setnVoo(ler.next());
+				
 				System.out.println("Insira o novo número de identidade do tripulante:");
-				editarTripulante.setId(ler.next());
+				tripulacao.setId(ler.next());
 
 				System.out.println("Insira o novo nome do tripulante:");
-				editarTripulante.setNome(ler.next());
+				tripulacao.setNome(ler.next());
 
 				System.out.println("Insira a nova nacionalidade:");
-				editarTripulante.setNacionalidade(ler.next());
+				tripulacao.setNacionalidade(ler.next());
 
 				System.out.println("Insira a nova morada:");
-				editarTripulante.setMorada(ler.next());
+				tripulacao.setMorada(ler.next());
 
 				System.out.println("Insira o novo telefone:");
-				editarTripulante.setTelefone(ler.nextInt());
+				tripulacao.setTelefone(ler.nextInt());
 
 				System.out.println("Insira a nova data de nascimento:");
-				editarTripulante.setDataDeNascimento(ler.next());
+				tripulacao.setDataDeNascimento(ler.next());
 
 				System.out.println("Insira a nova licença:");
-				editarTripulante.setnLincenca(ler.nextInt());
+				tripulacao.setnLincenca(ler.nextInt());
 
 				System.out.println("Insira a nova data de validade:");
-				editarTripulante.setDataDeValidade(ler.next());
+				tripulacao.setDataDeValidade(ler.next());
 
 				System.out.println("Insira as novas anotações:");
-				editarTripulante.setAnotacoes(ler.next());
+				tripulacao.setAnotacoes(ler.next());
 
 				System.out.println("Insira a nova categoria:");
-				editarTripulante.setCategoria(ler.next());
+				tripulacao.setCategoria(ler.next());
 
 				System.out.println(" ");
 
@@ -926,6 +941,7 @@ public class Aplicacao {
 
 		// Percorro o array para ver se encontro
 		for (Voo voo : voos) {
+<<<<<<< HEAD
 			// se sim
 			if (opcao.equals(voo.getnVoo())) {
 				listarVoo = voo;
@@ -953,6 +969,9 @@ public class Aplicacao {
 		for (Voo voo : voos) {
 			if (voo.getDataDePartida().isAfter(dataInicioPesquisa)
 					&& voo.getDataDeChegada().isBefore(dataFimPesquisa)) {
+=======
+			if (voo.getAeroOrigem().equalsIgnoreCase(aeroportoOrigem) && (voo.getAeroDestino().equalsIgnoreCase(aeroportoDestino))) {
+>>>>>>> 46407c2614cbe23a542ec91e8ff5207318c02436
 				System.out.println(voo);
 			}
 		}
@@ -1320,16 +1339,17 @@ public class Aplicacao {
 				String[] partes = linha.split("\\|");
 
 				String id = partes[0];
-				String nome = partes[1];
-				String nacionalidade = partes[2];
-				String morada = partes[3];
-				int telefone = Integer.parseInt(partes[4]);
-				String dataDeNascimento = partes[5];
-				String email = partes[6];
-				String tipoBilhete = partes[7];
-				String lugarReservado = partes[8];
+				String nVoo = partes[1];
+				String nome = partes[2];
+				String nacionalidade = partes[3];
+				String morada = partes[4];
+				int telefone = Integer.parseInt(partes[5]);
+				String dataDeNascimento = partes[6];
+				String email = partes[7];
+				String tipoBilhete = partes[8];
+				String lugarReservado = partes[9];
 
-				Passageiros passageiros = new Passageiros(id, nome, nacionalidade, morada, telefone, dataDeNascimento,
+				Passageiros passageiros = new Passageiros(id, nVoo, nome, nacionalidade, morada, telefone, dataDeNascimento,
 						email, tipoBilhete, lugarReservado);
 
 				this.passageiros.add(passageiros);
@@ -1575,68 +1595,82 @@ public class Aplicacao {
 	// Funcao para ler os dados do ficheiro
 	public void LerFicheirosTripulantes() {
 
-		/*
-		 * // Agora vou abrir os Reader try { FileReader fr = new
-		 * FileReader("C:\\Users\\asaph\\Desktop\\Aero\\Teste3.txt"); BufferedReader ler
-		 * = new BufferedReader(fr); // Ler o texto q foi escrito usando o
-		 * BufferedReader String linha;
-		 * 
-		 * while (ler.ready()) { linha = ler.readLine(); String[] partes =
-		 * linha.split("\\|");
-		 * 
-		 * String id = partes[0]; String nome = partes[1]; String nacionalidade =
-		 * partes[2]; String morada = partes[3]; int telefone =
-		 * Integer.parseInt(partes[4]); String dataDeNascimento = partes[5]; int
-		 * nLincenca = Integer.parseInt(partes[6]); String dataDeValidade = partes[7];
-		 * String anotacoes = partes[8]; String categoria = partes[8];
-		 * 
-		 * Tripulacao tripulantes = new Tripulacao(id, nome, nacionalidade, morada,
-		 * telefone, dataDeNascimento, nLincenca, dataDeValidade, categoria);
-		 * 
-		 * this.tripulacao.add(tripulantes);
-		 * 
-		 * }
-		 * 
-		 * ler.close();
-		 * 
-		 * } catch (IOException Ex) { System.out.println(Ex.getMessage()); }
-		 */
+		// Agora vou abrir os Reader
+		try {
+			FileReader fr = new FileReader("C:\\Users\\asaph\\Desktop\\Aero\\Teste3.txt");
+			BufferedReader ler = new BufferedReader(fr);
+			// Ler o texto q foi escrito usando o BufferedReader
+			String linha;
+
+			while (ler.ready()) {
+				linha = ler.readLine();
+				String[] partes = linha.split("\\|");
+
+				String id = partes[0];
+				String nVoo = partes [1];
+		        String nome = partes[2];
+		        String nacionalidade = partes[3];
+		        String morada = partes[4];
+		        int telefone = Integer.parseInt(partes[5]);
+		        String dataDeNascimento = partes[6];
+		        int nLincenca = Integer.parseInt(partes[7]);
+		        String dataDeValidade = partes[8];
+		        String anotacoes = partes[9];
+		        String categoria = partes[10];
+
+		        Tripulacao tripulantes = new Tripulacao(id, nVoo, nome, nacionalidade, morada,
+		            telefone, dataDeNascimento, nLincenca, dataDeValidade, anotacoes, categoria );
+
+		        this.tripulacao.add(tripulantes);
+
+			}
+
+			ler.close();
+
+		} catch (IOException Ex) {
+			System.out.println(Ex.getMessage());
+		}			
 	}
 
 	// Funcao para guardar os dados no ficheiro
 	public void GravarFicheirosTripulantes() {
-		/*
-		 * String resposta;
-		 * 
-		 * System.out.println("Queres salvar as altere��es (S/N)?"); resposta =
-		 * ler.next();
-		 * 
-		 * if (resposta.equals("S") || resposta.equals("s")) {
-		 * 
-		 * try { // Abrir o FileWriter, Buffered Writer FileWriter fw = new
-		 * FileWriter("C:\\Users\\asaph\\Desktop\\Aero\\Teste2.txt"); BufferedWriter
-		 * caneta = new BufferedWriter(fw); String linha = "";
-		 * 
-		 * if (tripulacao.isEmpty()) { caneta.write("");
-		 * 
-		 * } else {
-		 * 
-		 * for (Tripulacao tripulantes : tripulacao) { linha = "";
-		 * 
-		 * linha += tripulantes.getId() + "|"; linha += tripulantes.getNome() + "|";
-		 * linha += tripulantes.getNacionalidade() + "|"; linha +=
-		 * tripulantes.getMorada() + "|"; linha += tripulantes.getTelefone() + "|";
-		 * linha += tripulantes.getDataDeNascimento() + "|"; linha +=
-		 * tripulantes.getnLincenca() + "|"; linha += tripulantes.getDataDeValidade() +
-		 * "|"; linha += tripulantes.getAnotacoes() + "|"; linha +=
-		 * tripulantes.getCategoria() + "|\n";
-		 * 
-		 * caneta.write(linha); } } caneta.close();
-		 * 
-		 * } catch (IOException Ex) { { System.out.println(Ex.getMessage()); }
-		 * 
-		 * } }
-		 */
+		
+		 String resposta;
+		 
+		 System.out.println("Queres salvar as altere��es (S/N)?"); 
+		 resposta = ler.next();
+		 
+		 if (resposta.equals("S") || resposta.equals("s")) {		 
+			 try { 
+				 // Abrir o FileWriter, Buffered Writer 
+				 FileWriter fw = new FileWriter("C:\\Users\\asaph\\Desktop\\Aero\\Teste2.txt"); 
+				 BufferedWriter caneta = new BufferedWriter(fw); 
+				 String linha = "";
+		 
+				 if (tripulacao.isEmpty()) { 
+					 caneta.write("");		
+				 } else {		 
+					 for (Tripulacao tripulantes : tripulacao) { 
+						 linha = "";
+					 	 linha += tripulantes.getId() + "|"; 
+					 	 linha += tripulantes.getnVoo() + "|";
+					 	 linha += tripulantes.getNome() + "|";
+					 	 linha += tripulantes.getNacionalidade() + "|"; 
+					 	 linha += tripulantes.getMorada() + "|"; 
+					 	 linha += tripulantes.getTelefone() + "|";
+					 	 linha += tripulantes.getDataDeNascimento() + "|"; 
+					 	 linha += tripulantes.getnLincenca() + "|"; 
+					 	 linha += tripulantes.getDataDeValidade() + "|"; 
+					 	 linha += tripulantes.getAnotacoes() + "|"; 
+					 	 linha += tripulantes.getCategoria() + "|\n";		 
+					 	 caneta.write(linha); 
+				 	 } 
+				 } 
+				 caneta.close();		 
+			 } catch (IOException Ex) {
+				 System.out.println(Ex.getMessage()); 
+			 }
+		 }
 	}
 
 	// Funcao para ler e converter data

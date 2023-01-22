@@ -25,9 +25,7 @@ public class Voo {
 		this.dataDePartida = dataDePartida;
 		this.dataDeChegada = dataDeChegada;
 		this.horaDePartida = horaDePartida;
-		this.horaDeChegada = horaDeChegada;
-		
-		
+		this.horaDeChegada = horaDeChegada;			
 	}
 
 	public Voo() {
@@ -97,7 +95,7 @@ public class Voo {
 	public void setHoraDeChegada(String horaDeChegada) {
 		this.horaDeChegada = horaDeChegada;
 	}
-	
+		
 	
 	@Override
 	public String toString() {
