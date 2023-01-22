@@ -26,30 +26,22 @@ public class Aplicacao {
 	ArrayList<Aeronave> aeronave = new ArrayList<>();
 	ArrayList<Aeroporto> aeroporto = new ArrayList<>();
 
-
-
 	public void Iniciar() {
 		LerFicheirosVoos();
 		// LerFicheirosPassageiros();
 		LerFicheirosAeroporto();
 		// LerFicheirosAeronave();
 
-<<<<<<< HEAD
 		System.out.println("Bem vindo a aplicação para companhia aérea");
-=======
-		System.out.println("Bem vindo a aplicaÃ§Ã£o para companhia aÃ©rea");
->>>>>>> 8fa2a59fca8718e1adbdc42b49b366cbbfc27d93
+
 		LerCompanhiaAerea();
 		MenuPrincipal();
 
 	}
 
 	public void LerCompanhiaAerea() {
-<<<<<<< HEAD
+
 		System.out.println("Qual a companhia aérea?");
-=======
-		System.out.println("Qual a companhia aÃ©rea?");
->>>>>>> 8fa2a59fca8718e1adbdc42b49b366cbbfc27d93
 
 		companhia = ler.next();
 
@@ -72,26 +64,20 @@ public class Aplicacao {
 			System.out.println("");
 			System.out.println("## Menu principal ##");
 			System.out.println("Companhia selecionada: " + companhia);
-<<<<<<< HEAD
+
 			System.out.println("Selecione uma opção:");
 
 			System.out.println("1 - Voos");
 			System.out.println("2 - Passageiros");
 			System.out.println("3 - Tripulação");
-=======
-			System.out.println("Selecione uma opÃ§Ã£o:");
-
-			System.out.println("1 - Voos");
-			System.out.println("2 - Passageiros");
-			System.out.println("3 - TripulaÃ§Ã£o");
->>>>>>> 8fa2a59fca8718e1adbdc42b49b366cbbfc27d93
 			System.out.println("4 - Aeronaves");
 			System.out.println("5 - Aeroportos");
 			System.out.println("6 - Estatísticas");
 			System.out.println("7 - Fechar");
 
 			opcao = ler.nextInt();
-
+			
+			//chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 
 			case 1:
@@ -123,11 +109,9 @@ public class Aplicacao {
 				break;
 
 			default:
-<<<<<<< HEAD
+
 				System.out.println("Opção inválida");
-=======
-				System.out.println("OpÃ§Ã£o InvÃ¡lida");
->>>>>>> 8fa2a59fca8718e1adbdc42b49b366cbbfc27d93
+
 				break;
 
 			}
@@ -150,6 +134,7 @@ public class Aplicacao {
 
 			opcao = ler.nextInt();
 
+			//chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 			case 1:
 				MenuVoo2();
@@ -167,29 +152,20 @@ public class Aplicacao {
 				MenuPrincipal();
 
 			default:
-<<<<<<< HEAD
 				System.out.println("Opção inválida!");
-=======
-				System.out.println("OpcÃ£o invÃ¡lida!");
->>>>>>> 8fa2a59fca8718e1adbdc42b49b366cbbfc27d93
+
 				break;
 
 			}
 		} while (opcao != 5);
 
 	}
-	
+
 	public void MenuVoo2() {
 
 		int opcao;
-<<<<<<< HEAD
 
 		// escolher as opcoes do menu consoante ao que o utilizador deseja, e repeticao
-=======
-		
-		
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e repetiï¿½ï¿½o
->>>>>>> 8fa2a59fca8718e1adbdc42b49b366cbbfc27d93
 		// do menu
 		do {
 			System.out.println("1 - Listar por datas");
@@ -199,19 +175,16 @@ public class Aplicacao {
 			System.out.println("5 - Voltar ao menu anterior");
 
 			opcao = ler.nextInt();
+				
 			
+			//chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 
-			case 1: // funcao para listar por datas
+			case 1: 
 				FiltrarVoosPorData();
 				break;
-<<<<<<< HEAD
 			case 2:
-				// Funcao para listar por rotas
-=======
-			case 2:	// Funï¿½ï¿½o para listar por 
 				FilrarVoosPorRota();
->>>>>>> 8fa2a59fca8718e1adbdc42b49b366cbbfc27d93
 				break;
 			case 3:
 				ListarVoos();
@@ -223,11 +196,9 @@ public class Aplicacao {
 				ApresentarMenuVoo();
 				break;
 			default:
-<<<<<<< HEAD
+
 				System.out.println("Opção inválida");
-=======
-				System.out.println("OpcÃ£o invÃ¡lida");
->>>>>>> 8fa2a59fca8718e1adbdc42b49b366cbbfc27d93
+
 				break;
 			}
 
@@ -237,9 +208,8 @@ public class Aplicacao {
 	public void ApresentarMenuPassageiro() {
 
 		int opcao;
-
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e
-		// repetiï¿½ï¿½o
+		// escolher as opcoes do menu consoante ao que o utilizador deseja, e
+		// repeticao
 		// do menu
 		do {
 			System.out.println("1 - Listar passageiros");
@@ -251,6 +221,7 @@ public class Aplicacao {
 
 			opcao = ler.nextInt();
 
+			//chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 
 			case 1:
@@ -271,12 +242,11 @@ public class Aplicacao {
 			case 6:
 				MenuPrincipal();
 				break;
-<<<<<<< HEAD
+
 			default:
-				System.out.println("Opï¿½ï¿½o invï¿½lida");
-=======
-				default:System.out.println("OpÃ§Ã£o invÃ¡lida");
->>>>>>> 8fa2a59fca8718e1adbdc42b49b366cbbfc27d93
+
+				System.out.println("Opção inválida");
+
 			}
 		} while (opcao != 6);
 	}
@@ -284,8 +254,8 @@ public class Aplicacao {
 	public void MenuListaPassageiros2() {
 
 		int opcao;
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e
-		// repetiï¿½ï¿½o
+		// escolher as opcoes do menu consoante ao que o utilizador deseja, e
+		// repeticao
 		// do menu
 		do {
 			System.out.println("1 - Listar passageiros por voo");
@@ -296,23 +266,24 @@ public class Aplicacao {
 
 			opcao = ler.nextInt();
 
+			//chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
-			case 1: // funcao para listar por datas
+			case 1: // funcao para listar por voo
 				break;
 			case 2:
 				ListarTodosOsPassageiros();
 				break;
 			case 3:
-				// Funï¿½ï¿½o para apresentar voos em um dia
+				// Funcao para apresentar voos em um dia
 				break;
 			case 4:
-				// Funï¿½ï¿½o para listar passageiros num intervalo de datas
+				// Funcao para listar passageiros num intervalo de datas
 				break;
 			case 5:
 				ApresentarMenuPassageiro();
 				break;
 			default:
-				System.out.println("OpÃ§Ã£o invÃ¡lida");
+				System.out.println("Opção inválida");
 			}
 
 		} while (opcao != 5);
@@ -322,8 +293,8 @@ public class Aplicacao {
 
 		int opcao;
 
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e
-		// repetiï¿½ï¿½o
+		// escolher as opcoes do menu consoante ao que o utilizador deseja, e
+		// repeticao
 		// do menu
 		do {
 			System.out.println("1 - Listar pessoal cabine");
@@ -334,6 +305,7 @@ public class Aplicacao {
 
 			opcao = ler.nextInt();
 
+			//chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 
 			case 1:
@@ -361,8 +333,8 @@ public class Aplicacao {
 
 		int opcao;
 
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e
-		// repetiï¿½ï¿½o
+		// escolher as opcoes do menu consoante ao que o utilizador deseja, e
+		// repeticao
 		// do menu
 		System.out.println("## Selecione uma opÃ§Ã£o ##");
 
@@ -376,6 +348,7 @@ public class Aplicacao {
 
 			opcao = ler.nextInt();
 
+			//chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 
 			case 1:
@@ -403,13 +376,13 @@ public class Aplicacao {
 
 		int opcao;
 
-		// escolher as opï¿½ï¿½es do menu consoante ao que o utilizador deseja, e
-		// repetiï¿½ï¿½o
+		// escolher as opcoes do menu consoante ao que o utilizador deseja, e
+		// repeticao
 		// do menu
 
 		do {
 
-			System.out.println("## Selecione uma opÃ§Ã£o ##");
+			System.out.println("## Selecione uma opção ##");
 
 			System.out.println("1 - Adicionar aeroportos:");
 			System.out.println("2 - Listar aeroportos:");
@@ -419,6 +392,7 @@ public class Aplicacao {
 
 			opcao = ler.nextInt();
 
+			//chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
 			case 1:
 				AdicionarAaeroporto();
@@ -437,7 +411,7 @@ public class Aplicacao {
 				break;
 
 			default:
-				System.out.println("OpÃ§Ã£o InvÃ¡lida!");
+				System.out.println("Opção Inválida!");
 
 			}
 
@@ -526,7 +500,7 @@ public class Aplicacao {
 		}
 	}
 
-	// Funï¿½ï¿½o para editar algum passageiro
+	// Funcao para editar algum passageiro
 	public void EditarPassageiroCompleto() {
 
 		Passageiros editarPassageiro = new Passageiros();
@@ -587,14 +561,14 @@ public class Aplicacao {
 
 	}
 
-	// Funï¿½ï¿½o para listar os passageiros do array
+	// Funcao para listar os passageiros do array
 	public void ListarTodosOsPassageiros() {
 		// Verifico se o array contï¿½m dados
 		if (passageiros.isEmpty()) {
 			System.out.println("NÃ£o existem passageiros registados!");
 			System.out.println(" ");
 		} else {
-			// Se contï¿½m, percorro o array e mostro ao utilizador
+			// Se contem, percorro o array e mostro ao utilizador
 			for (Passageiros passageiros : passageiros) {
 				System.out.println(passageiros);
 			}
@@ -610,7 +584,7 @@ public class Aplicacao {
 	 * 
 	 */
 
-	// Funï¿½ï¿½o para adicionar tripulantes
+	// Funcao para adicionar tripulantes
 	public void AdicionarPessoalCabine() {
 		// Preencho os dados
 		Tripulacao tripulacao = new Tripulacao();
@@ -658,16 +632,16 @@ public class Aplicacao {
 		ApresentarMenuTripulacao();
 	}
 
-	// Funï¿½ï¿½o para listar tripulantes
+	// Funcao para listar tripulantes
 	public void ListarPessoalCabine() {
 
-		// Verifico se contï¿½m dados no array
+		// Verifico se contem dados no array
 		if (tripulacao.isEmpty()) {
 			System.out.println("NÃ£o existem tripulantes registrados!");
 			System.out.println(" ");
 		} else {
 
-			// Percorro o array e mostro o conteï¿½do dele
+			// Percorro o array e mostro o conteudo dele
 			for (Tripulacao tripulacao : tripulacao) {
 				System.out.println(tripulacao);
 			}
@@ -677,13 +651,13 @@ public class Aplicacao {
 		}
 	}
 
-	// Funï¿½ï¿½o para eliminar um tripulante
+	// Funcao para eliminar um tripulante
 	public void ElminarCabine() {
 
 		Tripulacao eliminarCabine = null;
 		String nomeCabine;
 
-		// Peï¿½o ao utilizador o nome do tripulante
+		// Peco ao utilizador o nome do tripulante
 		System.out.println("Insira o nome do tripulante que deseja eliminar:");
 		nomeCabine = ler.next();
 
@@ -708,7 +682,7 @@ public class Aplicacao {
 
 	}
 
-	// Funï¿½ï¿½o para editar os dados de um tripulante
+	// Funcao para editar os dados de um tripulante
 	public void EditarCabine() {
 
 		Tripulacao editarTripulante = new Tripulacao();
@@ -761,7 +735,7 @@ public class Aplicacao {
 				System.out.println("\n-------------------------------------");
 
 			} else {
-				// Mensagem ao utilizador se nï¿½o encontrar o tripulante
+				// Mensagem ao utilizador se nao encontrar o tripulante
 				System.out.println("Tripulante nÃ£o encontrado!");
 
 				ApresentarMenuPassageiro();
@@ -775,7 +749,7 @@ public class Aplicacao {
 	 * 
 	 */
 
-	// Funï¿½ï¿½o para eliminar um voo
+	// Funcao para eliminar um voo
 	public void EliminarVoos() {
 
 		Voo eliminarVoo = null;
@@ -805,7 +779,7 @@ public class Aplicacao {
 		}
 	}
 
-	// Funï¿½ï¿½o para adicionar um voo
+	// Funcao para adicionar um voo
 	public void AdicionarVoos() {
 
 		Voo voo = new Voo();
@@ -849,7 +823,7 @@ public class Aplicacao {
 
 	}
 
-	// Funï¿½ï¿½o para listar os voos
+	// Funcao para listar os voos
 	public void ListarVoos() {
 
 		// Verifico se existem dados registrados
@@ -868,19 +842,19 @@ public class Aplicacao {
 
 	}
 
-	// Funï¿½ï¿½o para editar os dados de um voo
+	// Funcao para editar os dados de um voo
 	public void EditarVoosCompleto() {
 
 		Voo editarVoo = new Voo();
 		String numeroVoo;
 
-<<<<<<< HEAD
+
 		// Pergunto ao utilizador os numero do voo
 		System.out.println("Insira o número do voo:");
-=======
+
 		// Pergunto ao utilizador os nï¿½mero do voo
 		System.out.println("Insira o nÃºmero do voo que deseja editar:");
->>>>>>> 8fa2a59fca8718e1adbdc42b49b366cbbfc27d93
+
 		numeroVoo = ler.next();
 
 		// Percorro o array, encontro os dados e altero
@@ -924,13 +898,13 @@ public class Aplicacao {
 				ApresentarMenuPassageiro();
 
 			} else {
-<<<<<<< HEAD
+
 				// Se nao encontrar, mostro a mensagem
 				System.out.println("Voo não encontrado!");
-=======
+
 				// Se nï¿½o encontrar, mostro a mensagem
 				System.out.println("Voo nÃ£o encontrado!");
->>>>>>> 8fa2a59fca8718e1adbdc42b49b366cbbfc27d93
+
 				System.out.println(" ");
 
 				ApresentarMenuVoo();
@@ -939,66 +913,69 @@ public class Aplicacao {
 
 	}
 
-<<<<<<< HEAD
-	//Funcao para listar voo por número
+	
+	// Funcao para listar voo por número
 	public void ListarVoosPorNumero() {
 
 		Voo listarVoo = new Voo();
 
 		String opcao;
-		//Peco ao utilizador o número do voo
+		// Peco ao utilizador o número do voo
 		System.out.println("Insira o número do voo:");
 		opcao = ler.next();
-		
-		//Percorro o array para ver se encontro
+
+		// Percorro o array para ver se encontro
 		for (Voo voo : voos) {
-			//se sim
+			// se sim
 			if (opcao.equals(voo.getnVoo())) {
 				listarVoo = voo;
 			}
 
 		}
-		//mostro o voo
+		// mostro o voo
 		System.out.println(listarVoo);
 
 		MenuVoo2();
 	}
 
-=======
+
+
 	public void FiltrarVoosPorData() {
-        LocalDate dataInicioPesquisa;
-        LocalDate dataFimPesquisa;
-		        
-        System.out.println("Insira uma data de inÃ­cio (dd/MM/aaaa)");
-        dataInicioPesquisa = LerData();
-        
-        System.out.println("Insira uma data fim (dd/MM/aaaa)");
-        dataFimPesquisa = LerData();
-        
-        for (Voo voo : voos) {
-            if (voo.getDataDePartida().isAfter(dataInicioPesquisa) && voo.getDataDeChegada().isBefore(dataFimPesquisa)) {
-            	System.out.println(voo);
-            }
-        }
-	}
-	
-	public void FilrarVoosPorRota() {
-		String aeroportoOrigem;
-		String aeroportoDestino;
-		
-		System.out.println("Insira o aeroporto de origem");
-		aeroportoOrigem = ler.next();
-		System.out.println("Insira o aeroporto de destino");
-		aeroportoDestino = ler.next();
-		
+		LocalDate dataInicioPesquisa;
+		LocalDate dataFimPesquisa;
+
+		System.out.println("Insira uma data de inÃ­cio (dd/MM/aaaa)");
+		dataInicioPesquisa = LerData();
+
+		System.out.println("Insira uma data fim (dd/MM/aaaa)");
+		dataFimPesquisa = LerData();
+
 		for (Voo voo : voos) {
-			if (aeroportoOrigem.equalsIgnoreCase(aeroportoOrigem) && (aeroportoDestino.equalsIgnoreCase(aeroportoDestino))) {
+			if (voo.getDataDePartida().isAfter(dataInicioPesquisa)
+					&& voo.getDataDeChegada().isBefore(dataFimPesquisa)) {
 				System.out.println(voo);
 			}
 		}
 	}
+
+	public void FilrarVoosPorRota() {
+		String aeroportoOrigem;
+		String aeroportoDestino;
+
+		System.out.println("Insira o aeroporto de origem");
+		aeroportoOrigem = ler.next();
+		System.out.println("Insira o aeroporto de destino");
+		aeroportoDestino = ler.next();
+
+		for (Voo voo : voos) {
+			if (aeroportoOrigem.equalsIgnoreCase(aeroportoOrigem)
+					&& (aeroportoDestino.equalsIgnoreCase(aeroportoDestino))) {
+				System.out.println(voo);
+			}
+		}
+	}
+
 	
->>>>>>> 8fa2a59fca8718e1adbdc42b49b366cbbfc27d93
 	/*
 	 * 
 	 * CONTROLO DE AERONAVES
@@ -1011,16 +988,16 @@ public class Aplicacao {
 		Aeronave aeronaves = new Aeronave();
 
 		// Prencho os dados
-		System.out.println("Insira o nÃºmero de registo:");
+		System.out.println("Insira o número de registo:");
 		aeronaves.setnRegistro(ler.next());
 
 		System.out.println("Insira a marca/modelo:");
 		aeronaves.setMarcaEmodelo(ler.next());
 
-		System.out.println("Insira o nÃºmero de lugares na classe executiva:");
+		System.out.println("Insira o número de lugares na classe executiva:");
 		aeronaves.setNlugaresExecutiva(ler.nextInt());
 
-		System.out.println("Insira o nÃºmero de lugares na classe turÃ­stica:");
+		System.out.println("Insira o número de lugares na classe turística:");
 		aeronaves.setNlugaresTuristica(ler.nextInt());
 
 		// adiciono ao array
@@ -1037,12 +1014,12 @@ public class Aplicacao {
 
 	}
 
-	// Funï¿½ï¿½o para listar aeronaves
+	// Funcao para listar aeronaves
 	public void ListarAeronaves() {
 
-		// Verifico se contï¿½m dados
+		// Verifico se contem dados
 		if (aeronave.isEmpty()) {
-			System.out.println("NÃ£o existem aeronaves registadas!");
+			System.out.println("Não existem aeronaves registadas!");
 			System.out.println(" ");
 		} else {
 
@@ -1055,19 +1032,18 @@ public class Aplicacao {
 		}
 
 	}
-	
 
-	// Funï¿½ï¿½o para Eliminar aeronaves
+	// Funcao para Eliminar aeronaves
 	public void EliminarAeronaves() {
 
 		Aeronave eliminarAeronave = null;
 		String numAeronave;
 
 		// Pergunto ao utilizador os dados
-		System.out.println("Insira o nÃºmero de registo da aeronave que deseja eliminar:");
+		System.out.println("Insira o número de registo da aeronave que deseja eliminar:");
 		numAeronave = ler.next();
 
-		// Percoro o array e comparo para ver se os dados sï¿½o iguais
+		// Percoro o array e comparo para ver se os dados sao iguais
 		for (Aeronave aeronaves : aeronave) {
 			if (numAeronave.equals(aeronaves.getnRegistro())) {
 				eliminarAeronave = aeronaves;
@@ -1088,7 +1064,7 @@ public class Aplicacao {
 		MenuAeronaves();
 	}
 
-	// Funï¿½ï¿½o para editar os dados de uma aeronave
+	// Funcao para editar os dados de uma aeronave
 	public void EditarAeronaves() {
 
 		Aeronave editarAeronave = new Aeronave();
@@ -1103,16 +1079,16 @@ public class Aplicacao {
 			if (numeroAeronave.equals(aeronaves.getnRegistro())) {
 				editarAeronave = aeronaves;
 
-				System.out.println("Insira o novo nÃºmero de registo:");
+				System.out.println("Insira o novo número de registo:");
 				editarAeronave.setnRegistro(ler.next());
 
 				System.out.println("Insira a nova marca/modelo:");
 				editarAeronave.setMarcaEmodelo(ler.next());
 
-				System.out.println("Insira o novo nÃºmero de lugares da classe executiva:");
+				System.out.println("Insira o novo número de lugares da classe executiva:");
 				editarAeronave.setNlugaresExecutiva(ler.nextInt());
 
-				System.out.println("Insira o novo nÃºmero de lugares da classe turÃ­stica:");
+				System.out.println("Insira o novo número de lugares da classe turística:");
 				editarAeronave.setNlugaresTuristica(ler.nextInt());
 
 				System.out.println(" ");
@@ -1126,8 +1102,8 @@ public class Aplicacao {
 
 			} else {
 
-				// Menssagem ao utilizador caso nï¿½o encontre
-				System.out.println("Aeronave nÃ£o encontrada!");
+				// Menssagem ao utilizador caso nao encontre
+				System.out.println("Aeronave não encontrada!");
 
 			}
 		}
@@ -1140,7 +1116,7 @@ public class Aplicacao {
 	 * 
 	 */
 
-	//Mostrar as estatísticas
+	// Mostrar as estatísticas
 	public void Estatisticas() {
 
 		int opcao;
@@ -1166,7 +1142,7 @@ public class Aplicacao {
 	 * 
 	 */
 
-	// Funï¿½ï¿½o para adicionar um aeroporto
+	// Funcao para adicionar um aeroporto
 	public void AdicionarAaeroporto() {
 
 		Aeroporto aeroportos = new Aeroporto();
@@ -1194,16 +1170,16 @@ public class Aplicacao {
 
 	}
 
-	// Funï¿½ï¿½o para listar os aeroportos
+	// Funcao para listar os aeroportos
 	public void ListarAaeroportos() {
 
 		// Verifico se existem dados registados
 		if (aeroporto.isEmpty()) {
-			System.out.println("NÃ£o existem aeroportos registrados!");
+			System.out.println("Não existem aeroportos registrados!");
 			System.out.println(" ");
 		} else {
 
-			// Percorro o array e mostro o conteï¿½do
+			// Percorro o array e mostro o conteudo
 			for (Aeroporto aeroportos : aeroporto) {
 				System.out.println(aeroportos);
 			}
@@ -1213,7 +1189,7 @@ public class Aplicacao {
 
 	}
 
-	// Funï¿½ï¿½o para eliminar um aeroporto
+	// Funcao para eliminar um aeroporto
 	public void EliminarAeroportos() {
 
 		Aeroporto eliminarAeroporto = null;
@@ -1245,9 +1221,9 @@ public class Aplicacao {
 
 	}
 
-	// Funï¿½ï¿½o para editar aeroporto
+	// Funcao para editar aeroporto
 	public void EditarAeroportos() {
-		
+
 		String sigla;
 
 		// Pergunto ao utilizador a sigla
@@ -1258,15 +1234,14 @@ public class Aplicacao {
 		for (Aeroporto aeroportos : aeroporto) {
 			if (sigla.equals(aeroportos.getSigla())) {
 
-			
 				// Se encontrado, edito os dados
 				System.out.println("Insira a nova sigla:");
 				aeroportos.setSigla(ler.next());
 
-				System.out.println("Insira o novo paÃ­s:");
+				System.out.println("Insira o novo país:");
 				aeroportos.setPais(ler.next());
 
-				System.out.println("Insira a nova cidade mais prÃ³xima:");
+				System.out.println("Insira a nova cidade mais próxima:");
 				aeroportos.setCidadeProx(ler.next());
 
 				System.out.println(" ");
@@ -1280,8 +1255,8 @@ public class Aplicacao {
 
 			} else {
 
-				// Se nï¿½o, mensagem ao utilizador
-				System.out.println("Aeroporto nÃ£o encontrado!");
+				// Se nao, mensagem ao utilizador
+				System.out.println("Aeroporto não encontrado!");
 			}
 		}
 
@@ -1293,7 +1268,7 @@ public class Aplicacao {
 	 * 
 	 */
 
-	// Funï¿½ï¿½o para ler os dados do ficheiro
+	// Funcao para ler os dados do ficheiro
 	public void LerFicheirosVoos() {
 
 		// Agora vou abrir os Reader
@@ -1311,8 +1286,8 @@ public class Aplicacao {
 				String Aviao = partes[1];
 				String AeroOrigem = partes[2];
 				String AeroDestino = partes[3];
-				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");        
-				LocalDate DataDePartida =  LocalDate.parse(partes[4], formatter);       
+				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+				LocalDate DataDePartida = LocalDate.parse(partes[4], formatter);
 				LocalDate DataDeChegada = LocalDate.parse(partes[5], formatter);
 				String HoraDePartida = partes[6];
 				String HoraDeChegada = partes[7];
@@ -1330,7 +1305,7 @@ public class Aplicacao {
 		}
 	}
 
-	// Funï¿½ï¿½o para ler os dados do ficheiro
+	// Funcao para ler os dados do ficheiro
 	public void LerFicheirosPassageiros() {
 
 		// Agora vou abrir os Reader
@@ -1368,7 +1343,7 @@ public class Aplicacao {
 		}
 	}
 
-	// Funï¿½ï¿½o para guardar os dados no ficheiro
+	// Funcao para guardar os dados no ficheiro
 	public void GravarFicheirosVoos() {
 
 		String resposta;
@@ -1414,7 +1389,7 @@ public class Aplicacao {
 
 	}
 
-	// Funï¿½ï¿½o para guardar os dados no ficheiro
+	// Funcao para guardar os dados no ficheiro
 	public void GravarFicheirosPass() {
 		String resposta;
 
@@ -1462,7 +1437,7 @@ public class Aplicacao {
 
 	}
 
-	// Funï¿½ï¿½o para ler os dados do ficheiro
+	// Funcao para ler os dados do ficheiro
 	public void LerFicheirosAeroporto() {
 
 		// Agora vou abrir os Reader
@@ -1493,7 +1468,7 @@ public class Aplicacao {
 
 	}
 
-	// Funï¿½ï¿½o para guardar os dados no ficheiro
+	// Funcao para guardar os dados no ficheiro
 	public void GravarFicheirosAeroporto() {
 
 		String resposta;
@@ -1536,7 +1511,7 @@ public class Aplicacao {
 
 	}
 
-	// Funï¿½ï¿½o para ler os dados do ficheiro
+	// Funcao para ler os dados do ficheiro
 	public void LerFicheirosAeronave() {
 		/*
 		 * // Agora vou abrir os Reader try { FileReader fr = new
@@ -1562,7 +1537,7 @@ public class Aplicacao {
 		 */
 	}
 
-	// Funï¿½ï¿½o para guardar os dados no ficheiro
+	// Funcao para guardar os dados no ficheiro
 	public void GravarFicheirosAeronave() {
 
 		/*
@@ -1597,7 +1572,7 @@ public class Aplicacao {
 		 */
 	}
 
-	// Funï¿½ï¿½o para ler os dados do ficheiro
+	// Funcao para ler os dados do ficheiro
 	public void LerFicheirosTripulantes() {
 
 		/*
@@ -1628,7 +1603,7 @@ public class Aplicacao {
 		 */
 	}
 
-	// Funï¿½ï¿½o para guardar os dados no ficheiro
+	// Funcao para guardar os dados no ficheiro
 	public void GravarFicheirosTripulantes() {
 		/*
 		 * String resposta;
@@ -1664,19 +1639,17 @@ public class Aplicacao {
 		 */
 	}
 
-	//FunÃ§Ã£o para ler e converter data
+	// Funcao para ler e converter data
 	public LocalDate LerData() {
 		try {
 			LocalDate data;
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");        
-        	data = LocalDate.parse(ler.next(), formatter);		
-        	return data;
-		}catch(Exception ex) {
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+			data = LocalDate.parse(ler.next(), formatter);
+			return data;
+		} catch (Exception ex) {
 			System.out.println("Data invalida, insira uma data com o formato (dd/MM/aaaa)");
 			return LerData();
 		}
 	}
 
 }
-
-
