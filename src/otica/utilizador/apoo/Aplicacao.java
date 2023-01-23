@@ -1359,7 +1359,7 @@ public class Aplicacao {
 
 		String resposta;
 
-		System.out.println("Deseja gravar as alteraÃ§Ãµes (S/N)?");
+		System.out.println("Deseja gravar as alterações (S/N)?");
 		resposta = ler.next();
 
 		if (resposta.equals("S") || resposta.equals("s")) {
@@ -1484,7 +1484,7 @@ public class Aplicacao {
 
 		String resposta;
 
-		System.out.println("Queres salvar as alteraÃ§Ãµes (S/N)?");
+		System.out.println("Queres salvar as alterações (S/N)?");
 		resposta = ler.next();
 
 		if (resposta.equals("S") || resposta.equals("s")) {
