@@ -30,7 +30,7 @@ public class Aplicacao {
 		LerFicheirosVoos();
 		// LerFicheirosPassageiros();
 		LerFicheirosAeroporto();
-		// LerFicheirosAeronave();
+		LerFicheirosAeronave();
 
 		System.out.println("Bem vindo a aplicação para companhia aérea");
 
@@ -215,7 +215,7 @@ public class Aplicacao {
 			System.out.println("2 - Editar passageiros");
 			System.out.println("3 - Adicionar passageiros");
 			System.out.println("4 - Eliminar passageiros");
-			System.out.println("5 - Mï¿½dia de passageiros");
+			System.out.println("5 - Média de passageiros");
 			System.out.println("6 - Voltar ao menu anterior");
 
 			opcao = ler.nextInt();
@@ -445,7 +445,7 @@ public class Aplicacao {
 		passageiro.setMorada(ler.next());
 
 		System.out.println("Telefone:");
-		passageiro.setTelefone(ler.nextInt());
+		passageiro.setTelefone(ler.next());
 
 		System.out.println("Data de nascimento:");
 		passageiro.setDataDeNascimento(ler.next());
@@ -532,7 +532,7 @@ public class Aplicacao {
 				passageiros.setMorada(ler.next());
 
 				System.out.println("Insira o novo telefone:");
-				passageiros.setTelefone(ler.nextInt());
+				passageiros.setTelefone(ler.next());
 
 				System.out.println("Insira a nova data de nascimento:");
 				passageiros.setDataDeNascimento(ler.next());
@@ -608,7 +608,7 @@ public class Aplicacao {
 		tripulacao.setMorada(ler.next());
 
 		System.out.println("Telefone:");
-		tripulacao.setTelefone(ler.nextInt());
+		tripulacao.setTelefone(ler.next());
 
 		System.out.println("Data de nascimento:");
 		tripulacao.setDataDeNascimento(ler.next());
@@ -718,13 +718,13 @@ public class Aplicacao {
 				tripulacao.setMorada(ler.next());
 
 				System.out.println("Insira o novo telefone:");
-				tripulacao.setTelefone(ler.nextInt());
+				tripulacao.setTelefone(ler.next());
 
 				System.out.println("Insira a nova data de nascimento:");
 				tripulacao.setDataDeNascimento(ler.next());
 
 				System.out.println("Insira a nova licenÃ§a:");
-				tripulacao.setnLincenca(ler.nextInt());
+				tripulacao.setnLincenca(ler.next());
 
 				System.out.println("Insira a nova data de validade:");
 				tripulacao.setDataDeValidade(ler.next());
@@ -948,7 +948,7 @@ public class Aplicacao {
 		LocalDate dataInicioPesquisa;
 		LocalDate dataFimPesquisa;
 
-		System.out.println("Insira uma data de inÃ­cio (dd/MM/aaaa)");
+		System.out.println("Insira uma data de início (dd/MM/aaaa)");
 		dataInicioPesquisa = LerData();
 
 		System.out.println("Insira uma data fim (dd/MM/aaaa)");
@@ -958,8 +958,9 @@ public class Aplicacao {
 			if (voo.getDataDePartida().isAfter(dataInicioPesquisa)
 					&& voo.getDataDeChegada().isBefore(dataFimPesquisa)) {
 
-				String aeroportoDestino = null;
+				
 				String aeroportoOrigem = null;
+				String aeroportoDestino = null;
 				if (voo.getAeroOrigem().equalsIgnoreCase(aeroportoOrigem)
 						&& (voo.getAeroDestino().equalsIgnoreCase(aeroportoDestino))) {
 
@@ -1005,10 +1006,10 @@ public class Aplicacao {
 		aeronaves.setMarcaEmodelo(ler.next());
 
 		System.out.println("Insira o número de lugares na classe executiva:");
-		aeronaves.setNlugaresExecutiva(ler.nextInt());
+		aeronaves.setNlugaresExecutiva(ler.next());
 
 		System.out.println("Insira o número de lugares na classe turística:");
-		aeronaves.setNlugaresTuristica(ler.nextInt());
+		aeronaves.setNlugaresTuristica(ler.next());
 
 		// adiciono ao array
 		this.aeronave.add(aeronaves);
@@ -1096,10 +1097,10 @@ public class Aplicacao {
 				editarAeronave.setMarcaEmodelo(ler.next());
 
 				System.out.println("Insira o novo número de lugares da classe executiva:");
-				editarAeronave.setNlugaresExecutiva(ler.nextInt());
+				editarAeronave.setNlugaresExecutiva(ler.next());
 
 				System.out.println("Insira o novo número de lugares da classe turística:");
-				editarAeronave.setNlugaresTuristica(ler.nextInt());
+				editarAeronave.setNlugaresTuristica(ler.next());
 
 				System.out.println(" ");
 
@@ -1334,7 +1335,7 @@ public class Aplicacao {
 				String nome = partes[2];
 				String nacionalidade = partes[3];
 				String morada = partes[4];
-				int telefone = Integer.parseInt(partes[5]);
+				String telefone = partes[5];
 				String dataDeNascimento = partes[6];
 				String email = partes[7];
 				String tipoBilhete = partes[8];
@@ -1524,63 +1525,77 @@ public class Aplicacao {
 
 	// Funcao para ler os dados do ficheiro
 	public void LerFicheirosAeronave() {
-		/*
-		 * // Agora vou abrir os Reader try { FileReader fr = new
-		 * FileReader("C:\\Users\\asaph\\Desktop\\Aero\\Teste5Aeronave.txt");
-		 * BufferedReader ler = new BufferedReader(fr); // Ler o texto q foi escrito
-		 * usando o BufferedReader String linha;
-		 * 
-		 * while (ler.ready()) { linha = ler.readLine(); String[] partes =
-		 * linha.split("\\|");
-		 * 
-		 * String nRegistro = partes[0]; String marcaEmodelo = partes[1]; String
-		 * nlugaresTuristica = Integer.parseInt(partes[2]); int nlugaresExecutiva =
-		 * Integer.parseInt(partes[3]);
-		 * 
-		 * Aeronave aeronaves = new Aeronave(nRegistro, marcaEmodelo, nlugaresTuristica,
-		 * nlugaresExecutiva); aeronave.add(aeronaves);
-		 * 
-		 * }
-		 * 
-		 * ler.close();
-		 * 
-		 * } catch (IOException Ex) { System.out.println(Ex.getMessage()); }
-		 */
+		// Agora vou abrir os Reader
+		try {
+			FileReader fr = new FileReader("C:\\Users\\asaph\\Desktop\\Aero\\Teste5Aeronave.txt");
+			BufferedReader ler = new BufferedReader(fr);
+			// Ler o texto q foi escrito usando o BufferedReader
+			String linha;
+
+			while (ler.ready()) {
+				linha = ler.readLine();
+				String[] partes = linha.split("\\|");
+
+				String nRegistro = partes[0];
+				String marcaEmodelo = partes[1];
+				String nLugaresTuristica = partes[2];
+				String nLugaresExecutiva = partes[3];
+
+				Aeronave aeronaves = new Aeronave(nRegistro, marcaEmodelo, nLugaresTuristica, nLugaresExecutiva);
+				aeronave.add(aeronaves);
+
+			}
+
+			ler.close();
+
+		} catch (IOException Ex) {
+			System.out.println(Ex.getMessage());
+		}
+
 	}
 
 	// Funcao para guardar os dados no ficheiro
 	public void GravarFicheirosAeronave() {
+		
+		String resposta;
 
-		/*
-		 * String resposta;
-		 * 
-		 * System.out.println("Queres salvar as altereï¿½ï¿½es (S/N)?"); resposta =
-		 * ler.next();
-		 * 
-		 * if (resposta.equals("S") || resposta.equals("s")) {
-		 * 
-		 * try { // Abrir o FileWriter, Buffered Writer FileWriter fw = new
-		 * FileWriter("C:\\Users\\asaph\\Desktop\\Aero\\Teste4Aeroporto.txt");
-		 * BufferedWriter caneta = new BufferedWriter(fw); String linha = "";
-		 * 
-		 * if (aeroporto.isEmpty()) { caneta.write("");
-		 * 
-		 * } else {
-		 * 
-		 * for (Aeroporto aeroporto : aeroporto) { linha = "";
-		 * 
-		 * linha += aeroporto.getSigla() + "|"; linha += aeroporto.getPais() + "|";
-		 * linha += aeroporto.getCidadeProx() + "\n|";
-		 * 
-		 * caneta.write(linha); } } caneta.close();
-		 * 
-		 * } catch (IOException Ex) { { System.out.println(Ex.getMessage()); }
-		 * 
-		 * } }
-		 * 
-		 * 
-		 * 
-		 */
+		System.out.println("Queres salvar as alterações (S/N)?");
+		resposta = ler.next();
+
+		if (resposta.equals("S") || resposta.equals("s")) {
+
+			try {
+				// Abrir o FileWriter, Buffered Writer
+				FileWriter fw = new FileWriter("C:\\Users\\asaph\\Desktop\\Aero\\Teste5Aeronave.txt");
+				BufferedWriter caneta = new BufferedWriter(fw);
+				String linha = "";
+
+				if (aeronave.isEmpty()) {
+					caneta.write("");
+
+				} else {
+
+					for (Aeronave aeronave : aeronave) {
+						linha = "";
+
+						linha += aeronave.getnRegistro() + "|";
+						linha += aeronave.getMarcaEmodelo() + "|";
+						linha += aeronave.getNlugaresTuristica() + "|";
+						linha += aeronave.getNlugaresExecutiva() + "\n|";
+						
+						caneta.write(linha);
+					}
+				}
+				caneta.close();
+
+			} catch (IOException Ex) {
+				{
+					System.out.println(Ex.getMessage());
+				}
+
+			}
+		}
+		
 	}
 
 	// Funcao para ler os dados do ficheiro
@@ -1602,9 +1617,9 @@ public class Aplicacao {
 				String nome = partes[2];
 				String nacionalidade = partes[3];
 				String morada = partes[4];
-				int telefone = Integer.parseInt(partes[5]);
+				String telefone = partes[5];
 				String dataDeNascimento = partes[6];
-				int nLincenca = Integer.parseInt(partes[7]);
+				String nLincenca = partes[7];
 				String dataDeValidade = partes[8];
 				String anotacoes = partes[9];
 				String categoria = partes[10];

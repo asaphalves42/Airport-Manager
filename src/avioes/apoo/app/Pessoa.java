@@ -6,11 +6,11 @@ public class Pessoa {
 	private String nome;
 	private String nacionalidade;
 	private String morada;
-	private int telefone;
+	private String telefone;
 	private String dataDeNascimento;
 	
 	
-	public Pessoa(String id, String nome, String nacionalidade, String morada, int telefone, String dataDeNascimento) {
+	public Pessoa(String id, String nome, String nacionalidade, String morada, String telefone, String dataDeNascimento) {
 			
 		super();
 		this.id = id;
@@ -58,11 +58,11 @@ public class Pessoa {
 		this.morada = morada;
 	}
 
-	public int getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(int telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 

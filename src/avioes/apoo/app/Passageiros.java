@@ -7,7 +7,7 @@ public class Passageiros extends Pessoa {
 	private String lugarReservado;
 	private String nVoo;
 	
-	public Passageiros(String id, String nVoo, String nome, String nacionalidade, String morada, int telefone, String dataDeNascimento,
+	public Passageiros(String id, String nVoo, String nome, String nacionalidade, String morada, String telefone, String dataDeNascimento,
 			String email, String tipoBilhete, String lugarReservado) {
 		
 		this.email = email;

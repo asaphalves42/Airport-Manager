@@ -2,14 +2,14 @@ package avioes.apoo.app;
 
 public class Tripulacao extends Pessoa {
 	
-	private int nLincenca;
+	private String nLincenca;
 	private String dataDeValidade;
 	private String anotacoes;
 	private String categoria;
 	private String nVoo;
 	
-	public Tripulacao(String id, String nVoo, String nome, String nacionalidade, String morada, int telefone, String dataDeNascimento,
-			int nLincenca, String dataDeValidade, String anotacoes, String categoria) {
+	public Tripulacao(String id, String nVoo, String nome, String nacionalidade, String morada, String telefone, String dataDeNascimento,
+			String nLincenca, String dataDeValidade, String anotacoes, String categoria) {
 		super(id, nome, nacionalidade, morada, telefone, dataDeNascimento);
 		this.nLincenca = nLincenca;
 		this.dataDeValidade = dataDeValidade;
@@ -30,11 +30,11 @@ public class Tripulacao extends Pessoa {
 		this.nVoo = nVoo;
 	}
 
-	public int getnLincenca() {
+	public String getnLincenca() {
 		return nLincenca;
 	}
 
-	public void setnLincenca(int nLincenca) {
+	public void setnLincenca(String nLincenca) {
 		this.nLincenca = nLincenca;
 	}
 
