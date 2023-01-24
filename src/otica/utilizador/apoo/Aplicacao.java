@@ -28,7 +28,7 @@ public class Aplicacao {
 
 	public void Iniciar() {
 		LerFicheirosVoos();
-		// LerFicheirosPassageiros();
+		LerFicheirosPassageiros();
 		LerFicheirosAeroporto();
 		//LerFicheirosAeronave();
 
@@ -132,7 +132,7 @@ public class Aplicacao {
 			System.out.println("4 - Eliminar voos");
 			System.out.println("5 - Voltar ao menu anterior");
 
-			opcao = ler.nextInt();
+			opcao = (ler.nextInt());
 
 			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
@@ -259,15 +259,14 @@ public class Aplicacao {
 		do {
 			System.out.println("1 - Listar passageiros por voo");
 			System.out.println("2 - Listar todos os passageiros");
-			System.out.println("3 - Listar passageiros por dia");
-			System.out.println("4 - Listar passageiros num intervalo de datas");
-			System.out.println("5 - Voltar ao menu anterior");
+			System.out.println("3 - Listar passageiros num intervalo de datas");
+			System.out.println("4 - Voltar ao menu anterior");
 
 			opcao = ler.nextInt();
 
 			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
-			case 1: // funcao para listar por voo
+			case 1: ListarPassageirosPorVoo();
 				break;
 			case 2:
 				ListarTodosOsPassageiros();
@@ -276,16 +275,14 @@ public class Aplicacao {
 				// Funcao para apresentar voos em um dia
 				break;
 			case 4:
-				// Funcao para listar passageiros num intervalo de datas
-				break;
-			case 5:
 				ApresentarMenuPassageiro();
 				break;
+			
 			default:
 				System.out.println("Opção inválida");
 			}
 
-		} while (opcao != 5);
+		} while (opcao != 4);
 	}
 
 	public void ApresentarMenuTripulacao() {
@@ -429,35 +426,35 @@ public class Aplicacao {
 		// Crio um objeto do tipo passageiro, e adiciono os dados
 		Passageiros passageiro = new Passageiros();
 
-		System.out.println("Indique o nº do Voo:");
-		passageiro.setnVoo(ler.next());
+		System.out.print("Indique o nº do Voo:");
+		passageiro.setnVoo(ler.nextLine());
 
 		System.out.println("Identidade do passageiro:");
-		passageiro.setId(ler.next());
+		passageiro.setId(ler.nextLine());
 
 		System.out.println("Nome do passageiro:");
 		passageiro.setNome(ler.nextLine());
 
 		System.out.println("Nacionalidade:");
-		passageiro.setNacionalidade(ler.next());
+		passageiro.setNacionalidade(ler.nextLine());
 
 		System.out.println("Morada:");
 		passageiro.setMorada(ler.nextLine());
 
 		System.out.println("Telefone:");
-		passageiro.setTelefone(ler.next());
+		passageiro.setTelefone(ler.nextLine());
 
 		System.out.println("Data de nascimento:");
-		passageiro.setDataDeNascimento(ler.next());
+		passageiro.setDataDeNascimento(ler.nextLine());
 
 		System.out.println("E-mail:");
-		passageiro.setEmail(ler.next());
+		passageiro.setEmail(ler.nextLine());
 
 		System.out.println("Tipo do bilhete:");
-		passageiro.setTipoBilhete(ler.next());
+		passageiro.setTipoBilhete(ler.nextLine());
 
 		System.out.println("Lugar reservado");
-		passageiro.setLugarReservado(ler.next());
+		passageiro.setLugarReservado(ler.nextLine());
 
 		// adiciono ao arrayList
 		this.passageiros.add(passageiro);
@@ -517,34 +514,34 @@ public class Aplicacao {
 
 				// edito todos os campos
 				System.out.println("Indique o nº do Voo:");
-				passageiros.setnVoo(ler.next());
+				passageiros.setnVoo(ler.nextLine());
 
-				System.out.println("Insira o novo nÃºmero de identidade do passageiro:");
-				passageiros.setId(ler.next());
+				System.out.println("Insira o novo número de identidade do passageiro:");
+				passageiros.setId(ler.nextLine());
 
 				System.out.println("Insira o novo nome do passageiro:");
-				passageiros.setNome(ler.next());
+				passageiros.setNome(ler.nextLine());
 
 				System.out.println("Insira a nova nacionalidade:");
-				passageiros.setNacionalidade(ler.next());
+				passageiros.setNacionalidade(ler.nextLine());
 
 				System.out.println("Insira a nova morada:");
-				passageiros.setMorada(ler.next());
+				passageiros.setMorada(ler.nextLine());
 
 				System.out.println("Insira o novo telefone:");
-				passageiros.setTelefone(ler.next());
+				passageiros.setTelefone(ler.nextLine());
 
 				System.out.println("Insira a nova data de nascimento:");
-				passageiros.setDataDeNascimento(ler.next());
+				passageiros.setDataDeNascimento(ler.nextLine());
 
 				System.out.println("Insira o novo e-mail:");
-				passageiros.setEmail(ler.next());
+				passageiros.setEmail(ler.nextLine());
 
 				System.out.println("Insira o novo tipo de bilhete:");
-				passageiros.setTipoBilhete(ler.next());
+				passageiros.setTipoBilhete(ler.nextLine());
 
 				System.out.println("Insira o novo lugar reservado:");
-				passageiros.setLugarReservado(ler.next());
+				passageiros.setLugarReservado(ler.nextLine());
 
 				System.out.println(" ");
 
@@ -566,9 +563,9 @@ public class Aplicacao {
 
 	// Funcao para listar os passageiros do array
 	public void ListarTodosOsPassageiros() {
-		// Verifico se o array contï¿½m dados
+		// Verifico se o array contem dados
 		if (passageiros.isEmpty()) {
-			System.out.println("NÃo existem passageiros registados!");
+			System.out.println("Não existem passageiros registados!");
 			System.out.println(" ");
 		} else {
 			// Se contem, percorro o array e mostro ao utilizador
@@ -581,6 +578,54 @@ public class Aplicacao {
 
 	}
 
+	public void ListarPassageirosPorData() {
+	/*	LocalDate dataInicioPesquisa;
+		LocalDate dataFimPesquisa;
+
+		System.out.println("Insira uma data de início (dd/MM/aaaa):");
+		dataInicioPesquisa = LerData();
+
+		System.out.println("Insira uma data fim (dd/MM/aaaa):");
+		dataFimPesquisa = LerData();
+
+		for (Passageiros passageiro : passageiros) {
+			if(
+
+			}
+		}
+		
+		
+		
+	
+	*/
+	}
+	
+	public void ListarPassageirosPorVoo() {
+		String nVoo;
+		
+		if (passageiros.isEmpty()) {
+			System.out.println("Não existem passageiros registados!");
+			System.out.println(" ");
+		} else {
+			// Se contem, percorro o array e mostro ao utilizador
+			
+			System.out.println("Insira o número do voo:");
+			nVoo = ler.nextLine();
+			
+			for (Passageiros passageiros : passageiros) {
+				if(passageiros.getnVoo().equals(nVoo)) {
+					System.out.println(passageiros);
+				}
+			}
+
+			ApresentarMenuPassageiro();
+		}
+		
+		
+		
+		
+	}
+	
 	/*
 	 * 
 	 * CONTROLO DE PESSOAL CABINE
@@ -590,37 +635,35 @@ public class Aplicacao {
 	// Funcao para adicionar tripulantes
 	public void AdicionarPessoalCabine() {
 		// Preencho os dados
+
 		Tripulacao tripulacao = new Tripulacao();
 
-		System.out.println("Indique o nÂº do Voo:");
-		tripulacao.setnVoo(ler.next());
+		System.out.println("Identidade do funcionário:");
+		tripulacao.setId(ler.nextLine());
 
-		System.out.println("Identidade do funcionÃ¡rio:");
-		tripulacao.setId(ler.next());
-
-		System.out.println("Nome do funcionÃ¡rio:");
-		tripulacao.setNome(ler.next());
+		System.out.println("Nome do funcionário:");
+		tripulacao.setNome(ler.nextLine());
 
 		System.out.println("Nacionalidade:");
-		tripulacao.setNacionalidade(ler.next());
+		tripulacao.setNacionalidade(ler.nextLine());
 
 		System.out.println("Morada:");
-		tripulacao.setMorada(ler.next());
+		tripulacao.setMorada(ler.nextLine());
 
 		System.out.println("Telefone:");
-		tripulacao.setTelefone(ler.next());
+		tripulacao.setTelefone(ler.nextLine());
 
 		System.out.println("Data de nascimento:");
-		tripulacao.setDataDeNascimento(ler.next());
+		tripulacao.setDataDeNascimento(ler.nextLine());
 
 		System.out.println("Data de validade:");
-		tripulacao.setDataDeValidade(ler.next());
+		tripulacao.setDataDeValidade(ler.nextLine());
 
-		System.out.println("AnotaÃ§Ãµes:");
-		tripulacao.setAnotacoes(ler.next());
+		System.out.println("Anotações:");
+		tripulacao.setAnotacoes(ler.nextLine());
 
 		System.out.println("Categoria:");
-		tripulacao.setCategoria(ler.next());
+		tripulacao.setCategoria(ler.nextLine());
 
 		// Adiciono ao array
 		this.tripulacao.add(tripulacao);
@@ -694,7 +737,7 @@ public class Aplicacao {
 		String idTripulante;
 
 		// Pergunto ao utilizador a identidade do tripulante
-		System.out.println("Insira o nÃºmero de identidade do tripulante que deseja editar:");
+		System.out.println("Insira o número de identidade do tripulante que deseja editar:");
 		idTripulante = ler.next();
 
 		// Percorro o array para encontrar o id
@@ -702,38 +745,38 @@ public class Aplicacao {
 			if (idTripulante.equals(tripulacao.getId())) {
 
 				// Edito os dados
-				System.out.println("Indique o nÂº do Voo:");
-				tripulacao.setnVoo(ler.next());
+				System.out.println("Indique o nº do Voo:");
+				tripulacao.setnVoo(ler.nextLine());
 
 				System.out.println("Insira o novo nÃºmero de identidade do tripulante:");
-				tripulacao.setId(ler.next());
+				tripulacao.setId(ler.nextLine());
 
 				System.out.println("Insira o novo nome do tripulante:");
-				tripulacao.setNome(ler.next());
+				tripulacao.setNome(ler.nextLine());
 
 				System.out.println("Insira a nova nacionalidade:");
-				tripulacao.setNacionalidade(ler.next());
+				tripulacao.setNacionalidade(ler.nextLine());
 
 				System.out.println("Insira a nova morada:");
-				tripulacao.setMorada(ler.next());
+				tripulacao.setMorada(ler.nextLine());
 
 				System.out.println("Insira o novo telefone:");
-				tripulacao.setTelefone(ler.next());
+				tripulacao.setTelefone(ler.nextLine());
 
 				System.out.println("Insira a nova data de nascimento:");
-				tripulacao.setDataDeNascimento(ler.next());
+				tripulacao.setDataDeNascimento(ler.nextLine());
 
 				System.out.println("Insira a nova licenÃ§a:");
-				tripulacao.setnLincenca(ler.next());
+				tripulacao.setnLincenca(ler.nextLine());
 
 				System.out.println("Insira a nova data de validade:");
-				tripulacao.setDataDeValidade(ler.next());
+				tripulacao.setDataDeValidade(ler.nextLine());
 
 				System.out.println("Insira as novas anotaÃ§Ãµes:");
-				tripulacao.setAnotacoes(ler.next());
+				tripulacao.setAnotacoes(ler.nextLine());
 
 				System.out.println("Insira a nova categoria:");
-				tripulacao.setCategoria(ler.next());
+				tripulacao.setCategoria(ler.nextLine());
 
 				System.out.println(" ");
 
@@ -743,7 +786,7 @@ public class Aplicacao {
 
 			} else {
 				// Mensagem ao utilizador se nao encontrar o tripulante
-				System.out.println("Tripulante nÃ£o encontrado!");
+				System.out.println("Tripulante não encontrado!");
 
 				ApresentarMenuPassageiro();
 			}
@@ -859,7 +902,7 @@ public class Aplicacao {
 		System.out.println("Insira o número do voo:");
 
 		// Pergunto ao utilizador os nï¿½mero do voo
-		System.out.println("Insira o nÃºmero do voo que deseja editar:");
+		System.out.println("Insira o número do voo que deseja editar:");
 
 		numeroVoo = ler.next();
 
@@ -868,10 +911,10 @@ public class Aplicacao {
 			if (numeroVoo.equals(voo.getnVoo())) {
 				editarVoo = voo;
 
-				System.out.println("Insira o novo nÃºmero do voo:");
+				System.out.println("Insira o novo número do voo:");
 				editarVoo.setnVoo(ler.next());
 
-				System.out.println("Insira o novo nÃºmero do aviÃ£o:");
+				System.out.println("Insira o novo número do aviÃ£o:");
 				editarVoo.setAviao(ler.next());
 
 				System.out.println("Insira o novo aeroporto de origem:");
@@ -957,16 +1000,14 @@ public class Aplicacao {
 		for (Voo voo : voos) {
 			if (voo.getDataDePartida().isAfter(dataInicioPesquisa)
 					&& voo.getDataDeChegada().isBefore(dataFimPesquisa)) {
-				
+
 				System.out.println(voo);
-				
-				}else {
-					System.out.println("Não existem voos registados nessa data!");
-				}
+
 			}
-			
 		}
-	
+		MenuVoo2();
+
+	}
 
 	public void FilrarVoosPorRota() {
 		String aeroportoOrigem;
@@ -978,13 +1019,14 @@ public class Aplicacao {
 		aeroportoDestino = ler.next();
 
 		for (Voo voo : voos) {
-			if (aeroportoOrigem.equalsIgnoreCase(aeroportoOrigem)
-					&& (aeroportoDestino.equalsIgnoreCase(aeroportoDestino))) {
+			if (voo.getAeroOrigem().equalsIgnoreCase(aeroportoOrigem)
+					&& (voo.getAeroDestino().equalsIgnoreCase(aeroportoDestino))) {
 				System.out.println(voo);
-			} else {
-				System.out.println("Não existem voos registados nessa rota!");
+			
 			}
 		}
+
+		MenuVoo2();
 	}
 
 	/*
@@ -1000,16 +1042,16 @@ public class Aplicacao {
 
 		// Prencho os dados
 		System.out.println("Insira o número de registo:");
-		aeronaves.setnRegistro(ler.next());
+		aeronaves.setnRegistro(ler.nextLine());
 
 		System.out.println("Insira a marca/modelo:");
-		aeronaves.setMarcaEmodelo(ler.next());
+		aeronaves.setMarcaEmodelo(ler.nextLine());
 
 		System.out.println("Insira o número de lugares na classe executiva:");
-		aeronaves.setNlugaresExecutiva(ler.next());
+		aeronaves.setNlugaresExecutiva(ler.nextLine());
 
 		System.out.println("Insira o número de lugares na classe turística:");
-		aeronaves.setNlugaresTuristica(ler.next());
+		aeronaves.setNlugaresTuristica(ler.nextLine());
 
 		// adiciono ao array
 		this.aeronave.add(aeronaves);
@@ -1082,8 +1124,8 @@ public class Aplicacao {
 		String numeroAeronave;
 
 		// Pergunto ao utilizador a aeronave que ele quer editar
-		System.out.println("Insira o nÃºmero de registo da aeronave que deseja editar:");
-		numeroAeronave = ler.next();
+		System.out.println("Insira o número de registo da aeronave que deseja editar:");
+		numeroAeronave = ler.nextLine();
 
 		// Percorro o array para ver se encontro, e edito os dados
 		for (Aeronave aeronaves : aeronave) {
@@ -1091,23 +1133,23 @@ public class Aplicacao {
 				editarAeronave = aeronaves;
 
 				System.out.println("Insira o novo número de registo:");
-				editarAeronave.setnRegistro(ler.next());
+				editarAeronave.setnRegistro(ler.nextLine());
 
 				System.out.println("Insira a nova marca/modelo:");
-				editarAeronave.setMarcaEmodelo(ler.next());
+				editarAeronave.setMarcaEmodelo(ler.nextLine());
 
 				System.out.println("Insira o novo número de lugares da classe executiva:");
-				editarAeronave.setNlugaresExecutiva(ler.next());
+				editarAeronave.setNlugaresExecutiva(ler.nextLine());
 
 				System.out.println("Insira o novo número de lugares da classe turística:");
-				editarAeronave.setNlugaresTuristica(ler.next());
+				editarAeronave.setNlugaresTuristica(ler.nextLine());
 
 				System.out.println(" ");
 
 				System.out.println("Editado com sucesso!");
 				System.out.println("\n-------------------------------------");
 
-				 //GravarFicheirosAeronaves();
+				// GravarFicheirosAeronaves();
 
 				MenuAeronaves();
 
@@ -1162,11 +1204,11 @@ public class Aplicacao {
 		System.out.println("Insira a sigla do aeroporto:");
 		aeroportos.setSigla(ler.next());
 
-		System.out.println("Insira o paÃ­s:");
-		aeroportos.setPais(ler.next());
+		System.out.println("Insira o país:");
+		aeroportos.setPais(ler.nextLine());
 
-		System.out.println("Insira a cidade mais prÃ³xima:");
-		aeroportos.setCidadeProx(ler.next());
+		System.out.println("Insira a cidade mais próxima:");
+		aeroportos.setCidadeProx(ler.nextLine());
 
 		// Adiciono ao array
 		this.aeroporto.add(aeroportos);
@@ -1250,10 +1292,10 @@ public class Aplicacao {
 				aeroportos.setSigla(ler.next());
 
 				System.out.println("Insira o novo país:");
-				aeroportos.setPais(ler.next());
+				aeroportos.setPais(ler.nextLine());
 
 				System.out.println("Insira a nova cidade mais próxima:");
-				aeroportos.setCidadeProx(ler.next());
+				aeroportos.setCidadeProx(ler.nextLine());
 
 				System.out.println(" ");
 
@@ -1556,7 +1598,7 @@ public class Aplicacao {
 
 	// Funcao para guardar os dados no ficheiro
 	public void GravarFicheirosAeronave() {
-		
+
 		String resposta;
 
 		System.out.println("Queres salvar as alterações (S/N)?");
@@ -1582,7 +1624,7 @@ public class Aplicacao {
 						linha += aeronave.getMarcaEmodelo() + "|";
 						linha += aeronave.getNlugaresTuristica() + "|";
 						linha += aeronave.getNlugaresExecutiva() + "\n|";
-						
+
 						caneta.write(linha);
 					}
 				}
@@ -1595,7 +1637,7 @@ public class Aplicacao {
 
 			}
 		}
-		
+
 	}
 
 	// Funcao para ler os dados do ficheiro
@@ -1687,12 +1729,9 @@ public class Aplicacao {
 			data = LocalDate.parse(ler.next(), formatter);
 			return data;
 		} catch (Exception ex) {
-			System.out.println("Data invalida, insira uma data com o formato (dd/MM/aaaa)");
+			System.out.println("Data inválida, insira uma data com o formato (dd/MM/aaaa):");
 			return LerData();
 		}
 	}
 
-		
-	}
-	
-
+}

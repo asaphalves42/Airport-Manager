@@ -10,7 +10,9 @@ public class Tripulacao extends Pessoa {
 	
 	public Tripulacao(String id, String nVoo, String nome, String nacionalidade, String morada, String telefone, String dataDeNascimento,
 			String nLincenca, String dataDeValidade, String anotacoes, String categoria) {
+		
 		super(id, nome, nacionalidade, morada, telefone, dataDeNascimento);
+		
 		this.nLincenca = nLincenca;
 		this.dataDeValidade = dataDeValidade;
 		this.anotacoes = anotacoes;
@@ -66,7 +68,7 @@ public class Tripulacao extends Pessoa {
 	public String toString() {
 		return "Tripulantes [\nId: " + getId() + "\nNome: " + getNome() + "\nNacionalidade: " + getNacionalidade() + 
 				"\nMorada: " + getMorada() + "\ntelefone: " + getTelefone() + "\nData de nascimento: " + 
-				getDataDeNascimento() + "[\nNï¿½mero da lincenca: " + nLincenca + "\nData de validade: " + dataDeValidade + "\nAnotaï¿½ï¿½es: " + anotacoes
+				getDataDeNascimento() + "[\nNúmero da lincenca: " + nLincenca + "\nData de validade: " + dataDeValidade + "\nAnotações: " + anotacoes
 				+ "\nCategoria: " + categoria + "]" + "\n" + 
 				"------------------------------------------------------";
 				
