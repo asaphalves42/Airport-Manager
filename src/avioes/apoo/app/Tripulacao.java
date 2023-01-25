@@ -2,15 +2,17 @@ package avioes.apoo.app;
 
 public class Tripulacao extends Pessoa {
 	
-	private int nLincenca;
+	private String nLincenca;
 	private String dataDeValidade;
 	private String anotacoes;
 	private String categoria;
 	private String nVoo;
 	
-	public Tripulacao(String id, String nVoo, String nome, String nacionalidade, String morada, int telefone, String dataDeNascimento,
-			int nLincenca, String dataDeValidade, String anotacoes, String categoria) {
+	public Tripulacao(String id, String nVoo, String nome, String nacionalidade, String morada, String telefone, String dataDeNascimento,
+			String nLincenca, String dataDeValidade, String anotacoes, String categoria) {
+		
 		super(id, nome, nacionalidade, morada, telefone, dataDeNascimento);
+		
 		this.nLincenca = nLincenca;
 		this.dataDeValidade = dataDeValidade;
 		this.anotacoes = anotacoes;
@@ -30,11 +32,11 @@ public class Tripulacao extends Pessoa {
 		this.nVoo = nVoo;
 	}
 
-	public int getnLincenca() {
+	public String getnLincenca() {
 		return nLincenca;
 	}
 
-	public void setnLincenca(int nLincenca) {
+	public void setnLincenca(String nLincenca) {
 		this.nLincenca = nLincenca;
 	}
 
@@ -66,7 +68,7 @@ public class Tripulacao extends Pessoa {
 	public String toString() {
 		return "Tripulantes [\nId: " + getId() + "\nNome: " + getNome() + "\nNacionalidade: " + getNacionalidade() + 
 				"\nMorada: " + getMorada() + "\ntelefone: " + getTelefone() + "\nData de nascimento: " + 
-				getDataDeNascimento() + "[\nNï¿½mero da lincenca: " + nLincenca + "\nData de validade: " + dataDeValidade + "\nAnotaï¿½ï¿½es: " + anotacoes
+				getDataDeNascimento() + "[\nNúmero da lincenca: " + nLincenca + "\nData de validade: " + dataDeValidade + "\nAnotações: " + anotacoes
 				+ "\nCategoria: " + categoria + "]" + "\n" + 
 				"------------------------------------------------------";
 				

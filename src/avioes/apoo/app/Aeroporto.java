@@ -1,4 +1,4 @@
-package otica.utilizador.apoo;
+package avioes.apoo.app;
 
 public class Aeroporto {
 	String sigla;

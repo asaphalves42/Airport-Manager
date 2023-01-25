@@ -3,10 +3,10 @@ package avioes.apoo.app;
 public class Aeronave {
 	private String nRegistro;
 	private String marcaEmodelo;
-	private int NlugaresTuristica;
-	private int NlugaresExecutiva;
+	private String NlugaresTuristica;
+	private String NlugaresExecutiva;
 	
-	public Aeronave(String nRegistro, String marcaEmodelo, int nlugaresTuristica, int nlugaresExecutiva) {
+	public Aeronave(String nRegistro, String marcaEmodelo, String nlugaresTuristica, String nlugaresExecutiva) {
 		super();
 		this.nRegistro = nRegistro;
 		this.marcaEmodelo = marcaEmodelo;
@@ -34,19 +34,19 @@ public class Aeronave {
 		this.marcaEmodelo = marcaEmodelo;
 	}
 
-	public int getNlugaresTuristica() {
+	public String getNlugaresTuristica() {
 		return NlugaresTuristica;
 	}
 
-	public void setNlugaresTuristica(int nlugaresTuristica) {
+	public void setNlugaresTuristica(String nlugaresTuristica) {
 		NlugaresTuristica = nlugaresTuristica;
 	}
 
-	public int getNlugaresExecutiva() {
+	public String getNlugaresExecutiva() {
 		return NlugaresExecutiva;
 	}
 
-	public void setNlugaresExecutiva(int nlugaresExecutiva) {
+	public void setNlugaresExecutiva(String nlugaresExecutiva) {
 		NlugaresExecutiva = nlugaresExecutiva;
 	}
 
