@@ -117,17 +117,10 @@ public class Aplicacao {
 		do {
 
 			System.out.println("1 - Listar voos");
-			System.out.println("2 - Pesquisar voo de passageiro");
-			System.out.println("3 - Editar voos");
+			System.out.println("2 - Editar voos");
 			System.out.println("3 - Adicionar voos");
 			System.out.println("4 - Eliminar voos");
 			System.out.println("5 - Voltar ao menu anterior");
-
-			//opção 2 passa a ser listar passageiros e tripulaçoa por voo
-			// 2 ciclos for para ler passageiros e ler array tripulantes
-			// se nVoo for igual entao escrever
-	
-			
 
 			opcao = ler.nextInt();
 
@@ -136,18 +129,15 @@ public class Aplicacao {
 				MenuVoo2();
 				break;
 			case 2:
-			//	FiltroPassageiroVOO();
-				break;
-			case 3:
 				EditarVoosCompleto();
 				break;
-			case 4:
+			case 3:
 				AdicionarVoos();
 				break;
-			case 5:
+			case 4:
 				EliminarVoos();
 				break;
-			case 6:
+			case 5:
 				MenuPrincipal();
 
 			default:
@@ -155,7 +145,7 @@ public class Aplicacao {
 				break;
 
 			}
-		} while (opcao != 6);
+		} while (opcao != 5);
 
 	}
 	
@@ -904,17 +894,11 @@ public class Aplicacao {
         for (Voo voo : voos) {
             if (voo.getDataDePartida().isAfter(dataInicioPesquisa) && voo.getDataDeChegada().isBefore(dataFimPesquisa)) {
             	System.out.println(voo);
-            } else {
-            	//se não encontrar nenhum voo
-            	System.out.println("Voo não encontrado");
-				System.out.println(" ");
-
-				ApresentarMenuVoo();
             }
         }
 	}
 	
-	public void FilrarVoosPorRota(){
+	public void FilrarVoosPorRota() {
 		String aeroportoOrigem;
 		String aeroportoDestino;
 		
@@ -926,15 +910,10 @@ public class Aplicacao {
 		for (Voo voo : voos) {
 			if (voo.getAeroOrigem().equalsIgnoreCase(aeroportoOrigem) && (voo.getAeroDestino().equalsIgnoreCase(aeroportoDestino))) {
 				System.out.println(voo);
-			} else {
-            	//se não encontrar nenhum voo
-            	System.out.println("Voo não encontrado");
-				System.out.println(" ");
-
-				ApresentarMenuVoo();
+			}
 		}
 	}
-	}
+	
 	/*
 	 * 
 	 * CONTROLO DE AERONAVES
@@ -1109,7 +1088,7 @@ public class Aplicacao {
 
 		// Verifico se existem dados registados
 		if (aeroporto.isEmpty()) {
-			System.out.println("Não existem aeroportos registados!");
+			System.out.println("Não existem aeroportos registrados!");
 			System.out.println(" ");
 		} else {
 
@@ -1601,23 +1580,7 @@ public class Aplicacao {
 			return LerData();
 		}
 	}
-	
-	/*/public void FiltroPassageiroVOO() {
-		// Se cont�m, percorro o array e mostro ao utilizador
-		int contadorPassegeiros = 0;
-		System.out.println("Insira o número do voo");
-		System.out.println("Insira o Id do passageiro");
-			for (Voo voo : voos) {
-				//para cada um dos voos, vou contador os passegeiros
-				for(Passageiros passageiro: passageiros) {
-					if (passageiro.getnVoo().equals(voo.getnVoo().equals(passageiro.getId()))) {
-						contadorPassegeiros++;
-					}
-				}
-				System.out.println(passageiros);
-			}
-	}
-*/
+
 }
 
 
