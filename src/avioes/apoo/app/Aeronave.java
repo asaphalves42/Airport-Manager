@@ -10,8 +10,8 @@ public class Aeronave {
 		super();
 		this.nRegistro = nRegistro;
 		this.marcaEmodelo = marcaEmodelo;
-		NlugaresTuristica = nlugaresTuristica;
-		NlugaresExecutiva = nlugaresExecutiva;
+		this.NlugaresTuristica = nlugaresTuristica;
+		this.NlugaresExecutiva = nlugaresExecutiva;
 	}
 
 	public Aeronave() {
@@ -52,8 +52,8 @@ public class Aeronave {
 
 	@Override
 	public String toString() {
-		return "Aeronaves [\nNúmero de registro: " + nRegistro + "\nMarca/modelo: " + marcaEmodelo + "\nNúmero de lugares turística: "
-				+ NlugaresTuristica + "\nNúmero de lugares executiva: " + NlugaresExecutiva + "]" + "\n----------------------------------";
+		return "Aeronaves [\nNÃºmero de registro: " + nRegistro + "\nMarca/modelo: " + marcaEmodelo + "\nNï¿½mero de lugares turï¿½stica: "
+				+ NlugaresTuristica + "\nNï¿½mero de lugares executiva: " + NlugaresExecutiva + "]" + "\n----------------------------------";
 	}
 	
 	
