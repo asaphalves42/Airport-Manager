@@ -44,7 +44,6 @@ public class Passageiros extends Pessoa {
 		this.lugarReservado = lugarReservado;
 	}
 	
-
 	public String getnVoo() {
 		return nVoo;
 	}
@@ -55,7 +54,7 @@ public class Passageiros extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "Passageiros [\nId: " + getId() + "\nNúmero do voo: " + nVoo + "\nNome: " + getNome() + "\nNacionalidade: " + getNacionalidade() + 
+		return "Passageiros [\nId: " + getId() + "\nNï¿½mero do voo: " + nVoo + "\nNome: " + getNome() + "\nNacionalidade: " + getNacionalidade() + 
 				"\nMorada: " + getMorada() + "\ntelefone: " + getTelefone() + "\nData de nascimento: " + getDataDeNascimento() + "\ne-mail: " + email + 
 				"\ntipoBilhete: " + tipoBilhete + "\nLugar reservado: " + lugarReservado
 				+ "]" + "\n" + 
