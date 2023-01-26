@@ -17,10 +17,10 @@ import avioes.apoo.app.Tripulacao;
 import avioes.apoo.app.Voo;
 
 public class Aplicacao {
-	
+
 	public String companhia;
 	public String LocalizacaoDados = "C:\\aplicacao";
-	
+
 	Scanner ler = new Scanner(System.in);
 
 	ArrayList<Voo> voos = new ArrayList<>();
@@ -36,7 +36,7 @@ public class Aplicacao {
 		LerFicheirosAeroportos();
 		LerFicheirosAeronaves();
 		LerFicheirosTripulantes();
-		System.out.println("Bem vindo a aplicação para companhia aérea!");	
+		System.out.println("Bem vindo a aplicação para companhia aérea!");
 		MenuPrincipal();
 
 	}
@@ -74,25 +74,25 @@ public class Aplicacao {
 
 			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
-				case 1:
-					ApresentarMenuVoo();
-					break;
-				case 2:
-					ApresentarMenuPassageiro();
-					break;
-				case 3:
-					ApresentarMenuTripulacao();
-					break;
-				case 4:
-					MenuAeronaves();
-					break;
-				case 5:
-					MenuAeroportos();
-					break;
-				case 6:
-					break;
-				default:
-					System.out.println("Opção inválida");
+			case 1:
+				ApresentarMenuVoo();
+				break;
+			case 2:
+				ApresentarMenuPassageiro();
+				break;
+			case 3:
+				ApresentarMenuTripulacao();
+				break;
+			case 4:
+				MenuAeronaves();
+				break;
+			case 5:
+				MenuAeroportos();
+				break;
+			case 6:
+				break;
+			default:
+				System.out.println("Opção inválida");
 				break;
 			}
 		} while (opcao != 6);
@@ -102,7 +102,7 @@ public class Aplicacao {
 
 		int opcao;
 		System.out.println("## MENU VOOS ##");
-		
+
 		do {
 
 			System.out.println("1 - Listar voos");
@@ -114,25 +114,25 @@ public class Aplicacao {
 			opcao = (ler.nextInt());
 			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
-				case 1:
-					MenuVooListar();
-					break;
-				case 2:
-					EditarVooCompleto();
-					break;
-				case 3:
-					AdicionarVoo();
-					break;
-				case 4:
-					EliminarVoo();
-					break;
-				case 5:
-					MenuPrincipal();
-	
-				default:
-					System.out.println("Opção inválida!");
-	
-					break;
+			case 1:
+				MenuVooListar();
+				break;
+			case 2:
+				EditarVooCompleto();
+				break;
+			case 3:
+				AdicionarVoo();
+				break;
+			case 4:
+				EliminarVoo();
+				break;
+			case 5:
+				MenuPrincipal();
+
+			default:
+				System.out.println("Opção inválida!");
+
+				break;
 			}
 		} while (opcao != 5);
 	}
@@ -141,7 +141,7 @@ public class Aplicacao {
 
 		int opcao;
 		System.out.println("## MENU VOOS - LISTAR ##");
-		
+
 		do {
 			System.out.println("1 - Listar voos por datas");
 			System.out.println("2 - Listar voos por rotas");
@@ -153,24 +153,24 @@ public class Aplicacao {
 
 			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
-				case 1:
-					FiltrarVoosPorData();
-					break;
-				case 2:
-					FilrarVoosPorRota();
-					break;
-				case 3:
-					ListarVoos();
-					break;
-				case 4:
-					ListarVoosPorNumero();
-					break;
-				case 5:
-					ApresentarMenuVoo();
-					break;
-				default:
-					System.out.println("Opção inválida");
-					break;
+			case 1:
+				FiltrarVoosPorData();
+				break;
+			case 2:
+				FilrarVoosPorRota();
+				break;
+			case 3:
+				ListarVoos();
+				break;
+			case 4:
+				ListarVoosPorNumero();
+				break;
+			case 5:
+				ApresentarMenuVoo();
+				break;
+			default:
+				System.out.println("Opção inválida");
+				break;
 			}
 		} while (opcao != 5);
 	}
@@ -179,7 +179,7 @@ public class Aplicacao {
 
 		int opcao;
 		System.out.println("## MENU PASSAGEIROS ##");
-		
+
 		do {
 			System.out.println("1 - Listar passageiros");
 			System.out.println("2 - Editar passageiro");
@@ -191,24 +191,24 @@ public class Aplicacao {
 
 			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
-				case 1:
-					MenuListaPassageirosListar();
-					break;
-				case 2:
-					EditarPassageiroCompleto();
-					break;
-				case 3:
-					AdicionarPassageiros();
-					break;
-				case 4:
-					EliminarPassageiros();
-					break;
-				case 5:
-					MenuPrincipal();
-					break;
-				default:
-					System.out.println("Opção inválida");
-				}
+			case 1:
+				MenuListaPassageirosListar();
+				break;
+			case 2:
+				EditarPassageiroCompleto();
+				break;
+			case 3:
+				AdicionarPassageiros();
+				break;
+			case 4:
+				EliminarPassageiros();
+				break;
+			case 5:
+				MenuPrincipal();
+				break;
+			default:
+				System.out.println("Opção inválida");
+			}
 		} while (opcao != 5);
 	}
 
@@ -216,7 +216,7 @@ public class Aplicacao {
 
 		int opcao;
 		System.out.println("## MENU PASSAGEIROS - LISTAR ##");
-		
+
 		do {
 			System.out.println("1 - Listar passageiros por voo");
 			System.out.println("2 - Listar todos os passageiros");
@@ -227,20 +227,21 @@ public class Aplicacao {
 
 			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
-				case 1: ListarPassageirosPorVoo();
-					break;
-				case 2:
-					ListarTodosOsPassageiros();
-					break;
-				case 3:
-					ListarPassageirosPorData();
-					break;
-				case 4:
-					ApresentarMenuPassageiro();
-					break;			
-				default:
-					System.out.println("Opção inválida");
-					break;
+			case 1:
+				ListarPassageirosPorVoo();
+				break;
+			case 2:
+				ListarTodosOsPassageiros();
+				break;
+			case 3:
+				ListarPassageirosPorData();
+				break;
+			case 4:
+				ApresentarMenuPassageiro();
+				break;
+			default:
+				System.out.println("Opção inválida");
+				break;
 			}
 
 		} while (opcao != 4);
@@ -250,7 +251,7 @@ public class Aplicacao {
 
 		int opcao;
 		System.out.println("## MENU TRIPULANTES - LISTAR ##");
-		
+
 		do {
 			System.out.println("1 - Listar pessoal cabine");
 			System.out.println("2 - Editar pessoal cabine");
@@ -262,24 +263,24 @@ public class Aplicacao {
 
 			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
-				case 1:
-					ListarPessoalCabine();
-					break;
-				case 2:
-					EditarCabine();
-					break;
-				case 3:
-					AdicionarPessoalCabine();
-					break;
-				case 4:
-					ElminarCabine();
-					break;
-				case 5:
-					MenuPrincipal();
-					break;
-				default:
-					System.out.println("Opcão inválida");
-					break;
+			case 1:
+				ListarPessoalCabine();
+				break;
+			case 2:
+				EditarCabine();
+				break;
+			case 3:
+				AdicionarPessoalCabine();
+				break;
+			case 4:
+				ElminarCabine();
+				break;
+			case 5:
+				MenuPrincipal();
+				break;
+			default:
+				System.out.println("Opcão inválida");
+				break;
 			}
 		} while (opcao != 5);
 	}
@@ -301,24 +302,24 @@ public class Aplicacao {
 
 			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
-				case 1:
-					AdicionarAaeronave();
-					break;
-				case 2:
-					ListarAeronave();
-					break;
-				case 3:
-					EditarAeronave();
-					break;
-				case 4:
-					EliminarAeronave();
-					break;
-				case 5:
-					MenuPrincipal();
-					break;
-				default:
-					System.out.println("Opção invalida!");
-					break;
+			case 1:
+				AdicionarAaeronave();
+				break;
+			case 2:
+				ListarAeronave();
+				break;
+			case 3:
+				EditarAeronave();
+				break;
+			case 4:
+				EliminarAeronave();
+				break;
+			case 5:
+				MenuPrincipal();
+				break;
+			default:
+				System.out.println("Opção invalida!");
+				break;
 			}
 		} while (opcao != 5);
 	}
@@ -331,7 +332,7 @@ public class Aplicacao {
 		// repeticao
 		// do menu
 		System.out.println("## MENU AEROPORTOS ##");
-		do {			
+		do {
 			System.out.println("1 - Adicionar aeroporto");
 			System.out.println("2 - Listar aeroportos");
 			System.out.println("3 - Editar aeroporto");
@@ -342,24 +343,24 @@ public class Aplicacao {
 
 			// chamar a funcao especifica a que o utilizador usar
 			switch (opcao) {
-				case 1:
-					AdicionarAaeroporto();
-					break;
-				case 2:
-					ListarAaeroportos();
-					break;
-				case 3:
-					EditarAeroporto();
-					break;
-				case 4:
-					EliminarAeroporto();
-					break;
-				case 5:
-					MenuPrincipal();
-					break;
-				default:
-					System.out.println("Opcao Invalida!");
-					break;
+			case 1:
+				AdicionarAaeroporto();
+				break;
+			case 2:
+				ListarAaeroportos();
+				break;
+			case 3:
+				EditarAeroporto();
+				break;
+			case 4:
+				EliminarAeroporto();
+				break;
+			case 5:
+				MenuPrincipal();
+				break;
+			default:
+				System.out.println("Opcao Invalida!");
+				break;
 			}
 
 		} while (opcao != 5);
@@ -370,74 +371,74 @@ public class Aplicacao {
 	 * CONTROLO DE PASSAGEIROS
 	 * 
 	 */
-	
+
 	public Passageiros ObterPassageiroPorIdentidade(String id) {
 		for (Passageiros passageiro : passageiros) {
 			if (id.equals(passageiro.getId())) {
-				return passageiro;				
+				return passageiro;
 			}
 		}
 		return null;
 	}
-	
+
 	public int ContagemPassageirosVoo(String numero) {
 		int contagem = 0;
 		for (Passageiros passageiro : passageiros) {
 			if (numero.equals(passageiro.getnVoo())) {
-				contagem = contagem+1;			
+				contagem = contagem + 1;
 			}
 		}
 		return contagem;
 	}
-		
+
 	public void AdicionarPassageiros() {
 
 		try {
 			Passageiros passageiro = new Passageiros();
-	
+
 			System.out.print("Indique o n. do Voo:");
 			passageiro.setnVoo(ler.next());
-	
+
 			System.out.println("Identidade do passageiro:");
 			passageiro.setId(ler.next());
-	
+
 			System.out.println("Nome do passageiro:");
 			passageiro.setNome(ler.next());
-	
+
 			System.out.println("Nacionalidade:");
 			passageiro.setNacionalidade(ler.next());
-	
+
 			System.out.println("Morada:");
 			passageiro.setMorada(ler.next());
-	
+
 			System.out.println("Telefone:");
 			passageiro.setTelefone(ler.next());
-	
+
 			System.out.println("Data de nascimento:");
 			passageiro.setDataDeNascimento(LerData().toString());
-	
+
 			System.out.println("E-mail:");
 			passageiro.setEmail(ler.next());
-	
+
 			System.out.println("Tipo do bilhete:");
 			passageiro.setTipoBilhete(ler.next());
-	
+
 			System.out.println("Lugar reservado");
 			passageiro.setLugarReservado(ler.next());
-	
+
 			// adiciono ao arrayList
 			this.passageiros.add(passageiro);
-	
+
 			System.out.println(" ");
-	
+
 			// mensagem ao utilizador
 			System.out.println("Passageiro adicionado com sucesso!");
 			System.out.println("\n-------------------------------------");
-	
+
 			// gravo os ficheiros
 			GravarFicheirosPassageiros();
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a inserir o novo passageiro!" +e.getMessage());
+			System.out.println("Ocorreu um erro a inserir o novo passageiro!" + e.getMessage());
 		}
 
 	}
@@ -448,7 +449,7 @@ public class Aplicacao {
 			System.out.println("Insira o número da identidade do passageiro que deseja eliminar:");
 			String idPassageiro = ler.next();
 			Passageiros encontrado = ObterPassageiroPorIdentidade(idPassageiro);
-			
+
 			if (encontrado != null) {
 				passageiros.remove(encontrado);
 				System.out.println(" ");
@@ -456,68 +457,68 @@ public class Aplicacao {
 				System.out.println("\n-------------------------------------");
 				GravarFicheirosPassageiros();
 			} else {
-				System.out.println(" ");	
+				System.out.println(" ");
 				System.out.println("Não foi encontrado nenhum passageiro com o número da identidade indicado!");
-			}	
+			}
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a eliminar o passageiro!" +e.getMessage());
+			System.out.println("Ocorreu um erro a eliminar o passageiro!" + e.getMessage());
 		}
 	}
- 
+
 	public void EditarPassageiroCompleto() {
 
 		try {
 			// identifico o passageiro
 			System.out.println("Insira número de identidade do passageiro que deseja editar:");
 			String idPassageiro = ler.next();
-	
+
 			Passageiros passageiro = ObterPassageiroPorIdentidade(idPassageiro);
 			if (passageiro != null) {
-	
+
 				System.out.println("Indique o nº do Voo:");
 				passageiro.setnVoo(ler.next());
-	
+
 				System.out.println("Insira o novo numero de identidade do passageiro:");
 				passageiro.setId(ler.next());
-	
+
 				System.out.println("Insira o novo nome do passageiro:");
 				passageiro.setNome(ler.next());
-	
+
 				System.out.println("Insira a nova nacionalidade:");
 				passageiro.setNacionalidade(ler.next());
-	
+
 				System.out.println("Insira a nova morada:");
 				passageiro.setMorada(ler.next());
-	
+
 				System.out.println("Insira o novo telefone:");
 				passageiro.setTelefone(ler.next());
-	
+
 				System.out.println("Insira a nova data de nascimento:");
 				passageiro.setDataDeNascimento(LerData().toString());
-	
+
 				System.out.println("Insira o novo e-mail:");
 				passageiro.setEmail(ler.next());
-	
+
 				System.out.println("Insira o novo tipo de bilhete:");
 				passageiro.setTipoBilhete(ler.next());
-	
+
 				System.out.println("Insira o novo lugar reservado:");
 				passageiro.setLugarReservado(ler.next());
-	
+
 				System.out.println(" ");
-	
+
 				System.out.println("Editado com sucesso!");
 				System.out.println("\n-------------------------------------");
-				
+
 				GravarFicheirosPassageiros();
-	
+
 			} else {
 				System.out.println("Passageiro não encontrado!");
-				ApresentarMenuPassageiro();		
+				ApresentarMenuPassageiro();
 			}
 			ApresentarMenuVoo();
-		}catch (Exception e) {
-			System.out.println("Ocorreu um erro a alterar o passageiro!" +e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Ocorreu um erro a alterar o passageiro!" + e.getMessage());
 		}
 
 	}
@@ -546,43 +547,42 @@ public class Aplicacao {
 		System.out.println("Insira uma data fim (dd/MM/aaaa):");
 		LocalDate dataFimPesquisa = LerData();
 
-		//procurar todos os voos dentro de determinada data 
+		// procurar todos os voos dentro de determinada data
 		int contador = 0;
 		for (Voo voo : voos) {
-			if (
-				(voo.getDataDePartida().isAfter(dataInicioPesquisa) || voo.getDataDePartida().isEqual(dataInicioPesquisa))
-				&& 
-				(voo.getDataDeChegada().isBefore(dataFimPesquisa) || voo.getDataDeChegada().isEqual(dataFimPesquisa))
-			) {
+			if ((voo.getDataDePartida().isAfter(dataInicioPesquisa)
+					|| voo.getDataDePartida().isEqual(dataInicioPesquisa))
+					&& (voo.getDataDeChegada().isBefore(dataFimPesquisa)
+							|| voo.getDataDeChegada().isEqual(dataFimPesquisa))) {
 				// para cada voo, vou procurar os passageiros
-				for(Passageiros passageiro: passageiros) {					
-					if (passageiro.getnVoo().equals(voo.getnVoo())) {				
-						System.out.println(passageiro);		
+				for (Passageiros passageiro : passageiros) {
+					if (passageiro.getnVoo().equals(voo.getnVoo())) {
+						System.out.println(passageiro);
 						contador = contador + 1;
 					}
 				}
 			}
 		}
 		if (contador == 0) {
-			System.out.println("\nNão foram encontrados passageiros nas datas indicadas.");		
+			System.out.println("\nNão foram encontrados passageiros nas datas indicadas.");
 		} else {
-			System.out.println("\nEncontrados "+contador+" passageiros.");		
+			System.out.println("\nEncontrados " + contador + " passageiros.");
 		}
 	}
-	
+
 	public void ListarPassageirosPorVoo() {
-		
+
 		if (passageiros.isEmpty()) {
 			System.out.println("Não existem passageiros registados!");
 			System.out.println(" ");
 		} else {
-			// Se contem, percorro o array e mostro ao utilizador			
+			// Se contem, percorro o array e mostro ao utilizador
 			System.out.println("Insira o número do voo:");
 			String nVoo = ler.next();
-			
+
 			Boolean encontradoPassageiros = false;
 			for (Passageiros passageiros : passageiros) {
-				if(passageiros.getnVoo().equals(nVoo)) {
+				if (passageiros.getnVoo().equals(nVoo)) {
 					System.out.println(passageiros);
 					encontradoPassageiros = true;
 				}
@@ -593,7 +593,7 @@ public class Aplicacao {
 			ApresentarMenuPassageiro();
 		}
 	}
-	
+
 	/*
 	 * 
 	 * CONTROLO DE PESSOAL CABINE
@@ -603,64 +603,65 @@ public class Aplicacao {
 	public Tripulacao ObterTripulantePorIdentidade(String id) {
 		for (Tripulacao tripulante : tripulantes) {
 			if (id.equals(tripulante.getId())) {
-				return tripulante;				
+				return tripulante;
 			}
 		}
 		return null;
 	}
-	
+
 	public void AdicionarPessoalCabine() {
 		try {
 			Tripulacao tripulacao = new Tripulacao();
-	
+
 			System.out.println("Identidade do funcionário:");
 			tripulacao.setId(ler.next());
-	
+
 			System.out.println("Nome do funcionário:");
 			tripulacao.setNome(ler.next());
-	
+
 			System.out.println("Nacionalidade:");
 			tripulacao.setNacionalidade(ler.next());
-	
+
 			System.out.println("Morada:");
 			tripulacao.setMorada(ler.next());
-	
+
 			System.out.println("Telefone:");
 			tripulacao.setTelefone(ler.next());
-	
+
 			System.out.println("Data de nascimento:");
 			tripulacao.setDataDeNascimento(LerData().toString());
-	
+
 			System.out.println("Licenca:");
 			tripulacao.setnLicenca(ler.next());
-			
+
 			System.out.println("Data de validade:");
-			tripulacao.setDataDeValidade(LerData().toString());;
-	
+			tripulacao.setDataDeValidade(LerData().toString());
+			;
+
 			System.out.println("Anotações:");
 			tripulacao.setAnotacoes(ler.next());
-	
+
 			System.out.println("Categoria:");
 			tripulacao.setCategoria(ler.next());
-	
+
 			// Adiciono ao array
 			this.tripulantes.add(tripulacao);
-	
+
 			System.out.println(" ");
-	
+
 			// Mensagem ao utilizador
 			System.out.println("Tripulante adicionado com sucesso!");
 			System.out.println("\n-------------------------------------");
-	
+
 			// Gravo para ficheiros
 			GravarFicheirosTripulantes();
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a adicionar tripulante!" +e.getMessage());
+			System.out.println("Ocorreu um erro a adicionar tripulante!" + e.getMessage());
 		}
-		
+
 		// Volto ao menu
 		ApresentarMenuTripulacao();
-		
+
 	}
 
 	public void ListarPessoalCabine() {
@@ -685,9 +686,9 @@ public class Aplicacao {
 		try {
 			System.out.println("Insira o número da identidade do tripulante que deseja eliminar:");
 			String idTripulante = ler.next();
-			
+
 			Tripulacao encontrado = ObterTripulantePorIdentidade(idTripulante);
-			
+
 			if (encontrado != null) {
 				tripulantes.remove(encontrado);
 				System.out.println(" ");
@@ -695,73 +696,73 @@ public class Aplicacao {
 				System.out.println("\n-------------------------------------");
 				GravarFicheirosTripulantes();
 			} else {
-				System.out.println(" ");	
+				System.out.println(" ");
 				System.out.println("Não foi encontrado nenhum tripulante com o número da identidade indicado!");
-			}		
+			}
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a eliminar tripulante!" +e.getMessage());
+			System.out.println("Ocorreu um erro a eliminar tripulante!" + e.getMessage());
 		}
 	}
 
 	public void EditarCabine() {
 		try {
 			String idTripulante;
-	
+
 			// Pergunto ao utilizador a identidade do tripulante
 			System.out.println("Insira o número de identidade do tripulante que deseja editar:");
 			idTripulante = ler.next();
-	
+
 			Tripulacao tripulante = ObterTripulantePorIdentidade(idTripulante);
 			if (tripulante != null) {
-				
+
 				System.out.println("Indique o nº do Voo:");
 				tripulante.setnVoo(ler.next());
-	
+
 				System.out.println("Insira o novo número de identidade do tripulante:");
 				tripulante.setId(ler.next());
-	
+
 				System.out.println("Insira o novo nome do tripulante:");
 				tripulante.setNome(ler.next());
-	
+
 				System.out.println("Insira a nova nacionalidade:");
 				tripulante.setNacionalidade(ler.next());
-	
+
 				System.out.println("Insira a nova morada:");
 				tripulante.setMorada(ler.next());
-	
+
 				System.out.println("Insira o novo telefone:");
 				tripulante.setTelefone(ler.next());
-	
+
 				System.out.println("Insira a nova data de nascimento:");
 				tripulante.setDataDeNascimento(ler.next());
-	
+
 				System.out.println("Insira a nova licença:");
 				tripulante.setnLicenca(ler.next());
-	
+
 				System.out.println("Insira a nova data de validade:");
 				tripulante.setDataDeValidade(ler.next());
-	
+
 				System.out.println("Insira as novas anotações:");
 				tripulante.setAnotacoes(ler.next());
-	
+
 				System.out.println("Insira a nova categoria:");
 				tripulante.setCategoria(ler.next());
-	
+
 				System.out.println(" ");
-	
+
 				// Mensagem ao utilizador se conseguir
 				System.out.println("Editado com sucesso!");
 				System.out.println("\n-------------------------------------");
-				
+
 				GravarFicheirosTripulantes();
-	
+
 			} else {
 				// Mensagem ao utilizador se nao encontrar o tripulante
 				System.out.println("Tripulante não encontrado!");
 				ApresentarMenuPassageiro();
 			}
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a editar tripulante!" +e.getMessage());
+			System.out.println("Ocorreu um erro a editar tripulante!" + e.getMessage());
 		}
 	}
 
@@ -774,82 +775,80 @@ public class Aplicacao {
 	public Voo ObterVooPorNumero(String numero) {
 		for (Voo voo : voos) {
 			if (numero.equals(voo.getnVoo())) {
-				return voo;				
+				return voo;
 			}
 		}
 		return null;
 	}
-	
+
 	public void EliminarVoo() {
 		try {
 			System.out.println("Insira o número do voo que deseja eliminar:");
 			String numVoo = ler.next();
-			
+
 			Voo encontrado = ObterVooPorNumero(numVoo);
-	
+
 			// Removo do array
 			if (encontrado != null) {
 				voos.remove(encontrado);
-				
-				System.out.println(" ");					
+
+				System.out.println(" ");
 				System.out.println("Voo eliminado com sucesso!");
-				System.out.println("\n-------------------------------------");	
-				
+				System.out.println("\n-------------------------------------");
+
 				GravarFicheirosVoos();
 			} else {
-				System.out.println(" ");	
+				System.out.println(" ");
 				System.out.println("Não foi encontrado nenhum voo com o número indicado!");
 			}
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a elminar voo!" +e.getMessage());
+			System.out.println("Ocorreu um erro a elminar voo!" + e.getMessage());
 		}
 	}
 
 	public void AdicionarVoo() {
 		try {
 			Voo voo = new Voo();
-	
+
 			System.out.println("Insira o numero do voo: ");
 			voo.setnVoo(ler.next());
-	
+
 			// verifico se já existe um voo com o número indicado
 			if (ObterVooPorNumero(voo.getnVoo()) != null) {
-				System.out.println("Já existe um voo com o número inserido.");			
-			}
-			else 
-			{			
+				System.out.println("Já existe um voo com o número inserido.");
+			} else {
 				System.out.println("Insira o nome do avião: ");
 				voo.setAviao(ler.next());
-		
+
 				System.out.println("Insira o aeroporto de origem: ");
 				voo.setAeroOrigem(ler.next());
-		
+
 				System.out.println("Insira o aeroporto de destino: ");
 				voo.setAeroDestino(ler.next());
-		
+
 				System.out.println("Insira a data de partida: ");
 				voo.setDataDePartida(LerData());
-		
+
 				System.out.println("Insira a data de chegada: ");
 				voo.setDataDeChegada(LerData());
-		
+
 				System.out.println("Insira a hora de partida: ");
 				voo.setHoraDePartida(ler.next());
-		
+
 				System.out.println("Insira a hora de chegada: ");
 				voo.setHoraDeChegada(ler.next());
-		
+
 				// adiciono no array
 				this.voos.add(voo);
-		
-				System.out.println(" "); 
+
+				System.out.println(" ");
 				System.out.println("Voo adicionado com sucesso!");
 				System.out.println("\n-------------------------------------");
-		
+
 				GravarFicheirosVoos();
 			}
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a adicionar voo!" +e.getMessage());
+			System.out.println("Ocorreu um erro a adicionar voo!" + e.getMessage());
 		}
 	}
 
@@ -858,52 +857,52 @@ public class Aplicacao {
 			// Pergunto ao utilizador os numero do voo
 			System.out.println("Insira o número do voo que deseja editar:");
 			String numeroVoo = ler.next();
-			
+
 			Voo voo = ObterVooPorNumero(numeroVoo);
 			if (voo != null) {
 				System.out.println("Insira o novo número do voo:");
 				voo.setnVoo(ler.next());
-	
+
 				System.out.println("Insira o novo número do avião:");
 				voo.setAviao(ler.next());
-	
+
 				System.out.println("Insira o novo aeroporto de origem:");
 				voo.setAeroOrigem(ler.next());
-	
+
 				System.out.println("Insira o novo aeroporto de destino:");
 				voo.setAeroDestino(ler.next());
-	
+
 				System.out.println("Insira a nova data de partida:");
 				voo.setDataDePartida(LerData());
-	
+
 				System.out.println("Insira a nova data de chegada:");
 				voo.setDataDeChegada(LerData());
-	
+
 				System.out.println("Insira a nova hora de partida:");
 				voo.setHoraDePartida(ler.next());
-	
+
 				System.out.println("Insira a nova hora de chegada:");
 				voo.setHoraDeChegada(ler.next());
-	
+
 				System.out.println(" ");
 				System.out.println("Voo editado com sucesso!");
 				System.out.println("\n-------------------------------------");
-	
+
 				// Gravo para ficheiros
 				GravarFicheirosVoos();
-				
+
 				ApresentarMenuVoo();
-				
+
 			} else {
 				System.out.println(" ");
-				System.out.println("Voo não encontrado!");			
+				System.out.println("Voo não encontrado!");
 				ApresentarMenuVoo();
 			}
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a editar voo!" +e.getMessage());
+			System.out.println("Ocorreu um erro a editar voo!" + e.getMessage());
 		}
 	}
-	
+
 	public void ListarVoos() {
 
 		// Verifico se existem dados registados
@@ -920,7 +919,7 @@ public class Aplicacao {
 
 	}
 
-	public void ListarVoosPorNumero() {	
+	public void ListarVoosPorNumero() {
 		System.out.println("Insira o número do voo:");
 		String numeroVoo = ler.next();
 
@@ -933,10 +932,10 @@ public class Aplicacao {
 		MenuVooListar();
 	}
 
-	public void ListarVoosComMaisPassageiros() {	
-		
+	public void ListarVoosComMaisPassageiros() {
+
 	}
-	
+
 	public void FiltrarVoosPorData() {
 
 		System.out.println("Insira uma data de inicio (dd/MM/aaaa):");
@@ -947,12 +946,12 @@ public class Aplicacao {
 
 		Boolean encontradoVoos = false;
 		int contagemPassageiros = 0;
-		
+
 		for (Voo voo : voos) {
-			if (
-					(voo.getDataDePartida().isAfter(dataInicioPesquisa) || voo.getDataDePartida().isEqual(dataInicioPesquisa))
-					&& 
-					(voo.getDataDeChegada().isBefore(dataFimPesquisa) || voo.getDataDeChegada().isEqual(dataFimPesquisa))) {
+			if ((voo.getDataDePartida().isAfter(dataInicioPesquisa)
+					|| voo.getDataDePartida().isEqual(dataInicioPesquisa))
+					&& (voo.getDataDeChegada().isBefore(dataFimPesquisa)
+							|| voo.getDataDeChegada().isEqual(dataFimPesquisa))) {
 				System.out.println(voo);
 				encontradoVoos = true;
 				contagemPassageiros = contagemPassageiros + ContagemPassageirosVoo(voo.getnVoo());
@@ -972,20 +971,20 @@ public class Aplicacao {
 	public void FilrarVoosPorRota() {
 		System.out.println("Insira o aeroporto de origem:");
 		String aeroportoOrigem = ler.next();
-		
+
 		System.out.println("Insira o aeroporto de destino:");
 		String aeroportoDestino = ler.next();
-		
+
 		Boolean encontradoVoos = false;
 		int contagemPassageiros = 0;
 		int contagemVoos = 0;
-		
+
 		for (Voo voo : voos) {
 			if (voo.getAeroOrigem().equalsIgnoreCase(aeroportoOrigem)
 					&& (voo.getAeroDestino().equalsIgnoreCase(aeroportoDestino))) {
 				System.out.println(voo);
 				encontradoVoos = true;
-				contagemPassageiros = contagemPassageiros + ContagemPassageirosVoo(voo.getnVoo());	
+				contagemPassageiros = contagemPassageiros + ContagemPassageirosVoo(voo.getnVoo());
 				contagemVoos = contagemVoos + 1;
 			}
 		}
@@ -993,7 +992,7 @@ public class Aplicacao {
 			System.out.println("Não existem voo registado com as datas indicadas!");
 		} else {
 			System.out.println("Estatisticas:");
-			System.out.println("Total passageiros : " + contagemPassageiros);			
+			System.out.println("Total passageiros : " + contagemPassageiros);
 			System.out.println("Média passageiros rota: " + contagemPassageiros / contagemVoos);
 			System.out.println("--------------------------------------------------------------------");
 		}
@@ -1005,44 +1004,44 @@ public class Aplicacao {
 	 * CONTROLO DE AERONAVES
 	 * 
 	 */
-	
+
 	public Aeronave ObterAeronavePorNumero(String numero) {
 		for (Aeronave aeronave : aeronaves) {
 			if (numero.equals(aeronave.getnRegistro())) {
-				return aeronave;				
+				return aeronave;
 			}
 		}
 		return null;
 	}
-	
+
 	public void AdicionarAaeronave() {
 		try {
 			Aeronave aeronave = new Aeronave();
-	
+
 			// Prencho os dados
 			System.out.println("Insira o número de registo:");
 			aeronave.setnRegistro(ler.next());
-	
+
 			System.out.println("Insira a marca/modelo:");
 			aeronave.setMarcaEmodelo(ler.next());
-	
+
 			System.out.println("Insira o número de lugares na classe executiva:");
 			aeronave.setNlugaresExecutiva(ler.next());
-	
+
 			System.out.println("Insira o número de lugares na classe turistica:");
 			aeronave.setNlugaresTuristica(ler.next());
-	
+
 			// adiciono ao array
 			this.aeronaves.add(aeronave);
-	
+
 			System.out.println(" ");
 			System.out.println("Aeronave adicionada com sucesso!");
 			System.out.println("\n-------------------------------------");
-	
+
 			// Gravo para ficheiros
 			GravarFicheirosAeronave();
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a adicionar aeronave!" +e.getMessage());
+			System.out.println("Ocorreu um erro a adicionar aeronave!" + e.getMessage());
 		}
 	}
 
@@ -1067,27 +1066,26 @@ public class Aplicacao {
 			// Pergunto ao utilizador os dados
 			System.out.println("Insira o número de registo da aeronave que deseja eliminar:");
 			String numAeronave = ler.next();
-	
+
 			Aeronave encontrado = ObterAeronavePorNumero(numAeronave);
-	
+
 			// Removo do array
 			if (encontrado != null) {
 				aeronaves.remove(encontrado);
-	
+
 				System.out.println(" ");
 				System.out.println("Aeronave eliminada com sucesso!");
 				System.out.println("\n-------------------------------------");
-				
+
 				GravarFicheirosAeronave();
-			}
-			else {
-				System.out.println(" ");	
+			} else {
+				System.out.println(" ");
 				System.out.println("Não foi encontrado nenhuma aeronave com o número indicado!");
 			}
-	
+
 			MenuAeronaves();
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a eliminar aeronave!" +e.getMessage());
+			System.out.println("Ocorreu um erro a eliminar aeronave!" + e.getMessage());
 		}
 	}
 
@@ -1096,34 +1094,34 @@ public class Aplicacao {
 			// Pergunto ao utilizador a aeronave que ele quer editar
 			System.out.println("Insira o número de registo da aeronave que deseja editar:");
 			String numeroAeronave = ler.next();
-	
+
 			Aeronave aeronave = ObterAeronavePorNumero(numeroAeronave);
 			if (aeronave != null) {
 				System.out.println("Insira o novo numero de registo:");
 				aeronave.setnRegistro(ler.next());
-	
+
 				System.out.println("Insira a nova marca/modelo:");
 				aeronave.setMarcaEmodelo(ler.next());
-	
+
 				System.out.println("Insira o novo numero de lugares da classe executiva:");
 				aeronave.setNlugaresExecutiva(ler.next());
-	
+
 				System.out.println("Insira o novo numero de lugares da classe turistica:");
 				aeronave.setNlugaresTuristica(ler.next());
-	
+
 				System.out.println(" ");
 				System.out.println("Editado com sucesso!");
 				System.out.println("\n-------------------------------------");
-	
+
 				GravarFicheirosAeronave();
-	
+
 				MenuAeronaves();
 			} else {
 				System.out.println(" ");
 				System.out.println("Aeronave não encontrada!");
 			}
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a editar aeronave!" +e.getMessage());
+			System.out.println("Ocorreu um erro a editar aeronave!" + e.getMessage());
 		}
 	}
 
@@ -1132,40 +1130,40 @@ public class Aplicacao {
 	 * CONTROLO DE AEROPORTOS
 	 * 
 	 */
-	
+
 	public Aeroporto ObterAeroportoPorSigla(String sigla) {
 		for (Aeroporto aeroporto : aeroportos) {
 			if (sigla.equals(aeroporto.getSigla())) {
-				return aeroporto;				
+				return aeroporto;
 			}
 		}
 		return null;
 	}
-	
+
 	public void AdicionarAaeroporto() {
 		try {
 			Aeroporto aeroportos = new Aeroporto();
-	
+
 			// Adiciono os dados
 			System.out.println("Insira a sigla do aeroporto:");
 			aeroportos.setSigla(ler.next());
-	
+
 			System.out.println("Insira o pais:");
 			aeroportos.setPais(ler.next());
-	
+
 			System.out.println("Insira a cidade mais proxima:");
 			aeroportos.setCidadeProx(ler.next());
-	
+
 			// Adiciono ao array
 			this.aeroportos.add(aeroportos);
-	
+
 			System.out.println(" ");
 			System.out.println("Aeroporto adicionado com sucesso!");
 			System.out.println("\n-------------------------------------");
-	
+
 			GravarFicheirosAeroportos();
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a adicionar aeroporto!" +e.getMessage());
+			System.out.println("Ocorreu um erro a adicionar aeroporto!" + e.getMessage());
 		}
 	}
 
@@ -1191,25 +1189,25 @@ public class Aplicacao {
 			// Pergunto ao utilizador a sigla do aeroporto
 			System.out.println("Insira a sigla do aeroporto que deseja eliminar:");
 			String sigla = ler.next();
-	
+
 			Aeroporto encontrado = ObterAeroportoPorSigla(sigla);
-	
+
 			// Removo do array
 			if (encontrado != null) {
 				aeroportos.remove(encontrado);
-				
+
 				System.out.println(" ");
 				// Mensagem ao utilizador
 				System.out.println("Aeroporto eliminado com sucesso!");
 				System.out.println("\n-------------------------------------");
 			} else {
-				System.out.println(" ");	
+				System.out.println(" ");
 				System.out.println("Não foi encontrado nenhum aeroporto com a sigla indicada!");
 			}
-			
+
 			MenuAeroportos();
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a eliminar aeroporto!" +e.getMessage());
+			System.out.println("Ocorreu um erro a eliminar aeroporto!" + e.getMessage());
 		}
 	}
 
@@ -1217,32 +1215,32 @@ public class Aplicacao {
 		try {
 			System.out.println("Insira a sigla do aeroporto que deseja editar:");
 			String sigla = ler.next();
-	
+
 			Aeroporto aeroporto = ObterAeroportoPorSigla(sigla);
 			if (aeroporto != null) {
 				// Se encontrado, edito os dados
 				System.out.println("Insira a nova sigla:");
 				aeroporto.setSigla(ler.next());
-	
+
 				System.out.println("Insira o novo pais:");
 				aeroporto.setPais(ler.next());
-	
+
 				System.out.println("Insira a nova cidade mais proxima:");
 				aeroporto.setCidadeProx(ler.next());
-	
+
 				System.out.println(" ");
 				System.out.println("Editado com sucesso!");
 				System.out.println("\n-------------------------------------");
-	
+
 				GravarFicheirosAeroportos();
-	
-				MenuAeroportos();	
+
+				MenuAeroportos();
 			} else {
 				// Se nao, mensagem ao utilizador
 				System.out.println("Aeroporto não encontrado!");
 			}
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro a editar aeroporto!" +e.getMessage());
+			System.out.println("Ocorreu um erro a editar aeroporto!" + e.getMessage());
 		}
 	}
 
@@ -1251,26 +1249,26 @@ public class Aplicacao {
 	 * CONTROLO DE FICHEIROS
 	 * 
 	 */
-	
+
 	public String ObterPastaFicheirosCompanhia() {
-		
-		//verificar se a pasta existe, se não existir cria
+
+		// verificar se a pasta existe, se não existir cria
 		String diretorioDados = this.LocalizacaoDados + "\\" + this.companhia;
 		File theDir = new File(diretorioDados);
-		if (!theDir.exists()){
-		    theDir.mkdirs();
-		}		
+		if (!theDir.exists()) {
+			theDir.mkdirs();
+		}
 		return diretorioDados;
 	}
 
 	public void LerFicheirosVoos() {
-		try {					
-			String conteudo = this.LerFicheiro("voos");	
+		try {
+			String conteudo = this.LerFicheiro("voos");
 			if (conteudo != "") {
-				String[] linhas  = conteudo.split("\n");
-				for(String linha : linhas) {
+				String[] linhas = conteudo.split("\n");
+				for (String linha : linhas) {
 					String[] partes = linha.split("\\|");
-					
+
 					String nVoo = partes[0];
 					String Aviao = partes[1];
 					String AeroOrigem = partes[2];
@@ -1280,23 +1278,23 @@ public class Aplicacao {
 					LocalDate DataDeChegada = LocalDate.parse(partes[5], formatter);
 					String HoraDePartida = partes[6];
 					String HoraDeChegada = partes[7];
-		
+
 					Voo voo = new Voo(nVoo, Aviao, AeroOrigem, AeroDestino, DataDePartida, DataDeChegada, HoraDePartida,
 							HoraDeChegada);
 					voos.add(voo);
-				}	
+				}
 			}
 		} catch (Exception Ex) {
 			System.out.println("Ocorreu um erro a ler voos!" + Ex.getMessage());
 		}
 	}
-	
+
 	public void GravarFicheirosVoos() {
 		try {
-			String conteudo = "";	
-			if (voos.isEmpty() == false) {	
-				conteudo = "";	
-				for (Voo voo : voos) {						
+			String conteudo = "";
+			if (voos.isEmpty() == false) {
+				conteudo = "";
+				for (Voo voo : voos) {
 					conteudo += voo.getnVoo() + "|";
 					conteudo += voo.getAviao() + "|";
 					conteudo += voo.getAeroOrigem() + "|";
@@ -1304,23 +1302,23 @@ public class Aplicacao {
 					conteudo += voo.getDataDePartida() + "|";
 					conteudo += voo.getDataDeChegada() + "|";
 					conteudo += voo.getHoraDePartida() + "|";
-					conteudo += voo.getHoraDeChegada() + "|\n";						
+					conteudo += voo.getHoraDeChegada() + "|\n";
 				}
 			}
 			this.GravarFicheiro("voos", conteudo);
-		} catch (Exception Ex) {				
-			System.out.println("Ocorreu um erro a gravar voos!" + Ex.getMessage());					
+		} catch (Exception Ex) {
+			System.out.println("Ocorreu um erro a gravar voos!" + Ex.getMessage());
 		}
 	}
-		
+
 	public void LerFicheirosPassageiros() {
-		try {			
-			String conteudo = this.LerFicheiro("passageiros");	
+		try {
+			String conteudo = this.LerFicheiro("passageiros");
 			if (conteudo != "") {
-				String[] linhas  = conteudo.split("\n");
-				for(String linha : linhas) {
+				String[] linhas = conteudo.split("\n");
+				for (String linha : linhas) {
 					String[] partes = linha.split("\\|");
-					
+
 					String id = partes[0];
 					String nVoo = partes[1];
 					String nome = partes[2];
@@ -1331,24 +1329,24 @@ public class Aplicacao {
 					String email = partes[7];
 					String tipoBilhete = partes[8];
 					String lugarReservado = partes[9];
-		
+
 					Passageiros passageiros = new Passageiros(id, nVoo, nome, nacionalidade, morada, telefone,
 							dataDeNascimento, email, tipoBilhete, lugarReservado);
-		
+
 					this.passageiros.add(passageiros);
-				}			
+				}
 			}
 		} catch (Exception Ex) {
 			System.out.println("Ocorreu um erro a ler passageiros!" + Ex.getMessage());
-		}				
+		}
 	}
-	
+
 	public void GravarFicheirosPassageiros() {
 		try {
-			String conteudo = "";	
-			if (passageiros.isEmpty() == false) {	
-				conteudo = "";	
-				for (Passageiros passageiro : passageiros) {							
+			String conteudo = "";
+			if (passageiros.isEmpty() == false) {
+				conteudo = "";
+				for (Passageiros passageiro : passageiros) {
 					conteudo += passageiro.getId() + "|";
 					conteudo += passageiro.getnVoo() + "|";
 					conteudo += passageiro.getNome() + "|";
@@ -1358,66 +1356,66 @@ public class Aplicacao {
 					conteudo += passageiro.getDataDeNascimento() + "|";
 					conteudo += passageiro.getEmail() + "|";
 					conteudo += passageiro.getTipoBilhete() + "|";
-					conteudo += passageiro.getLugarReservado() + "|\n";		
-				}						
+					conteudo += passageiro.getLugarReservado() + "|\n";
+				}
 			}
 			this.GravarFicheiro("passageiros", conteudo);
-		} catch (Exception Ex) {				
-			System.out.println("Ocorreu um erro a gravar passageiros!" + Ex.getMessage());					
-		}		
+		} catch (Exception Ex) {
+			System.out.println("Ocorreu um erro a gravar passageiros!" + Ex.getMessage());
+		}
 	}
-	
+
 	public void LerFicheirosAeroportos() {
-		try {					
+		try {
 			String conteudo = this.LerFicheiro("aeroportos");
 			if (conteudo != "") {
-				String[] linhas  = conteudo.split("\n");
-				for(String linha : linhas) {
+				String[] linhas = conteudo.split("\n");
+				for (String linha : linhas) {
 					String[] partes = linha.split("\\|");
-					
+
 					String sigla = partes[0];
 					String pais = partes[1];
 					String cidadeProx = partes[2];
-		
+
 					Aeroporto aeroporto = new Aeroporto(sigla, pais, cidadeProx);
 					aeroportos.add(aeroporto);
-				}			
+				}
 			}
 		} catch (Exception Ex) {
 			System.out.println("Ocorreu um erro a ler aeroportos!" + Ex.getMessage());
 		}
 	}
-	 
+
 	public void GravarFicheirosAeroportos() {
 		try {
-			String conteudo = "";	
-			if (aeroportos.isEmpty() == false) {	
+			String conteudo = "";
+			if (aeroportos.isEmpty() == false) {
 				conteudo = "";
-				for (Aeroporto aeroporto : aeroportos) {							
+				for (Aeroporto aeroporto : aeroportos) {
 					conteudo += aeroporto.getSigla() + "|";
 					conteudo += aeroporto.getPais() + "|";
-					conteudo += aeroporto.getCidadeProx() + "\n";						
-				}								
+					conteudo += aeroporto.getCidadeProx() + "\n";
+				}
 			}
 			this.GravarFicheiro("aeroportos", conteudo);
-		} catch (Exception Ex) {				
-			System.out.println("Ocorreu um erro a gravar aeroportos!" + Ex.getMessage());					
-		}		
+		} catch (Exception Ex) {
+			System.out.println("Ocorreu um erro a gravar aeroportos!" + Ex.getMessage());
+		}
 	}
-	
+
 	public void LerFicheirosAeronaves() {
-		try {			
+		try {
 			String conteudo = this.LerFicheiro("aeronaves");
 			if (conteudo != "") {
-				String[] linhas  = conteudo.split("\n");
-				for(String linha : linhas) {
+				String[] linhas = conteudo.split("\n");
+				for (String linha : linhas) {
 					String[] partes = linha.split("\\|");
-					
+
 					String nRegistro = partes[0];
 					String marcaEmodelo = partes[1];
 					String nLugaresTuristica = partes[2];
 					String nLugaresExecutiva = partes[3];
-		
+
 					Aeronave aeronave = new Aeronave(nRegistro, marcaEmodelo, nLugaresTuristica, nLugaresExecutiva);
 					aeronaves.add(aeronave);
 				}
@@ -1426,33 +1424,33 @@ public class Aplicacao {
 			System.out.println("Ocorreu um erro a ler aeronaves!" + Ex.getMessage());
 		}
 	}
-	
-	public void GravarFicheirosAeronave() {	
+
+	public void GravarFicheirosAeronave() {
 		try {
-			String conteudo = "";	
-			if (aeronaves.isEmpty() == false) {	
-				conteudo = "";		
-				for (Aeronave aeronave : aeronaves) {										
+			String conteudo = "";
+			if (aeronaves.isEmpty() == false) {
+				conteudo = "";
+				for (Aeronave aeronave : aeronaves) {
 					conteudo += aeronave.getnRegistro() + "|";
 					conteudo += aeronave.getMarcaEmodelo() + "|";
 					conteudo += aeronave.getNlugaresTuristica() + "|";
-					conteudo += aeronave.getNlugaresExecutiva() + "\n";				
-				}								
+					conteudo += aeronave.getNlugaresExecutiva() + "\n";
+				}
 			}
 			this.GravarFicheiro("aeronaves", conteudo);
-		} catch (Exception Ex) {				
-			System.out.println("Ocorreu um erro a gravar aeronaves!" + Ex.getMessage());					
+		} catch (Exception Ex) {
+			System.out.println("Ocorreu um erro a gravar aeronaves!" + Ex.getMessage());
 		}
 	}
-	
+
 	public void LerFicheirosTripulantes() {
-		try {			
-			String conteudo = this.LerFicheiro("tripulantes");	
+		try {
+			String conteudo = this.LerFicheiro("tripulantes");
 			if (conteudo != "") {
-				String[] linhas  = conteudo.split("\n");
-				for(String linha : linhas) {
+				String[] linhas = conteudo.split("\n");
+				for (String linha : linhas) {
 					String[] partes = linha.split("\\|");
-					
+
 					String id = partes[0];
 					String nVoo = partes[1];
 					String nome = partes[2];
@@ -1464,7 +1462,7 @@ public class Aplicacao {
 					String dataDeValidade = partes[8];
 					String anotacoes = partes[9];
 					String categoria = partes[10];
-		
+
 					Tripulacao tripulante = new Tripulacao(id, nVoo, nome, nacionalidade, morada, telefone,
 							dataDeNascimento, nLicenca, dataDeValidade, anotacoes, categoria);
 					this.tripulantes.add(tripulante);
@@ -1474,13 +1472,13 @@ public class Aplicacao {
 			System.out.println("Ocorreu um erro a ler tripulantes!" + Ex.getMessage());
 		}
 	}
-	
+
 	public void GravarFicheirosTripulantes() {
 		try {
-			String conteudo = "";	
+			String conteudo = "";
 			if (tripulantes.isEmpty() == false) {
 				conteudo = "";
-				for (Tripulacao tripulante : tripulantes) {						
+				for (Tripulacao tripulante : tripulantes) {
 					conteudo += tripulante.getId() + "|";
 					conteudo += tripulante.getnVoo() + "|";
 					conteudo += tripulante.getNome() + "|";
@@ -1491,40 +1489,40 @@ public class Aplicacao {
 					conteudo += tripulante.getnLicenca() + "|";
 					conteudo += tripulante.getDataDeValidade() + "|";
 					conteudo += tripulante.getAnotacoes() + "|";
-					conteudo += tripulante.getCategoria() + "|\n";						
-				}								
+					conteudo += tripulante.getCategoria() + "|\n";
+				}
 			}
 			this.GravarFicheiro("tripulantes", conteudo);
-		} catch (Exception Ex) {				
-			System.out.println("Ocorreu um erro a gravar tripulantes!" + Ex.getMessage());					
-		}	
+		} catch (Exception Ex) {
+			System.out.println("Ocorreu um erro a gravar tripulantes!" + Ex.getMessage());
+		}
 	}
-	
+
 	public String LerFicheiro(String nomeFicheiro) {
 		String conteudo = "";
 		try {
-			String enderecoFicheiro = ObterPastaFicheirosCompanhia() + "\\" + nomeFicheiro +".txt";
+			String enderecoFicheiro = ObterPastaFicheirosCompanhia() + "\\" + nomeFicheiro + ".txt";
 			File f = new File(enderecoFicheiro);
 			if (f.exists()) {
 				FileReader fr = new FileReader(enderecoFicheiro);
-				BufferedReader ler = new BufferedReader(fr);	
+				BufferedReader ler = new BufferedReader(fr);
 				while (ler.ready()) {
-					conteudo += ler.readLine() +"\n";				
-				}	
+					conteudo += ler.readLine() + "\n";
+				}
 				ler.close();
 			}
-	
+
 		} catch (IOException Ex) {
 			System.out.println("Ocorreu um erro a ler o ficheiro!" + Ex.getMessage());
 		}
 		return conteudo;
 	}
-	
+
 	public void GravarFicheiro(String nomeFicheiro, String conteudo) {
 		try {
 			FileWriter fw = new FileWriter(ObterPastaFicheirosCompanhia() + "\\" + nomeFicheiro + ".txt");
-			BufferedWriter caneta = new BufferedWriter(fw);			
-			caneta.write(conteudo);			
+			BufferedWriter caneta = new BufferedWriter(fw);
+			caneta.write(conteudo);
 			caneta.close();
 		} catch (IOException Ex) {
 			{
@@ -1532,7 +1530,7 @@ public class Aplicacao {
 			}
 		}
 	}
-	
+
 	// Funcao para ler e converter data
 	public LocalDate LerData() {
 		try {
@@ -1545,5 +1543,5 @@ public class Aplicacao {
 			return LerData();
 		}
 	}
-	
+
 }
