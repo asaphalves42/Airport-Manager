@@ -2,18 +2,18 @@ package avioes.apoo.app;
 
 public class Tripulacao extends Pessoa {
 	
-	private String nLincenca;
+	private String nLicenca;
 	private String dataDeValidade;
 	private String anotacoes;
 	private String categoria;
 	private String nVoo;
 	
 	public Tripulacao(String id, String nVoo, String nome, String nacionalidade, String morada, String telefone, String dataDeNascimento,
-			String nLincenca, String dataDeValidade, String anotacoes, String categoria) {
+			String nLicenca, String dataDeValidade, String anotacoes, String categoria) {
 		
 		super(id, nome, nacionalidade, morada, telefone, dataDeNascimento);
 		
-		this.nLincenca = nLincenca;
+		this.nLicenca = nLicenca;
 		this.dataDeValidade = dataDeValidade;
 		this.anotacoes = anotacoes;
 		this.categoria = categoria;
@@ -32,12 +32,12 @@ public class Tripulacao extends Pessoa {
 		this.nVoo = nVoo;
 	}
 
-	public String getnLincenca() {
-		return nLincenca;
+	public String getnLicenca() {
+		return nLicenca;
 	}
 
-	public void setnLincenca(String nLincenca) {
-		this.nLincenca = nLincenca;
+	public void setnLicenca(String nLicenca) {
+		this.nLicenca = nLicenca;
 	}
 
 	public String getDataDeValidade() {
@@ -66,10 +66,10 @@ public class Tripulacao extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "Tripulantes [\nId: " + getId() + "\nNome: " + getNome() + "\nNacionalidade: " + getNacionalidade() + 
-				"\nMorada: " + getMorada() + "\ntelefone: " + getTelefone() + "\nData de nascimento: " + 
-				getDataDeNascimento() + "[\nNúmero da lincenca: " + nLincenca + "\nData de validade: " + dataDeValidade + "\nAnotações: " + anotacoes
-				+ "\nCategoria: " + categoria + "]" + "\n" + 
+		return "Tripulante [\n  Id: " + getId() + "\n  Nome: " + getNome() + "\n  Nacionalidade: " + getNacionalidade() + 
+				"\n  Morada: " + getMorada() + "\n  Telefone: " + getTelefone() + "\n  Data de nascimento: " + 
+				getDataDeNascimento() + "\n  NÃºmero da licenca: " + nLicenca + "\n  Data de validade: " + dataDeValidade + "\n  AnotaÃ§Ãµes: " + anotacoes
+				+ "\n  Categoria: " + categoria + "" + "\n]\n" + 
 				"------------------------------------------------------";
 				
 	}

@@ -10,6 +10,7 @@ public class Passageiros extends Pessoa {
 	public Passageiros(String id, String nVoo, String nome, String nacionalidade, String morada, String telefone, String dataDeNascimento,
 			String email, String tipoBilhete, String lugarReservado) {
 		
+		super(id, nome, nacionalidade,morada,telefone,dataDeNascimento);
 		this.email = email;
 		this.tipoBilhete = tipoBilhete;
 		this.lugarReservado = lugarReservado;
@@ -54,10 +55,10 @@ public class Passageiros extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "Passageiros [\nId: " + getId() + "\nN�mero do voo: " + nVoo + "\nNome: " + getNome() + "\nNacionalidade: " + getNacionalidade() + 
-				"\nMorada: " + getMorada() + "\ntelefone: " + getTelefone() + "\nData de nascimento: " + getDataDeNascimento() + "\ne-mail: " + email + 
-				"\ntipoBilhete: " + tipoBilhete + "\nLugar reservado: " + lugarReservado
-				+ "]" + "\n" + 
+		return "Passageiro [\n  Id: " + getId() + "\n  Numero do voo: " + nVoo + "\n  Nome: " + getNome() + "\n  Nacionalidade: " + getNacionalidade() + 
+				"\n  Morada: " + getMorada() + "\n  Telefone: " + getTelefone() + "\n  Data de nascimento: " + getDataDeNascimento() + "\n  E-mail: " + email + 
+				"\n  Tipo Bilhete: " + tipoBilhete + "\n  Lugar reservado: " + lugarReservado
+				+ "\n]" + "\n" + 
 				"---------------------------------------";
 		
 		

@@ -52,8 +52,8 @@ public class Aeronave {
 
 	@Override
 	public String toString() {
-		return "Aeronaves [\nNúmero de registro: " + nRegistro + "\nMarca/modelo: " + marcaEmodelo + "\nNúmero de lugares turística: "
-				+ NlugaresTuristica + "\nNúmero de lugares executiva: " + NlugaresExecutiva + "]" + "\n----------------------------------";
+		return "Aeronave [\n  Numero de registro: " + nRegistro + "\n  Marca/modelo: " + marcaEmodelo + "\n  Numero de lugares turustica: "
+				+ NlugaresTuristica + "\n  Numero de lugares executiva: " + NlugaresExecutiva + "\n]" + "\n----------------------------------";
 	}
 	
 	

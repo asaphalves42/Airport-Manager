@@ -35,7 +35,7 @@ public class Aeroporto {
 	}
 	@Override
 	public String toString() {
-		return "Aeroportos [\nSigla: " + sigla + "\nPaís: " + pais + "\nCidade mais próxima: " + cidadeProx + "]" 
+		return "Aeroporto [\n  Sigla: " + sigla + "\n  Pais: " + pais + "\n  Cidade mais proxima: " + cidadeProx + "\n]" 
 	+ "\n-------------------------------";
 	}
 	

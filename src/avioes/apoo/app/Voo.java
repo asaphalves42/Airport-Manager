@@ -99,9 +99,9 @@ public class Voo {
 	
 	@Override
 	public String toString() {
-		return "Voos[\nVoo: " + nVoo + " \nNúmero do avião: " + aviao + " \nAeroporto de origem: " + aeroOrigem + " \nAeroporto de destino: "
-				+ aeroDestino + " \nData de partida: " + dataDePartida + " \nData de chegada: " + dataDeChegada
-				+ " \nHora de partida: " + horaDePartida + " \nHora de chegada: " + horaDeChegada + "]\n" + 
+		return "Voo[\n  Voo: " + nVoo + " \n  Numero do aviao: " + aviao + " \n  Aeroporto de origem: " + aeroOrigem + " \n  Aeroporto de destino: "
+				+ aeroDestino + " \n  Data de partida: " + dataDePartida + " \n  Data de chegada: " + dataDeChegada
+				+ " \n  Hora de partida: " + horaDePartida + " \n  Hora de chegada: " + horaDeChegada + "\n]\n" + 
 				"--------------------------------------------------------------------";
 	}
 
