@@ -892,7 +892,8 @@ public class Aplicacao {
 				// Gravo para ficheiros
 				GravarFicheirosVoos();
 				
-				ApresentarMenuPassageiro();
+				ApresentarMenuVoo();
+				
 			} else {
 				System.out.println(" ");
 				System.out.println("Voo não encontrado!");			
