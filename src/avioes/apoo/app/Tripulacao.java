@@ -68,7 +68,7 @@ public class Tripulacao extends Pessoa {
 	public String toString() {
 		return "Tripulante [\n  Id: " + getId() + "\n  Nome: " + getNome() + "\n  Nacionalidade: " + getNacionalidade() + 
 				"\n  Morada: " + getMorada() + "\n  Telefone: " + getTelefone() + "\n  Data de nascimento: " + 
-				getDataDeNascimento() + "\n  Número da licenca: " + nLicenca + "\n  Data de validade: " + dataDeValidade + "\n  Anotações: " + anotacoes
+				getDataDeNascimento() + "\n  Numero da licenca: " + nLicenca + "\n  Data de validade: " + dataDeValidade + "\n  Anotacoes: " + anotacoes
 				+ "\n  Categoria: " + categoria + "" + "\n]\n" + 
 				"------------------------------------------------------";
 				

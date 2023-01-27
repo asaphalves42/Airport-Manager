@@ -18,11 +18,16 @@ import avioes.apoo.app.Passageiros;
 import avioes.apoo.app.Tripulacao;
 import avioes.apoo.app.Voo;
 
+/**
+ * Funcao que inicia a aplicacao
+ *
+ */
+
 public class Aplicacao {
 
-	public String nome;
-	public String companhia;
-	public String LocalizacaoDados = "C:\\aplicacao";
+	private String nome;
+	private String companhia;
+	private String LocalizacaoDados = "C:\\aplicacao";
 
 	Scanner ler = new Scanner(System.in);
 
@@ -31,6 +36,10 @@ public class Aplicacao {
 	ArrayList<Aeroporto> aeroportos = new ArrayList<>();
 	ArrayList<Tripulacao> tripulantes = new ArrayList<>();
 	ArrayList<Passageiros> passageiros = new ArrayList<>();
+	
+	/**
+	 * Funcao que inicia o programa
+	 */
 
 	public void Iniciar() {
 		SelecionarCompanhiaAerea();
@@ -440,6 +449,8 @@ public class Aplicacao {
 
 	/**
 	 * Funcao que obtem os passageiros pelo numero de identidade
+	 * @param id obtem os passageiros pelo id
+	 * @return passageiros, retorna o passageiro
 	 */
 
 	public Passageiros ObterPassageiroPorIdentidade(String id) {
@@ -453,6 +464,8 @@ public class Aplicacao {
 
 	/**
 	 * Funcao que conta o numero de passageiros
+	 * @param numero conta os passageiros por voo
+	 * @return devolve a contagem dos passageiros
 	 */
 
 	public int ContagemPassageirosVoo(String numero) {
@@ -523,7 +536,7 @@ public class Aplicacao {
 	}
 
 	/**
-	 * Funcao que elimina os passageiros
+	 * @author asaph Funcao que elimina os passageiros
 	 */
 
 	public void EliminarPassageiros() {
@@ -701,6 +714,8 @@ public class Aplicacao {
 
 	/**
 	 * Funcao que obtem os tripulantes pelo numero de identidade
+	 * @param id obtem os tripulantes pelo numero de identidade
+	 * @return retorna o tripulante
 	 */
 
 	public Tripulacao ObterTripulantePorIdentidade(String id) {
@@ -892,6 +907,8 @@ public class Aplicacao {
 
 	/**
 	 * Funcao que obtem os voos baseado no numero do voo
+	 * @param numero obtem voos baseados no numero
+	 * @return devolve os voos baseado no numero do voo
 	 */
 
 	public Voo ObterVooPorNumero(String numero) {
@@ -1079,7 +1096,7 @@ public class Aplicacao {
 	 */
 
 	public void ListarVoosComMaisPassageiros() {
-
+		
 	}
 
 	/**
@@ -1161,6 +1178,8 @@ public class Aplicacao {
 
 	/**
 	 * Funcao que obtem as aeronaves pelo numero
+	 * @param numero obtem as aeronaves por numero
+	 * @return devolve a aeronave 
 	 */
 
 	public Aeronave ObterAeronavePorNumero(String numero) {
@@ -1307,6 +1326,8 @@ public class Aplicacao {
 
 	/**
 	 * Funcao que obtem os aeroportos por sigla
+	 * @param sigla obtem os aeroportos pela sigla
+	 * @return devolve a sigla
 	 */
 
 	public Aeroporto ObterAeroportoPorSigla(String sigla) {

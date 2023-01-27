@@ -6,6 +6,8 @@ public class Aeronave {
 	private String NlugaresTuristica;
 	private String NlugaresExecutiva;
 	
+	
+	
 	public Aeronave(String nRegistro, String marcaEmodelo, String nlugaresTuristica, String nlugaresExecutiva) {
 		super();
 		this.nRegistro = nRegistro;
@@ -13,39 +15,46 @@ public class Aeronave {
 		NlugaresTuristica = nlugaresTuristica;
 		NlugaresExecutiva = nlugaresExecutiva;
 	}
-
+	
+	
 	public Aeronave() {
 		
 	}
 
+	
+	
 	public String getnRegistro() {
 		return nRegistro;
 	}
 
+	
+	
 	public void setnRegistro(String nRegistro) {
 		this.nRegistro = nRegistro;
 	}
-
+	
+	
 	public String getMarcaEmodelo() {
 		return marcaEmodelo;
 	}
-
+	
+	
 	public void setMarcaEmodelo(String marcaEmodelo) {
 		this.marcaEmodelo = marcaEmodelo;
 	}
-
+	
 	public String getNlugaresTuristica() {
 		return NlugaresTuristica;
 	}
-
+	
 	public void setNlugaresTuristica(String nlugaresTuristica) {
 		NlugaresTuristica = nlugaresTuristica;
 	}
-
+	
 	public String getNlugaresExecutiva() {
 		return NlugaresExecutiva;
 	}
-
+	
 	public void setNlugaresExecutiva(String nlugaresExecutiva) {
 		NlugaresExecutiva = nlugaresExecutiva;
 	}
