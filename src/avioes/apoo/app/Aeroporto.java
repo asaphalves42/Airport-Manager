@@ -1,9 +1,9 @@
 package avioes.apoo.app;
 
 public class Aeroporto {
-	String sigla;
-	String pais;
-	String cidadeProx;
+	private String sigla;
+	private String pais;
+	private String cidadeProx;
 	
 	
 	public Aeroporto(String sigla, String pais, String cidadeProx) {
